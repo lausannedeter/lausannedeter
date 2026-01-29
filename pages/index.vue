@@ -1,7 +1,7 @@
 <script setup>
 const { categories, events, categoryMap, affiches } = useEvents()
 
-const EVENTS_LIMIT = 1
+const EVENTS_LIMIT = 3
 const upcomingEvent = useUpcomingEvents(events, categoryMap, EVENTS_LIMIT)
     .map(normalizeEventDates)
 
@@ -30,7 +30,7 @@ console.log(upcomingEvent)
                 </p>
             </div>
             <div class="event-section">
-                <h3 class="subtitle">Prochain évènement:</h3>
+                <h3 class="subtitle">Prochains évènements:</h3>
                 <transition-group name="eventsList" tag="div" v-if="upcomingEvent.length"
                     class="month-content-container">
                     <EventBlock v-for="event in upcomingEvent" :key="event.id" :event="event"></EventBlock>
@@ -146,6 +146,13 @@ console.log(upcomingEvent)
     gap: 15px;
 }
 
+.month-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 24px;
+}
+
 .buttons-container {
     display: flex;
     flex-direction: column;
@@ -182,6 +189,10 @@ console.log(upcomingEvent)
         padding: 0 72px;
     }
 
+    .month-content-container {
+        padding: 0 72px;
+    }
+
     .buttons-container {
         padding: 0 72px;
     }
@@ -196,6 +207,10 @@ console.log(upcomingEvent)
     }
 
     .event-section {
+        padding: 0 144px;
+    }
+
+    .month-content-container {
         padding: 0 144px;
     }
 
