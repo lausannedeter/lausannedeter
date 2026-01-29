@@ -59,6 +59,7 @@ const props = defineProps({
 .info-container {
     padding-right: 5px;
     width: 100%;
+    gap: 5px;
 }
 
 .event-title {
@@ -68,5 +69,6 @@ const props = defineProps({
 
 .event-more-info {
     font-size: 12px;
+    text-transform: capitalize;
 }
 </style>

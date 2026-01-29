@@ -40,7 +40,7 @@ console.log(event)
         <div v-if="event.link" class="usefull-links">
             <h3 class="links-title">Liens utiles:</h3>
             <div class="links-container">
-                <a :href="event.link" class="link">{{ event.link }}</a>
+                <a :href="event.link" class="link">{{ event.organizer }}</a>
             </div>
         </div>
 
@@ -83,6 +83,10 @@ console.log(event)
     text-transform: capitalize;
 }
 
+.event-organizer {
+    text-transform: capitalize;
+}
+
 .event-image {
     width: 75%;
     max-width: 600px;
@@ -113,6 +117,7 @@ console.log(event)
 .link {
     font-size: 14px;
     text-decoration: underline;
+    text-transform: capitalize;
     width: fit-content;
 }
 

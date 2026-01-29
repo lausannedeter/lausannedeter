@@ -2,7 +2,7 @@
 /* ------------------------------ Gestion evenements ------------------------------------------- */
 const { categories, events, categoryMap, affiches } = useEvents()
 
-const EVENTS_LIMIT = 20
+const EVENTS_LIMIT = 50
 const upcomingEvents = useUpcomingEvents(events, categoryMap, EVENTS_LIMIT)
     .map(normalizeEventDates)
 
