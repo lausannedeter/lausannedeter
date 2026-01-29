@@ -1,0 +1,80 @@
+/* ========== Polices ========== */
+@font-face {
+  font-family: 'Jacquard12';
+  src: url('/fonts/Jacquard12-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Azeret Medium';
+  src: url('/fonts/AzeretMono-Medium.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Azeret Thin';
+  src: url('/fonts/AzeretMono-Thin.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Azeret Thin Italic';
+  src: url('/fonts/AzeretMono-ThinItalic.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Azeret Thin";
+}
+
+h1, h2 {
+  font-family: "Jacquard12";
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+section {
+  min-height: calc(100svh - 100px);
+  overflow-x: hidden;
+  padding: 50px 24px;
+}
+
+.button {
+  display: flex;
+  background-color: #CD523C;
+  color: white;
+  font-family: "Azeret Medium";
+  font-size: 12px;
+  width: fit-content;
+  padding: 10px 20px;
+}
+
+/* TABLETTE */
+@media (min-width: 750px) {
+  section {
+    padding: 50px 72px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+  section {
+    padding: 50px 144px;
+  }
+}

@@ -1,0 +1,236 @@
+{
+    "categories": [
+        {
+            "id": "bouffespop",
+            "label": "Bouffes pop",
+            "color": "#FA41AE"
+        },
+        {
+            "id": "perma",
+            "label": "Permanences",
+            "color": "#FFBF00"
+        },
+        {
+            "id": "soirees",
+            "label": "Soirées, concerts, projections",
+            "color": "#F4BFDB"
+        },
+        {
+            "id": "confs",
+            "label": "Conférences, tables rondes, ateliers",
+            "color": "#90E0F3"
+        },
+        {
+            "id": "manifs",
+            "label": "Manifs, rassemblements, grêves",
+            "color": "#ACE894"
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "title": "Tant qu’il y aura des prisons",
+            "slug": "tant-quil-y-aura-des-prisons-2026-02-10",
+            "description": "Conference “Tant qu’il y aura des prisons” avec Gwenola Ricordeau",
+            "startDate": "2026-02-10T20:00",
+            "endDate": "2026-02-10T22:00",
+            "organizer": "Pôle sud",
+            "image": "event.jpeg",
+            "location": "Pôle sud",
+            "link": "https://www.instagram.com/polesud_lausanne/",
+            "category": "confs",
+            "status": ""
+        },
+        {
+            "id": 2,
+            "title": "soutien a la gaza soup kitchen et justice4mike",
+            "slug": "soutien-a-la-gaza-soup-kitchen-et-justice4mike-2026-02-13",
+            "description": "teuf soutien a la gaza soup kitchen et justice4mike",
+            "startDate": "2026-02-13T22:00",
+            "endDate": "2026-02-13T23:59",
+            "organizer": "des gens deter",
+            "image": "event.jpeg",
+            "location": "Lieu Secret",
+            "link": "https://www.instagram.com/justicepourmike/",
+            "category": "soirees",
+            "status": ""
+        },
+        {
+            "id": 3,
+            "title": "Soutien au carnaval populaire et deter",
+            "slug": "soutien-au-carnaval-2026-02-21",
+            "description": "Soutien au carnaval populaire et deter",
+            "startDate": "2026-02-21T22:00",
+            "endDate": "2026-02-21T23:59",
+            "organizer": "Carnaval populaire et deter",
+            "image": "event.jpeg",
+            "location": "Lieu Secret",
+            "link": "",
+            "category": "soirees",
+            "status": ""
+        },
+        {
+            "id": 4,
+            "title": "Tournoi de foot d'EaG",
+            "slug": "tournoi-de-foot-eag-2026-02-28",
+            "description": "Tournoi de foot d'EaG pour les communales",
+            "startDate": "2026-02-28T14:00",
+            "endDate": "2026-02-28T20:00",
+            "organizer": "Ensemble à Gauche",
+            "image": "event.jpeg",
+            "location": "parc sportif du Censuy",
+            "link": "https://www.instagram.com/eag_vaud/",
+            "category": "manifs",
+            "status": ""
+        },
+        {
+            "id": 5,
+            "title": "Loto solidaire",
+            "slug": "loto-solidaire-2026-02-28",
+            "description": "Ça revient ! Après le succès de l’année dernière, le Loto des Multi fait son grand retour ! Animé par @merryqueersmas, cette soirée pleine de fun et de surprises soutient notre programme Multiplicatrices. Plus d’infos très bientôt ! La billetterie ouvrira prochainement, avec tous les détails pour participer. Préparez-vous à une soirée pleine de surprises et de tonnes de prix à gagner… on a hâte de vous retrouver !",
+            "startDate": "2026-02-28T18:00",
+            "endDate": "2026-02-28T20:00",
+            "organizer": "Surgir",
+            "image": "event.jpeg",
+            "location": "Casino de Montbenon",
+            "link": "https://www.instagram.com/fondationsurgir/",
+            "category": "soirees",
+            "status": ""
+        },
+        {
+            "id": 6,
+            "title": "concert, karaoké et dj set ",
+            "slug": "soiree-au-cylure-2026-03-06",
+            "description": "soirée au cylure concert, karaoké et dj set (carnaval populaire et deter) ",
+            "startDate": "2026-03-06T18:00",
+            "endDate": "2026-03-06T20:00",
+            "organizer": "Carnaval populaire et deter",
+            "image": "event.jpeg",
+            "location": "Cylure",
+            "link": "https://www.instagram.com/cylure/",
+            "category": "soirees",
+            "status": ""
+        },
+        {
+            "id": 7,
+            "title": "soirée à la Tortue (Ge)",
+            "slug": "soiree-a-la-tortue-2026-03-07",
+            "description": "soirée à la Tortue (Ge) par Stalingrad et l'altitude(carnaval populaire et deter) ",
+            "startDate": "2026-03-07T21:00",
+            "endDate": "2026-03-07T23:59",
+            "organizer": "Stalingrad et l'altitude",
+            "image": "event.jpeg",
+            "location": "Tortue (Ge)",
+            "link": "https://www.instagram.com/cylure/",
+            "category": "soirees",
+            "status": ""
+        },
+        {
+            "id": 8,
+            "title": "soirée pour le carnaval",
+            "slug": "soiree-carna-2026-03-14",
+            "description": "big teuf ",
+            "startDate": "2026-03-14T21:00",
+            "endDate": "2026-03-14T23:59",
+            "organizer": "carnaval populaire et deter",
+            "image": "event.jpeg",
+            "location": "Lieu Secret",
+            "link": "",
+            "category": "soirees",
+            "status": ""
+        },
+        {
+            "id": 9,
+            "title": "tournoi de foot FLINTA ",
+            "slug": "tournoi-foot-flinta-2026-03-05",
+            "description": "tournoi de foot FLINTA dans l'espace public pour le carnaval",
+            "startDate": "2026-03-05T15:00",
+            "endDate": "2026-03-05T23:00",
+            "organizer": "carnaval populaire et deter",
+            "image": "event.jpeg",
+            "location": "Espace public",
+            "link": "",
+            "category": "soirees",
+            "status": ""
+        },
+        {
+            "id": 10,
+            "title": "Conference - Débat avec l'Association Perirasude et Projection du film architecton",
+            "slug": "association-perirasude-2026-02-27",
+            "description": "Conference - Debat avec l'Association Perirasude et Projection du film architecton",
+            "startDate": "2026-02-27T18:00",
+            "endDate": "2026-02-27T23:59",
+            "organizer": "carnaval populaire et deter",
+            "image": "event.jpeg",
+            "location": "Pôle sud",
+            "link": "https://www.instagram.com/eag_vaud/",
+            "category": "confs",
+            "status": ""
+        },
+        {
+            "id": 11,
+            "title": "Permanence de droit de rester",
+            "slug": "permanence-de-droit-de-rester-2026-02-02",
+            "description": "Tous les lundis soirs 18h30 Permanence de droit de rester à la Maison de Quartier Sous-Gare",
+            "startDate": "2026-02-02T18:30",
+            "endDate": "2026-02-02T23:59",
+            "organizer": "droit de rester",
+            "image": "event.jpeg",
+            "location": "Maison de Quartier Sous-Gare",
+            "link": "https://www.instagram.com/droitderester/",
+            "category": "perma",
+            "status": ""
+        },
+        {
+            "id": 12,
+            "title": "Permanence de droit de rester",
+            "slug": "permanence-de-droit-de-rester-2026-02-09",
+            "description": "Tous les lundis soirs 18h30 Permanence de droit de rester à la Maison de Quartier Sous-Gare",
+            "startDate": "2026-02-09T18:30",
+            "endDate": "2026-02-09T23:59",
+            "organizer": "droit de rester",
+            "image": "event.jpeg",
+            "location": "Maison de Quartier Sous-Gare",
+            "link": "https://www.instagram.com/droitderester/",
+            "category": "perma",
+            "status": ""
+        },
+        {
+            "id": 13,
+            "title": "Permanence de droit de rester",
+            "slug": "permanence-de-droit-de-rester-2026-16-09",
+            "description": "Tous les lundis soirs 18h30 Permanence de droit de rester à la Maison de Quartier Sous-Gare",
+            "startDate": "2026-02-16T18:30",
+            "endDate": "2026-02-16T23:59",
+            "organizer": "droit de rester",
+            "image": "event.jpeg",
+            "location": "Maison de Quartier Sous-Gare",
+            "link": "https://www.instagram.com/droitderester/",
+            "category": "perma",
+            "status": ""
+        }
+        ,
+        {
+            "id": 14,
+            "title": "Permanence de droit de rester",
+            "slug": "permanence-de-droit-de-rester-2026-23-09",
+            "description": "Tous les lundis soirs 18h30 Permanence de droit de rester à la Maison de Quartier Sous-Gare",
+            "startDate": "2026-02-23T18:30",
+            "endDate": "2026-02-23T23:59",
+            "organizer": "droit de rester",
+            "image": "event.jpeg",
+            "location": "Maison de Quartier Sous-Gare",
+            "link": "https://www.instagram.com/droitderester/",
+            "category": "perma",
+            "status": ""
+        }
+    ],
+    "affiches": [
+        {
+            "id": 1,
+            "monthStart": "2026-02-01",
+            "monthLabel": "Février",
+            "link": ""
+        }
+    ]
+}
