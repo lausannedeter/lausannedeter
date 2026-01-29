@@ -63,8 +63,7 @@ console.log(upcomingEvent)
                 </p>
             </div>
             <div class="buttons-container">
-                <nuxt-link class="button see-collectifs" to="/collectifs">Voir collectifs alliés</nuxt-link>
-                <nuxt-link class="button see-lieux" to="/lieux">Voir lieux alliés</nuxt-link>
+                <nuxt-link class="button see-collectifs" to="/copaines">Voir les copaines</nuxt-link>
             </div>
         </div>
     </section>
@@ -150,7 +149,6 @@ console.log(upcomingEvent)
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 0 24px;
 }
 
 .buttons-container {
@@ -189,10 +187,6 @@ console.log(upcomingEvent)
         padding: 0 72px;
     }
 
-    .month-content-container {
-        padding: 0 72px;
-    }
-
     .buttons-container {
         padding: 0 72px;
     }
@@ -207,10 +201,6 @@ console.log(upcomingEvent)
     }
 
     .event-section {
-        padding: 0 144px;
-    }
-
-    .month-content-container {
         padding: 0 144px;
     }
 

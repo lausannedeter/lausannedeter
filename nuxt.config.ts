@@ -22,8 +22,7 @@ export default defineNuxtConfig({
       routes: [
         '/',
         'calendrier',
-        'lieux',
-        'collectifs',
+        'copaines',
         'a-propos',
         ...data.events.map(e => `/calendrier/${e.slug}`)
       ]     
