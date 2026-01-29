@@ -33,7 +33,7 @@ console.log(event)
             </div>
         </div>
 
-        <img v-if="event.image" src="/Logo-red-circle.png" :alt="event.title" class="event-image">
+        <img v-if="event.image" :src="`/logo/${event.link}`" :alt="event.title" class="event-image">
 
         <p class="event-description">{{ event.description }}</p>
 
