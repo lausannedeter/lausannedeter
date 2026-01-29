@@ -11,8 +11,7 @@
         </nuxt-link>
         <nav class="footer-menu-container">
             <nuxt-link to="/calendrier" active-class="active">Calendrier</nuxt-link>
-            <nuxt-link to="/collectifs" active-class="active">Collectifs</nuxt-link>
-            <nuxt-link to="/lieux" active-class="active">Lieux</nuxt-link>
+            <nuxt-link to="/copaines" active-class="active">Copaines</nuxt-link>
             <nuxt-link to="/a-propos" active-class="active">À propos</nuxt-link>
         </nav>
         <a class="mail-link" href="mailto:lausannedeter@proton.me">lausannedeter@proton.me</a>
