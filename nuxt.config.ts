@@ -21,7 +21,11 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         '/',
-        ...data.events.map(e => `/events/${e.slug}`)
+        'calendrier',
+        'lieux',
+        'collectifs',
+        'a-propos',
+        ...data.events.map(e => `/calendrier/${e.slug}`)
       ]     
     }
   }
