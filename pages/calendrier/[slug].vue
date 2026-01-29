@@ -86,6 +86,7 @@ console.log(event)
 .event-image {
     width: 75%;
     max-width: 600px;
+    height: auto;
 }
 
 .event-description {
