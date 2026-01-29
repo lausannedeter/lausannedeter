@@ -223,6 +223,34 @@
             "link": "https://www.instagram.com/droitderester/",
             "category": "perma",
             "status": ""
+        },
+        {
+            "id": 15,
+            "title": "Soirée de Lancement de campagne",
+            "slug": "soiree-lancement-2026-01-31",
+            "description": "Soirée de Lancement de campagne Ensemble à gauche",
+            "startDate": "2026-01-31T20:30",
+            "endDate": "2026-01-31T23:59",
+            "organizer": "Ensemble à Gauche",
+            "image": "eag.jpg",
+            "location": "La Datcha",
+            "link": "https://www.instagram.com/eag_vaud/",
+            "category": "soirees",
+            "status": ""
+        },
+        {
+            "id": 15,
+            "title": "Manif Free Rojava",
+            "slug": "free-rojava-2026-01-31",
+            "description": "Soirée de Lancement de campagne Ensemble à gauche",
+            "startDate": "2026-01-31T18:30",
+            "endDate": "2026-01-31T23:59",
+            "organizer": "des gens deter",
+            "image": "freerojava.webp",
+            "location": "Bern",
+            "link": "https://www.instagram.com/p/DUGEeRjjSvu/",
+            "category": "soirees",
+            "status": ""
         }
     ],
     "affiches": [
