@@ -59,6 +59,8 @@ const props = defineProps({
 .info-container {
     padding-right: 5px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     gap: 5px;
 }
 

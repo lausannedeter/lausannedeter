@@ -6,7 +6,6 @@ const event = events.find(
     e => e.slug === route.params.slug
 )
 
-console.log(event)
 </script>
 
 <template>
@@ -33,7 +32,7 @@ console.log(event)
             </div>
         </div>
 
-        <img v-if="event.image" :src="`/logo/${event.image}`" :alt="event.title" class="event-image">
+        <img v-if="event.image" :src="`/event/${event.image}`" :alt="event.title" class="event-image">
 
         <p class="event-description">{{ event.description }}</p>
 
@@ -96,6 +95,7 @@ console.log(event)
 .event-description {
     font-size: 14px;
     width: 100%;
+    white-space: pre-wrap;
 }
 
 .usefull-links {

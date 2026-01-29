@@ -13,7 +13,7 @@ const months = generateMonthsRange(firstDate, lastDate)
 const affichesByMonth = groupAffichesByMonth(affiches)
 
 /* --------------------------------- Gestion filtres --------------------------------- */
-const activeFilters = ref([])
+const activeFilters = ref(["perma"])
 
 function toggleFilters(category) {
     if (activeFilters.value.includes(category)) {
