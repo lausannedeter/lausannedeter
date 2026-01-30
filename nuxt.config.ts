@@ -18,6 +18,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   ssr: true,       
   nitro: {
+    preset: "static",
     prerender: {
       routes: [
         '/',
