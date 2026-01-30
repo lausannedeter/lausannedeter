@@ -23,8 +23,14 @@ function toggleFilters(category) {
     }
 }
 
-function deselectAllFilters() {
-    activeFilters.value = []
+function toggleAllFilters() {
+    if (activeFilters.value.length == 0) {
+        categories.forEach(cat => {
+            activeFilters.value.push(cat.id)
+        })
+    } else {
+        activeFilters.value = []
+    }
 }
 
 const filteredEvents = computed(() => {
@@ -46,7 +52,7 @@ const eventsByMonth = computed(() =>
 <template>
     <section class="calendar-page">
         <CalendarFiltersContainer :categories="categories" :activeFilters="activeFilters"
-            @toggle-filters="toggleFilters" @deselect-all-filters="deselectAllFilters"></CalendarFiltersContainer>
+            @toggle-filters="toggleFilters" @toggle-all-filters="toggleAllFilters"></CalendarFiltersContainer>
 
         <CalendarMonthContainer v-for="month in months" :key="month.toISOString()"
             :month-events="eventsByMonth[`${month.getFullYear()}-${month.getMonth()}`] || []" :month-name="month"
