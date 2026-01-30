@@ -8,11 +8,15 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "postbuild": "Remove-Item -Recurse -Force docs -ErrorAction SilentlyContinue; Copy-Item .output/public docs -Recurse"
+    "postbuild": "rimraf docs && cpx \".output/public/**/*\" docs"
   },
   "dependencies": {
     "nuxt": "^4.2.2",
     "vue": "^3.5.26",
     "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "rimraf": "^6.1.2"
   }
 }
