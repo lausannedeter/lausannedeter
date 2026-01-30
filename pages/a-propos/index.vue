@@ -49,13 +49,13 @@
                                         prenants
                                         place dans la région.
 
-                                        Par cette agenda nous souhaitons mettre en avant ces événements afin de les
+                                        Par cet agenda nous souhaitons mettre en avant ces événements afin de les
                                         rendre le
                                         plus accessible possible.
                                         <br><br>
                                         Nous pensons que rendre la lutte plus accessible, notamment par cet outil, nous
                                         permettra de faire
-                                        grossir toujours plus notre camp et de peser d’avantage dans la bataille
+                                        grossir toujours plus notre camp et de peser davantage dans la bataille
                                         matérielle
                                         et
                                         idéologique en
