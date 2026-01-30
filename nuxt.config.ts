@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-01-15',
   devtools: { enabled: true },
   app: {
-    baseURL: '/',
+    baseURL: '/lausannedeter/',
     head: {
       title: 'Lausanne Deter',
       meta: [
