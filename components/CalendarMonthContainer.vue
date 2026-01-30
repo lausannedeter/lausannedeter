@@ -24,7 +24,7 @@ const props = defineProps({
 
         <div v-if="affiche && affiche.link !== ''" class="download-link-container">
             <span class="link-text">
-                Télécharge <a class="link">l'agenda vresion pdf</a> et imprime le pour ton lieu co'
+                Télécharge <a class="link" :href="`/affiches/${affiche.link}`" download="">l'agenda vresion pdf</a> et imprime le pour ton lieu co'
             </span>
         </div>
 

@@ -39,7 +39,7 @@ const event = events.find(
         <div v-if="event.link" class="usefull-links">
             <h3 class="links-title">Liens utiles:</h3>
             <div class="links-container">
-                <a :href="event.link" class="link">{{ event.organizer }}</a>
+                <a :href="event.link" target="_blank" class="link">{{ event.organizer }}</a>
             </div>
         </div>
 
@@ -96,6 +96,7 @@ const event = events.find(
     font-size: 14px;
     width: 100%;
     white-space: pre-wrap;
+    text-transform: capitalize;
 }
 
 .usefull-links {
