@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "postbuild": "Remove-Item -Recurse -Force docs -ErrorAction SilentlyContinue; Copy-Item .output/public docs -Recurse"
   },
   "dependencies": {
     "nuxt": "^4.2.2",
