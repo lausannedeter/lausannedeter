@@ -4,8 +4,6 @@ const { categories, events, categoryMap, affiches } = useEvents()
 const EVENTS_LIMIT = 3
 const upcomingEvent = useUpcomingEvents(events, categoryMap, EVENTS_LIMIT)
     .map(normalizeEventDates)
-
-console.log(upcomingEvent)
 </script>
 
 <template>

@@ -15,8 +15,7 @@ const props = defineProps({
 
         <nuxt-link :to="`/calendrier/${event.slug}`" class="event-link">
             <div class="info-container"
-                :style="{ borderBottom: `3px solid ${event.categoryData.color}`, borderRight: `10px solid ${event.categoryData.color}` }"
-                @click="console.log(event.slug)">
+                :style="{ borderBottom: `3px solid ${event.categoryData.color}`, borderRight: `10px solid ${event.categoryData.color}` }">
                 <h3 class="event-title">{{ event.title }}</h3>
                 <div class="event-more-info">
                     <span>{{ event.organizer }} - {{ event.dayStart.toLocaleTimeString('fr-CH', {

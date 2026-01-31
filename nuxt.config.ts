@@ -19,12 +19,13 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   ssr: true,       
   nitro: {
+    preset: "static",
     prerender: {
       routes: [
         '/',
-        'calendrier',
-        'copaines',
-        'a-propos',
+        '/calendrier',
+        '/copaines',
+        '/a-propos',
         ...data.events.map(e => `/calendrier/${e.slug}`)
       ]     
     }
