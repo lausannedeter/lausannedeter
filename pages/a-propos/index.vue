@@ -1,6 +1,4 @@
 <script setup>
-
-
 </script>
 
 <template>
@@ -22,7 +20,7 @@
                                         curseur
                                         politique
                                         et qui se battent
-                                        contre le capitalisme et ses oppressions.
+                                        contre toute forme d'oppression.
                                         <br><br>
                                         Nous ne prenons pas un parti pris idéologique spéficique et considérons que
                                         l’important
