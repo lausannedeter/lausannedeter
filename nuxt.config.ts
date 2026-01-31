@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-01-15',
   devtools: { enabled: true },
   app: {
-    baseURL: '/lausannedeter/',
+    baseURL: '/',
     head: {
       title: 'Lausanne Deter',
       meta: [
@@ -19,7 +19,6 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   ssr: true,       
   nitro: {
-    preset: "static",
     prerender: {
       routes: [
         '/',
