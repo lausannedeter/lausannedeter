@@ -21,7 +21,7 @@ const upcomingEvent = useUpcomingEvents(events, categoryMap, EVENTS_LIMIT)
                     Ici, nous visibilisons toutes les luttes qui se placent à gauche du curseur politique
                     et qui
                     se battent
-                    contre le capitalisme et ses oppressions.
+                    contre toute forme d'oppression.
                     <br>
                     <br>
                     Découvrez où et quand les luttes romandes s’organisent!
