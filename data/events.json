@@ -71,14 +71,14 @@
         },
         {
             "id": 4,
-            "title": "Tournoi de foot d'EaG",
+            "title": "Jouons pour une ville solidaire et anticapitaliste!",
             "slug": "tournoi-de-foot-eag-2026-02-28",
-            "description": "Tournoi de foot d'EaG pour les communales",
+            "description": "Tournoi de foot d'EaG pour les communales.",
             "startDate": "2026-02-28T14:00",
             "endDate": "2026-02-28T20:00",
             "organizer": "Ensemble à Gauche",
             "image": "eag.jpg",
-            "location": "parc sportif du Censuy",
+            "location": "Stade rue de Verdeaux, Renens",
             "link": "https://www.instagram.com/eag_vaud/",
             "category": "manifs",
             "status": ""
