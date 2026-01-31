@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "postbuild": "rimraf docs && cpx \".output/public/**/*\" docs"
+    "postbuild": "rimraf docs && cpx \".output/public/**/*\" docs && echo.> docs\\.nojekyll && echo lausannedeter.ch> docs\\CNAME"
   },
   "dependencies": {
     "nuxt": "^4.2.2",
