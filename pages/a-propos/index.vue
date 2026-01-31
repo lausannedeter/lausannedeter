@@ -29,7 +29,7 @@
                                         événements nous
                                         rendra
                                         plus fort, car
-                                        c’est par le nombre que nous mettrons fin au capitalisme.
+                                        c’est par le nombre que nous mettrons fin aux oppressions systémiques.
                                 </p>
                         </div>
                 </div>

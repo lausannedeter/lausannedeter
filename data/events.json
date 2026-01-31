@@ -519,15 +519,15 @@
         },
         {
             "id": 37,
-            "title": "Projection La transformation de la classe ouvrière en étrangers",
-            "slug": "projection-la-transformation-de-la-classe-ouvriere-en-etrangers-2026-02-15",
-            "description": "Projection La transformation de la classe ouvrière en étrangers.",
-            "startDate": "2026-02-15T17:00",
-            "endDate": "2026-02-15T23:59",
-            "organizer": "des gens deter",
-            "image": "event.png",
-            "location": "Buvette de la salle de spectacles de Renens",
-            "link": "",
+            "title": "L’AMOUR AUTOTUNÉ X TENDINITES DJ SET X MAISONBAHOUI ALL STARS",
+            "slug": "lamour-autotune-tendinites-dj-set-maisonbahoui-all-stars-2026-02-15",
+            "description": "Après le succès retentissant de l’édition 2025, Les tendinites et l’écurie Maison Bah Oui reviennent avec un karaoké dont seuls elleux en ont la recette. Venez fêter l’amour tout en brillant comme une Star. C’est sur scène, face à une foule délirante que vous pourrez nous auto-tuner vos tubes préférés, pour ainsi vivre votre moment de fame ultime, et, qui sait, peut être taper dans l’oeil de votre futur star. Cette soirée est présentée par les Tendinites et Maison Bah Oui ♡\n\n✹ INFOS ✹\nDATE : 14 FÉVRIER 2026\nPORTES 23:00\nTARIF NORMAL: CHF 10.-\nPRIX DE SOUTIEN: CHF 15.-\nCARTE PLASTINIUM / CARTE CULTURE : CHF 5.-\nUNIQUEMENT EN CAISSE DU SOIR",
+            "startDate": "2026-02-14T23:00",
+            "endDate": "2026-02-14T23:59",
+            "organizer": "Les Tendinites et Maison Bah Oui",
+            "image": "tendinitesxbahoui.jpg",
+            "location": "Le Romandie",
+            "link": "https://www.instagram.com/p/DTsCMxVjc4l/?hl=fr&img_index=1",
             "category": "soirees",
             "status": ""
         },
@@ -635,7 +635,7 @@
             "id": 1,
             "monthStart": "2026-02-01",
             "monthLabel": "Février",
-            "link": ""
+            "link": "lausannedeter-Affiche_Février.pdf"
         }
     ]
 }
