@@ -96,7 +96,6 @@ const event = events.find(
     font-size: 14px;
     width: 100%;
     white-space: pre-wrap;
-    text-transform: capitalize;
 }
 
 .usefull-links {

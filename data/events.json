@@ -702,7 +702,7 @@
         {
             "id": 50,
             "title": "Tattoo uprising for Palestine",
-            "slug": "-2026-02-21",
+            "slug": "tattoo-uprising-for-palestine-2026-02-21",
             "description": "LAUSANNE TATTOO UPRISING FOR PALESTINE \n21.02.26\nOn est heureux.se de pouvoir enfin vous présenter ce projet, un flashday dont l’ensemble des bénéfices seront reversés à @kheirproject , qu’on remercie pour leur confiance !\nLe génocide étant toujours en cours, on compte sur vous pour noter la date.\n\nUn grand merci à @edel_cafe de nous accueillir et de nous faire confiance. \nMerci aux artistes de nous offrir leur temps et leur art pour cette cause qui nous tiens tous.tes.x à cœur:\n@tattootespieds \n@kammerheittt \n@kitatts \n@dirtyrandytattoo \n@penzingoo \n@bootattoo_ \n\nMerci à @rutix_nitro pour l’affiche, merci à @memoriestore.ch pour l’aide avec les tee-shirt et mille merci à @habibe.barhoom pour l’aide à l’organisation et ses précieux conseils.\n\nLe jour j, pas de rendez-vous, premiers.es.x arrivés premiers.re.x servis pour les tattoos et pour celleux qui ne veulent pas de tattoo il y’aura des tee shirts inédits et des tirages de ce flyer disponibles et dont les bénéfices partiront également dans la cagnotte. \nEt si vous trouvez pas votre bonheur dans tous ça, une partie des bénéfices sur vos consommations de la journée sera également versé dans la cagnotte par @edel_cafe donc quitte à boire du café ce jour là, autant le faire avec nous! \n\nOn se réjouis de vous y voir, hésitez pas à donner plein de force digitale à ce post, mais aussi à tous les posts qui concernent la situation en Palestine, gardez vos yeux ouverts et continuez de vous mobiliser ❤️\n\nFREE PALESTINE",
             "startDate": "2026-02-21T11:00",
             "endDate": "2026-02-21T19:00",
@@ -712,6 +712,48 @@
             "link": "https://www.instagram.com/p/DUTWRCxiC9F/",
             "category": "confs",
             "status": ""
+        },
+        {
+            "id": 51,
+            "title": "Stand LSCV dans le cadre de la Semaine de la durabilité",
+            "slug": "stand-lscv-semaine-de-la-durabilité-2026-03-02",
+            "description": "Stand du LSCV à l'UNIL dans le cadre de la Semaine de la durabilité.",
+            "startDate": "2026-03-02T11:00",
+            "endDate": "2026-03-02T16:00",
+            "organizer": "Ligue Suisse contre l'expérimentation animale et pour les droits des animaux",
+            "image": "",
+            "location": "UNIL",
+            "link": "https://www.lscv.ch/",
+            "category": "confs",
+            "status": ""
+        },
+        {
+            "id": 52,
+            "title": "Stand LSCV dans le cadre de la Semaine de la durabilité",
+            "slug": "stand-lscv-semaine-de-la-durabilité-2026-03-05",
+            "description": "Stand du LSCV à l'EPFL dans le cadre de la Semaine de la durabilité.",
+            "startDate": "2026-03-05T11:00",
+            "endDate": "2026-03-05T16:00",
+            "organizer": "Ligue Suisse contre l'expérimentation animale et pour les droits des animaux",
+            "image": "",
+            "location": "EPFL",
+            "link": "https://www.lscv.ch/",
+            "category": "confs",
+            "status": ""
+        },
+        {
+            "id": 53,
+            "title": "Journée d'action contre le test de nage forcée",
+            "slug": "journee-action-contre-le-test-de-nage-forcee-2026-03-05",
+            "description": "Réserve la date !\nLe 9 mai 2026, la LSCV organise une grande journée d'action à Lausanne, dans le cadre de sa campagne contre le test cruel de nage forcée, mené dans les laboratoires de l'Université de Lausanne et de l'EPFL !\n\nLe programme définitif sera mis en ligne prochainement, mais voici ce que l'on peut déjà vous dire :\n\nRDV dès 11h à Pôle Sud (Av. Jean-Jacques Mercier 3, Lausanne) pour :\n🥐 Un délicieux brunch végane concocté par la boulangerie végétale Aux Pains Sans Peines & Vege'tables\n🖌️ Le vernissage d'une exposition d'artistes antispécistes qui sera installée durant 3 semaines sur place\n📢 Dès 14h : Grande manif dans les rues de Lausanne et prises de parole de personnalités politiques et/ou animalistes\n\nRetour à Pôle Sud pour :\n🔬 Une table ronde avec des scientifiques et élu·e·s qui soutiennent la campagne contre le test de nage forcée\n🐾 Une discussion avec d'autres associations de défense des droits des animaux actives dans la lutte contre l'expérimentation animale\n🎶 Une soirée festive et engagée (humour, concerts...)\n\n- - - - - - -\n\nSi vous souhaitez rejoindre l'équipe de bénévoles, merci de nous contacter par mail : a.python@LSCV.ch ou au 079 275 46 52.\nMerci de partager l'événement partout autour de vous 🐱\nNous nous réjouissons de vous y voir et dénoncer ensemble ces expériences cruelles ! ✊🏽\n\n- - - - - - -\n\nEn attendant : MERCI DE SIGNER & PARTAGER notre pétition contre le test de nage forcée PARTOUT AUTOUR DE TOI !\n\n> https://www.lscv.ch/non-test-cruel-nage-forcee/",
+            "startDate": "2026-05-09T10:30",
+            "endDate": "2026-05-09T21:00",
+            "organizer": "Ligue Suisse contre l'expérimentation animale et pour les droits des animaux",
+            "image": "lscv-journee-action.png",
+            "location": "Lausanne",
+            "link": "https://www.facebook.com/events/s/journee-daction-manif-a-lausan/1407493101029524/?rdid=h4jXTdckRehgB0Ep&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17jdLXS9N4%2F",
+            "category": "manifs",
+            "status": ""
         }
     ],
     "affiches": [
@@ -720,6 +762,12 @@
             "monthStart": "2026-02-01",
             "monthLabel": "Février",
             "link": "lausannedeter-Affiche_Février.pdf"
+        },
+        {
+            "id": 2,
+            "monthStart": "2026-03-01",
+            "monthLabel": "Mars",
+            "link": ""
         }
     ]
 }
