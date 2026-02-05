@@ -34,7 +34,7 @@ const event = events.find(
 
         <img v-if="event.image" :src="`/event/${event.image}`" :alt="event.title" class="event-image">
 
-        <p class="event-description">{{ event.description }}</p>
+        <p class="event-description" v-html="event.description"></p>
 
         <div v-if="event.link" class="usefull-links">
             <h3 class="links-title">Liens utiles:</h3>
@@ -96,6 +96,10 @@ const event = events.find(
     font-size: 14px;
     width: 100%;
     white-space: pre-wrap;
+}
+
+.event-description :deep(a) {
+    text-decoration: underline;
 }
 
 .usefull-links {
