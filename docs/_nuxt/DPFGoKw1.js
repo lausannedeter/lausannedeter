@@ -1,0 +1,1 @@
+import{_ as o,c as s,a as t,o as c}from"./CJPKFtVY.js";const n={},r={class:"collectifs-page"};function a(i,e){return c(),s("section",r,[...e[0]||(e[0]=[t("p",null,"Arrive prochainement...",-1)])])}const _=o(n,[["render",a]]);export{_ as default};
