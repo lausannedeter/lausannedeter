@@ -839,6 +839,20 @@
             "category": "soirees",
             "status": ""
         }
+        {
+        "id": 60,
+            "title": "CARNAVAL ANTIFASCISTE",
+            "slug": "CARNAVAL-2026-03-28",
+            "description": "",
+            "startDate": "2026-03-28T15:00",
+            "endDate": "2026-03-28T21:00",
+            "organizer": "Carnaval populaire et deter",
+            "image": "",
+            "location": "Lieu Secret",
+            "link": "",
+            "category": "manifs",
+            "status": ""
+            }
     ],
     "affiches": [
         {
