@@ -57,13 +57,13 @@
         },
         {
             "id": 3,
-            "title": "Soutien au carnaval populaire et deter",
-            "slug": "soutien-au-carnaval-2026-02-21",
-            "description": "Soutien au carnaval populaire et deter",
+            "title": "Florytëk, soirée de soutien au carnaval populaire et deter",
+            "slug": "florytek-soiree-soutien-au-carnaval-2026-02-21",
+            "description": "",
             "startDate": "2026-02-21T22:00",
             "endDate": "2026-02-21T23:59",
             "organizer": "Grondement des terres",
-            "image": "",
+            "image": "florytek.jpeg",
             "location": "Lieu Secret",
             "link": "",
             "category": "soirees",
@@ -157,13 +157,13 @@
             "id": 10,
             "title": "Conference - Débat avec l'Association Perirasude et Projection du film architecton",
             "slug": "association-perirasude-2026-02-27",
-            "description": "Conference - Debat avec l'Association Perirasude et Projection du film architecton",
-            "startDate": "2026-02-27T18:00",
+            "description": "🌲DÉBAT& PROJECTION🌲\n\n🍃Comment (ne pas) construire ?\nL’opposition au projet de la Rasude à Lausanne permet d’ouvrir une discussion sur la nécessité (ou pas) de construire, dans un contexte où le secteur du bâtiment est extractiviste, ultra polluant et produit des projets parfois obsolètes dès leur livraison.\n\nDiscussion avec Silvia Egger, présidente de Perirasude, et Tiphaine Abenia, Chaire Cultures Constructives de l’Université Libre de Bruxelles, suivie de la projection du film Architecton !\n\n🕰 Vendredi 27.02 à 18h30\n📍 Pôle Sud Av. Jean-Jacques Mercier 3, 1003 Lausanne\n💸Prix libre (conseillé : 10.–)\n\nPROJECTION EN VOST ANGLAIS\n\n🧑‍💻 graphisme @niels_wehrspann",
+            "startDate": "2026-02-27T18:30",
             "endDate": "2026-02-27T23:59",
             "organizer": "Ensemble à Gauche Lausanne",
-            "image": "",
+            "image": "perirasude-projection.jpg",
             "location": "Pôle sud",
-            "link": "https://www.instagram.com/p/DUJMeIMjJZk/",
+            "link": "https://www.instagram.com/p/DUdspQPjHij/",
             "category": "confs",
             "status": ""
         },
@@ -838,11 +838,11 @@
             "link": "https://lecinematographe.ticketack.com/screening/buy/ebc51220-c837-440b-9749-098b7a5efa90",
             "category": "soirees",
             "status": ""
-        }
+        },
         {
-        "id": 60,
+            "id": 60,
             "title": "CARNAVAL ANTIFASCISTE",
-            "slug": "CARNAVAL-2026-03-28",
+            "slug": "carnaval-2026-03-28",
             "description": "",
             "startDate": "2026-03-28T15:00",
             "endDate": "2026-03-28T21:00",
@@ -852,7 +852,49 @@
             "link": "",
             "category": "manifs",
             "status": ""
-            }
+        },
+        {
+            "id": 61,
+            "title": "Soirée de soutien au contre-sommet de Stop Pillage",
+            "slug": "stop-pillage-contre-sommet-2026-03-07",
+            "description": "En avril 2026 aura lieu le sommet international du commerce des matières premières réunissant négociants et financiers à Lausanne.\n\nParce qu'il est temps de s'organiser contre les magnates de ce marché et de lutter contre l'accaparement des ressources communes et la destruction de la vie sur terre, Stop Pillage organise aussi son sommet.\n\nRendez-vous le samedi 7 mars à la soirée de soutien au financement de cet évènement!\n\nLausanne, lieu secret.\n\nCash only, prix libre.",
+            "startDate": "2026-03-07T19:00",
+            "endDate": "2026-03-07T23:59",
+            "organizer": "Stop Pillage",
+            "image": "stop-pillage-contre-sommet.webp",
+            "location": "Lieu Secret",
+            "link": "https://www.instagram.com/p/DUlkCz5gkQC/?hl=fr&img_index=1",
+            "category": "soirees",
+            "status": ""
+        },
+        {
+            "id": 62,
+            "title": "Super lotogéré en soutien au Carnaval populaire et deter",
+            "slug": "lotogere-soutien-carnaval-populaire-deter-2026-03-01",
+            "description": "",
+            "startDate": "2026-03-01T15:00",
+            "endDate": "2026-03-01T20:00",
+            "organizer": "Carnaval populaire et deter",
+            "image": "lotogere.png",
+            "location": "Pôle sud",
+            "link": "",
+            "category": "soirees",
+            "status": ""
+        },
+        {
+            "id": 63,
+            "title": "Journée internationale des luttes féministes",
+            "slug": "journee-internationale-luttes-feministes-greve-feministe-lausanne-2026-03-07",
+            "description": "📢MANIFESTATION 📢\n\nSamedi 7 mars\n15h\n\nPlace de la cathédrale\nLausanne\n\n🔥 Féministes contre les guerres impérialistes 🔥",
+            "startDate": "2026-03-07T15:00",
+            "endDate": "2026-03-07T20:00",
+            "organizer": "Grève Féministe",
+            "image": "manif-greve-feministe.jpg",
+            "location": "Cathédrale de Lausanne",
+            "link": "https://www.instagram.com/p/DUvtkiyjDNs/?hl=fr&img_index=1",
+            "category": "manifs",
+            "status": ""
+        }
     ],
     "affiches": [
         {
