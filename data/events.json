@@ -38,8 +38,7 @@
             "image": "polesud.jpg",
             "location": "Pôle sud",
             "link": "https://polesud.ch/evenement/tant-quil-y-aura-des-prisons/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 2,
@@ -52,8 +51,7 @@
             "image": "",
             "location": "Lieu Secret",
             "link": "https://www.instagram.com/justicepourmike/",
-            "category": "soirees",
-            "status": ""
+            "category": "soirees"
         },
         {
             "id": 3,
@@ -66,8 +64,7 @@
             "image": "florytek.jpeg",
             "location": "Lieu Secret",
             "link": "",
-            "category": "soirees",
-            "status": ""
+            "category": "soirees"
         },
         {
             "id": 4,
@@ -80,8 +77,7 @@
             "image": "tournoi-de-foot-eag.jpg",
             "location": "Stade rue de Verdeaux, Renens",
             "link": "https://www.instagram.com/p/DUYq0dajBzD/?hl=fr&img_index=1",
-            "category": "manifs",
-            "status": ""
+            "category": "manifs"
         },
         {
             "id": 5,
@@ -94,8 +90,7 @@
             "image": "loto_surgir.webp",
             "location": "Casino de Montbenon",
             "link": "https://www.instagram.com/p/DT0hBuxAkDB/",
-            "category": "soirees",
-            "status": ""
+            "category": "soirees"
         },
         {
             "id": 6,
@@ -108,22 +103,20 @@
             "image": "",
             "location": "Cylure",
             "link": "",
-            "category": "soirees",
-            "status": ""
+            "category": "soirees"
         },
         {
             "id": 7,
-            "title": "soirée à la Tortue (Ge)",
-            "slug": "soiree-a-la-tortue-2026-03-07",
-            "description": "soirée à la Tortue (Ge) par Stalingrad et l'altitude(carnaval populaire et deter) ",
-            "startDate": "2026-03-07T21:00",
+            "title": "Soirée en soutien au Carnaval populaire et deter",
+            "slug": "soiree-soutien-carnaval-populaire-deter-2026-03-07",
+            "description": "Bam ! Le karnaval antifa populaire et deter de Lausanne se prépare gentiment et il a besoin de soutien ! Viens faire la fête le 7 mars pour profiter d’une double stage en inte à Genève, en compagnie des camaradexs de L’Atitude\nLa soirée démarrera avec des concerts puis on s’occupe de la scène dub/bass music tandis que la tekno vous sera servie par les camaradexs\nTu connais la sauce c’est prix libre conseillé 10f et si tu veux savoir ou c’est ou si t’es chaudexs de staffer envoie un mess en mp",
+            "startDate": "2026-03-07T22:00",
             "endDate": "2026-03-07T23:59",
-            "organizer": "Stalingrad et l'altitude",
-            "image": "",
-            "location": "Tortue (Ge)",
-            "link": "",
-            "category": "soirees",
-            "status": ""
+            "organizer": "Stalingrad et l'Atitude",
+            "image": "stalingrad-atitude-carnaval.jpg",
+            "location": "GE, lieu secret",
+            "link": "https://www.instagram.com/p/DU5aIa1gltR/?hl=fr",
+            "category": "soirees"
         },
         {
             "id": 8,
@@ -136,8 +129,7 @@
             "image": "",
             "location": "Lieu Secret",
             "link": "",
-            "category": "soirees",
-            "status": ""
+            "category": "soirees"
         },
         {
             "id": 9,
@@ -150,8 +142,7 @@
             "image": "",
             "location": "Espace public",
             "link": "",
-            "category": "manifs",
-            "status": ""
+            "category": "manifs"
         },
         {
             "id": 10,
@@ -164,8 +155,7 @@
             "image": "perirasude-projection.jpg",
             "location": "Pôle sud",
             "link": "https://www.instagram.com/p/DUdspQPjHij/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 11,
@@ -178,8 +168,7 @@
             "image": "droitderester.jpg",
             "location": "Maison de Quartier Sous-Gare",
             "link": "https://www.instagram.com/droitderester/",
-            "category": "perma",
-            "status": ""
+            "category": "perma"
         },
         {
             "id": 12,
@@ -192,8 +181,7 @@
             "image": "droitderester.jpg",
             "location": "Maison de Quartier Sous-Gare",
             "link": "https://www.instagram.com/droitderester/",
-            "category": "perma",
-            "status": ""
+            "category": "perma"
         },
         {
             "id": 13,
@@ -206,8 +194,7 @@
             "image": "droitderester.jpg",
             "location": "Maison de Quartier Sous-Gare",
             "link": "https://www.instagram.com/droitderester/",
-            "category": "perma",
-            "status": ""
+            "category": "perma"
         },
         {
             "id": 14,
@@ -220,8 +207,7 @@
             "image": "droitderester.jpg",
             "location": "Maison de Quartier Sous-Gare",
             "link": "https://www.instagram.com/droitderester/",
-            "category": "perma",
-            "status": ""
+            "category": "perma"
         },
         {
             "id": 15,
@@ -234,8 +220,7 @@
             "image": "eag_party.jpeg",
             "location": "La Datcha",
             "link": "https://www.instagram.com/p/DTm5FrbjHyG/?hl=fr",
-            "category": "soirees",
-            "status": ""
+            "category": "soirees"
         },
         {
             "id": 16,
@@ -248,8 +233,7 @@
             "image": "freerojava.webp",
             "location": "Bern",
             "link": "https://www.instagram.com/p/DUGEeRjjSvu/",
-            "category": "manifs",
-            "status": ""
+            "category": "manifs"
         },
         {
             "id": 17,
@@ -262,8 +246,7 @@
             "image": "eag-dragshow.jpg",
             "location": "Base bar",
             "link": "https://www.instagram.com/p/DUOADxUDFwp/?hl=fr&img_index=1",
-            "category": "soirees",
-            "status": ""
+            "category": "soirees"
         },
         {
             "id": 18,
@@ -276,8 +259,7 @@
             "image": "axecycle.jpg",
             "location": "Place de la Riponne 10",
             "link": "https://www.instagram.com/axecycle/",
-            "category": "perma",
-            "status": ""
+            "category": "perma"
         },
         {
             "id": 19,
@@ -290,8 +272,7 @@
             "image": "axecycle.jpg",
             "location": "Place de la Riponne 10",
             "link": "https://www.instagram.com/axecycle/",
-            "category": "perma",
-            "status": ""
+            "category": "perma"
         },
         {
             "id": 20,
@@ -304,8 +285,7 @@
             "image": "axecycle.jpg",
             "location": "Place de la Riponne 10",
             "link": "https://www.instagram.com/axecycle/",
-            "category": "perma",
-            "status": ""
+            "category": "perma"
         },
         {
             "id": 21,
@@ -318,8 +298,7 @@
             "image": "axecycle.jpg",
             "location": "Place de la Riponne 10",
             "link": "https://www.instagram.com/axecycle/",
-            "category": "perma",
-            "status": ""
+            "category": "perma"
         },
         {
             "id": 22,
@@ -332,8 +311,7 @@
             "image": "axecycle.jpg",
             "location": "Place de la Riponne 10",
             "link": "https://www.instagram.com/axecycle/",
-            "category": "perma",
-            "status": ""
+            "category": "perma"
         },
         {
             "id": 23,
@@ -346,8 +324,7 @@
             "image": "axecycle.jpg",
             "location": "Place de la Riponne 10",
             "link": "https://www.instagram.com/axecycle/",
-            "category": "perma",
-            "status": ""
+            "category": "perma"
         },
         {
             "id": 24,
@@ -360,8 +337,7 @@
             "image": "axecycle.jpg",
             "location": "Place de la Riponne 10",
             "link": "https://www.instagram.com/axecycle/",
-            "category": "perma",
-            "status": ""
+            "category": "perma"
         },
         {
             "id": 26,
@@ -374,8 +350,7 @@
             "image": "axecycle.jpg",
             "location": "Place de la Riponne 10",
             "link": "https://www.instagram.com/axecycle/",
-            "category": "perma",
-            "status": ""
+            "category": "perma"
         },
         {
             "id": 27,
@@ -388,8 +363,7 @@
             "image": "cantine.jpg",
             "location": "Lieu Secret",
             "link": "",
-            "category": "bouffespop",
-            "status": ""
+            "category": "bouffespop"
         },
         {
             "id": 28,
@@ -402,8 +376,7 @@
             "image": "lachoral.jpg",
             "location": "Lieu Secret",
             "link": "https://lachorale.ch/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 29,
@@ -416,8 +389,7 @@
             "image": "lachoral.jpg",
             "location": "Lieu Secret",
             "link": "https://lachorale.ch/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 30,
@@ -430,8 +402,7 @@
             "image": "lachoral.jpg",
             "location": "Lieu Secret",
             "link": "https://lachorale.ch/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 31,
@@ -444,8 +415,7 @@
             "image": "lachoral.jpg",
             "location": "Lieu Secret",
             "link": "https://lachorale.ch/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 32,
@@ -458,8 +428,7 @@
             "image": "lachoral.jpg",
             "location": "Lieu Secret",
             "link": "https://lachorale.ch/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 33,
@@ -472,8 +441,7 @@
             "image": "lachoral.jpg",
             "location": "Lieu Secret",
             "link": "https://lachorale.ch/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 34,
@@ -486,8 +454,7 @@
             "image": "lachoral.jpg",
             "location": "Lieu Secret",
             "link": "https://lachorale.ch/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 35,
@@ -500,8 +467,7 @@
             "image": "lachoral.jpg",
             "location": "Lieu Secret",
             "link": "https://lachorale.ch/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 36,
@@ -514,8 +480,7 @@
             "image": "lachoral.jpg",
             "location": "Lieu Secret",
             "link": "https://lachorale.ch/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 37,
@@ -528,8 +493,7 @@
             "image": "tendinitesxbahoui.jpg",
             "location": "Le Romandie",
             "link": "https://www.instagram.com/p/DTsCMxVjc4l/?hl=fr&img_index=1",
-            "category": "soirees",
-            "status": ""
+            "category": "soirees"
         },
         {
             "id": 38,
@@ -542,8 +506,7 @@
             "image": "autoformation-hep.png",
             "location": "Avenue de Cours 33",
             "link": "",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 39,
@@ -556,8 +519,7 @@
             "image": "",
             "location": "parc de Montbenon",
             "link": "",
-            "category": "manifs",
-            "status": ""
+            "category": "manifs"
         },
         {
             "id": 40,
@@ -570,8 +532,7 @@
             "image": "la-valencienne-repas.jpeg",
             "location": "Centre socioculturel, rue de Renens 12C",
             "link": "",
-            "category": "bouffespop",
-            "status": ""
+            "category": "bouffespop"
         },
         {
             "id": 41,
@@ -584,8 +545,7 @@
             "image": "la-valencienne-repas.jpeg",
             "location": "Centre socioculturel, rue de Renens 12C",
             "link": "",
-            "category": "bouffespop",
-            "status": ""
+            "category": "bouffespop"
         },
         {
             "id": 42,
@@ -598,8 +558,7 @@
             "image": "la-valencienne-repas.jpeg",
             "location": "Centre socioculturel, rue de Renens 12C",
             "link": "",
-            "category": "bouffespop",
-            "status": ""
+            "category": "bouffespop"
         },
         {
             "id": 43,
@@ -612,8 +571,7 @@
             "image": "la-valencienne-repas.jpeg",
             "location": "Centre socioculturel, rue de Renens 12C",
             "link": "",
-            "category": "bouffespop",
-            "status": ""
+            "category": "bouffespop"
         },
         {
             "id": 44,
@@ -626,8 +584,7 @@
             "image": "mon-oeil-podcast.png",
             "location": "salle du Cazard, Lausanne",
             "link": "https://responsabilite-multinationales.ch/podcast/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 45,
@@ -640,8 +597,7 @@
             "image": "droitderester-manif06-02.jpg",
             "location": "rue Caroline 11, 1014 Lausanne",
             "link": "https://www.instagram.com/p/DULQjp8DDL1/",
-            "category": "manifs",
-            "status": ""
+            "category": "manifs"
         },
         {
             "id": 46,
@@ -654,8 +610,7 @@
             "image": "AFZ.webp",
             "location": "Pôle Sud",
             "link": "https://www.instagram.com/p/DULq23bDTfZ/?hl=fr&img_index=1",
-            "category": "soirees",
-            "status": ""
+            "category": "soirees"
         },
         {
             "id": 47,
@@ -668,8 +623,7 @@
             "image": "lauspal-playbook.jpg",
             "location": "La Fraternité, place Arlaud 2, 1003 Lausanne",
             "link": "https://www.instagram.com/p/DURAsRhjG21/?hl=fr&img_index=1",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 48,
@@ -682,8 +636,7 @@
             "image": "",
             "location": "Maison du Peuple",
             "link": "",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 49,
@@ -696,8 +649,7 @@
             "image": "defend-rojava-manif-07.02.jpg",
             "location": "Plaine de Plainpalais",
             "link": "https://www.instagram.com/p/DUVLfibjHlT/?hl=fr",
-            "category": "manifs",
-            "status": ""
+            "category": "manifs"
         },
         {
             "id": 50,
@@ -710,8 +662,7 @@
             "image": "tatto-uprising.jpg",
             "location": "Edel Café, Avenue d'Echallens 121, 1004 Lausanne",
             "link": "https://www.instagram.com/p/DUTWRCxiC9F/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 51,
@@ -724,8 +675,7 @@
             "image": "",
             "location": "UNIL",
             "link": "https://www.lscv.ch/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 52,
@@ -738,8 +688,7 @@
             "image": "",
             "location": "EPFL",
             "link": "https://www.lscv.ch/",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 53,
@@ -752,8 +701,7 @@
             "image": "lscv-journee-action.png",
             "location": "Lausanne",
             "link": "https://www.facebook.com/events/s/journee-daction-manif-a-lausan/1407493101029524/?rdid=h4jXTdckRehgB0Ep&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17jdLXS9N4%2F",
-            "category": "manifs",
-            "status": ""
+            "category": "manifs"
         },
         {
             "id": 54,
@@ -766,8 +714,7 @@
             "image": "courrier-ouvrons-le-debat-12-02.jpg",
             "location": "Espace Dickens, Av. Charles Dickens 4, Lausanne",
             "link": "https://www.espace-dickens.ch/agenda/1337",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 55,
@@ -780,8 +727,7 @@
             "image": "cantine.jpg",
             "location": "Lieu Secret",
             "link": "",
-            "category": "bouffespop",
-            "status": ""
+            "category": "bouffespop"
         },
         {
             "id": 56,
@@ -794,8 +740,7 @@
             "image": "cantine.jpg",
             "location": "Lieu Secret",
             "link": "",
-            "category": "bouffespop",
-            "status": ""
+            "category": "bouffespop"
         },
         {
             "id": 57,
@@ -808,8 +753,7 @@
             "image": "cantine.jpg",
             "location": "Lieu Secret",
             "link": "",
-            "category": "bouffespop",
-            "status": ""
+            "category": "bouffespop"
         },
         {
             "id": 58,
@@ -822,8 +766,7 @@
             "image": "marche-caritatif-gaza.jpg",
             "location": "Pôle Sud",
             "link": "https://www.instagram.com/p/DUgSrchjCj0/?hl=fr&img_index=1",
-            "category": "confs",
-            "status": ""
+            "category": "confs"
         },
         {
             "id": 59,
@@ -836,8 +779,7 @@
             "image": "contre-soiree-jamal-ouazzazi.webp",
             "location": "Le Cinematographe, au rez inférieur gauche du Casino, All. Ernest-Ansermet 3, 1003 Lausanne",
             "link": "https://lecinematographe.ticketack.com/screening/buy/ebc51220-c837-440b-9749-098b7a5efa90",
-            "category": "soirees",
-            "status": ""
+            "category": "soirees"
         },
         {
             "id": 60,
@@ -850,8 +792,7 @@
             "image": "",
             "location": "Lieu Secret",
             "link": "",
-            "category": "manifs",
-            "status": ""
+            "category": "manifs"
         },
         {
             "id": 61,
@@ -864,22 +805,20 @@
             "image": "stop-pillage-contre-sommet.webp",
             "location": "Lieu Secret",
             "link": "https://www.instagram.com/p/DUlkCz5gkQC/?hl=fr&img_index=1",
-            "category": "soirees",
-            "status": ""
+            "category": "soirees"
         },
         {
             "id": 62,
             "title": "Super lotogéré en soutien au Carnaval populaire et deter",
             "slug": "lotogere-soutien-carnaval-populaire-deter-2026-03-01",
-            "description": "",
+            "description": "🐱🐱🐱 Super Lotogéré 🐱🐱\n📆 Dim 1 mars I 16:00 - 18:00\n📍 Pôle Sud, salle Gibraltar (accessible PMR)\n\nLe Carnaval populaire & déter est de retour 28 mars 2026 dans les rues de Lausanne !\n\nAprès le franc succès du Lotogéré l’an passé, on remet ça le dimanche 1er mars 2026 pour vous faire gagner des super lots tout en construisant une caisse de soutien pour le carnaval.\n\nOn vous attend dès 15h pour manger des crêpes et jouer au loto entre 16h et 18h.\n\n15h : ouverture des portes\n16h – 18h : loto prix libre et crêpes",
             "startDate": "2026-03-01T15:00",
-            "endDate": "2026-03-01T20:00",
+            "endDate": "2026-03-01T22:00",
             "organizer": "Carnaval populaire et deter",
             "image": "lotogere.png",
             "location": "Pôle sud",
-            "link": "",
-            "category": "soirees",
-            "status": ""
+            "link": "https://www.instagram.com/p/DU1NehcjwI1/?hl=fr",
+            "category": "soirees"
         },
         {
             "id": 63,
@@ -892,8 +831,46 @@
             "image": "manif-greve-feministe.jpg",
             "location": "Cathédrale de Lausanne",
             "link": "https://www.instagram.com/p/DUvtkiyjDNs/?hl=fr&img_index=1",
-            "category": "manifs",
-            "status": ""
+            "category": "manifs"
+        },
+        {
+            "id": 64,
+            "title": "Soirée de projection et discussion - A state of passion",
+            "slug": "soiree-projection-discussion-a-state-of-passion-2026-03-05",
+            "description": "Deuxième soirée de projection et discussion du film documentaire: A STATE OF PASSION 🇵🇸\n\nÀ Lausanne, au @lecinematographe_lausanne\nJeudi 5 Mars à 18:30\n\nSuivie d’une discussion avec @lausanne_palestine 🇵🇸",
+            "startDate": "2026-03-05T18:30",
+            "endDate": "2026-03-05T23:59",
+            "organizer": "Soignante.x.s pour la Palestine",
+            "image": "projection-laus-pal.jpg",
+            "location": "Le Cinematographe",
+            "link": "https://www.instagram.com/p/DUyOdSBCGLw/?hl=fr&img_index=1",
+            "category": "soirees"
+        },
+        {
+            "id": 65,
+            "title": "Rojava, Syrie : quelles alternatives pour le Moyen-Orient ?",
+            "slug": "rojava-syrie-quelles-alternatives-pour-le-moyen-orient-2026-02-24",
+            "description": "[⚠️Changement de salle : 2227⚠️]\nRojava, Syrie : quelles alternatives pour le Moyen-Orient ?\n\nMardi 24 février à 18H00, l'association @kurde.unil et le GRC organisent une discussion autour du Rojava. Pour en parler, nous invitons Joseph Daher, chercheur spécialiste du Moyen-Orient ; Rüstü Demirkaya, doctorant en sociologie politique (UNIGE) ; et Julien Berthod, militant de retour du Rojava.\n\nLa conférence a lieu à Géopolis, salle 2121, sous réserve de modification. En cas de changement, nous vous informerons sur nos réseaux.",
+            "startDate": "2026-02-24T18:00",
+            "endDate": "2026-02-24T23:59",
+            "organizer": "Groupe Regards Critiques",
+            "image": "grc-conf-kurde.webp",
+            "location": "UNIL, Géopolis - Salle 2227",
+            "link": "https://www.instagram.com/p/DU78sStiN5e/?hl=fr",
+            "category": "confs"
+        },
+        {
+            "id": 66,
+            "title": "Soirée de soutien pour la Grève Féministe",
+            "slug": "soiree-soutien-greve-feministe-2026-02-20",
+            "description": "",
+            "startDate": "2026-02-20T22:00",
+            "endDate": "2026-02-20T23:59",
+            "organizer": "Grève Féministe",
+            "image": "soiree-soutien-greve-fem.jfif",
+            "location": "Cylure, Lausanne",
+            "link": "",
+            "category": "soirees"
         }
     ],
     "affiches": [
