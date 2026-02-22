@@ -11,8 +11,8 @@
  *   SUPER_ADMIN_PASSWORD
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from "fs";
+import path from "path";
 
 const API_URL = process.env.API_URL?.replace(/\/$/, '');
 const EMAIL = process.env.SUPER_ADMIN_EMAIL;
