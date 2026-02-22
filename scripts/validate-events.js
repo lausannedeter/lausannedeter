@@ -4,8 +4,8 @@
  * Utilisé par le CI — exit 1 si invalide.
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from "fs";
+import path from "path";
 
 const DATA_FILE = path.resolve(__dirname, '../data/events.json');
 
