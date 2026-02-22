@@ -1,13 +1,14 @@
-import data from '~/data/events.json'
+import events from '~/data/events.json'
+import categories from '~/data/categories.json'
+import affiches from '~/data/affiches.json'
 
 export const useEvents = () => {
-  const categories = data.categories
   const categoryMap = createCategoryMap(categories)
 
   return {
     categories,
     categoryMap,
-    events: data.events,
-    affiches: data.affiches
+    events: events,
+    affiches: affiches
   }
 }

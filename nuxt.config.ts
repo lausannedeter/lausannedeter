@@ -1,4 +1,4 @@
-import data from './data/events.json'
+import events from './data/events.json'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -26,7 +26,7 @@ export default defineNuxtConfig({
         '/calendrier',
         '/copaines',
         '/a-propos',
-        ...data.events.map(e => `/calendrier/${e.slug}`)
+        ...events.map(e => `/calendrier/${e.slug}`)
       ]     
     }
   }

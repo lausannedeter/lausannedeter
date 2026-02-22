@@ -1,0 +1,27 @@
+    [
+      {
+        "id": "bouffespop",
+        "label": "Bouffes pop",
+        "color": "#FA41AE"
+      },
+      {
+        "id": "perma",
+        "label": "Permanences",
+        "color": "#FFBF00"
+      },
+      {
+        "id": "soirees",
+        "label": "Soirées, concerts, projections",
+        "color": "#F4BFDB"
+      },
+      {
+        "id": "confs",
+        "label": "Conférences, tables rondes, ateliers",
+        "color": "#90E0F3"
+      },
+      {
+        "id": "manifs",
+        "label": "Manifs, rassemblements, grêves",
+        "color": "#ACE894"
+      }
+    ]
