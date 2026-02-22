@@ -1,0 +1,45 @@
+name: CD — Sync events to API
+
+on:
+  push:
+    branches: [dev]
+    paths:
+      - data/events.json
+
+jobs:
+  sync-to-api:
+    name: Push events via API
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate events before sync
+        run: node scripts/validate-events.js
+
+      - name: Push events via API
+        env:
+          API_URL: ${{ secrets.API_URL }}
+          SUPER_ADMIN_EMAIL: ${{ secrets.SUPER_ADMIN_EMAIL }}
+          SUPER_ADMIN_PASSWORD: ${{ secrets.SUPER_ADMIN_PASSWORD }}
+        run: node scripts/sync-events-api.js push
+
+      - name: Check API health
+        env:
+          API_URL: ${{ secrets.API_URL }}
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" $API_URL/api/health)
+          if [ "$STATUS" != "200" ]; then
+            echo "❌ API health check failed (HTTP $STATUS)"
+            exit 1
+          fi
+          echo "✔ API is healthy"
