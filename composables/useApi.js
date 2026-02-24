@@ -7,8 +7,18 @@ export const useApi = () => {
     Authorization: `Bearer ${token.value}`
   })
 
-  const get = (endpoint, options = {}) =>
-    $fetch(endpoint, { baseURL, ...options })
+  const get = async (endpoint, options = {}) => {
+    try {
+      return await $fetch(endpoint, { baseURL, ...options });
+    } catch (err) {
+      console.warn(`L'API ne repond pas ${endpoint}, fallback vers les JSON`, err);
+      const { events, categories, affiches } = useEvents();
+      if (endpoint.endsWith('/events')) return events;
+      if (endpoint.endsWith('/categories')) return categories;
+      if (endpoint.endsWith('/affiches')) return affiches;
+      throw err;
+    }
+  };
 
   const post = (endpoint, body, options = {}) =>
     $fetch(endpoint, { baseURL, method: 'POST', body, headers: authHeaders(), ...options })
