@@ -1,10 +1,7 @@
 name: CD — Sync events to API
 
 on:
-  push:
-    branches: [dev]
-    paths:
-      - data/events.json
+  workflow_dispatch:
 
 jobs:
   sync-to-api:
