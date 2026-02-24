@@ -1,5 +1,13 @@
 <script setup>
-const { categories, events, categoryMap, affiches } = useEvents()
+// const { categories, events, categoryMap, affiches } = useEvents()
+const api = useApi()
+
+const { data: events } = await api.get('/api/events')
+
+const { data: categories } = await api.get('/api/categories')
+const categoryMap = createCategoryMap(categories)
+
+const { data: affiches } = await api.get('/api/affiches')
 
 const EVENTS_LIMIT = 3
 const upcomingEvent = useUpcomingEvents(events, categoryMap, EVENTS_LIMIT)

@@ -17,6 +17,11 @@ export default defineNuxtConfig({
     }
   },
   css: ['~/assets/css/main.css'],
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.NUXT_PUBLIC_API_URL || 'http://lsndeter.henzelin.com'
+    }
+  },
   ssr: true,       
   nitro: {
     preset: "static",

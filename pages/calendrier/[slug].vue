@@ -1,5 +1,6 @@
 <script setup>
-const { events } = useEvents()
+// const { events } = useEvents()
+const { events, pending, error } = await useFetch('/api/events')
 const route = useRoute()
 
 const event = events.find(
