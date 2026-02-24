@@ -1,6 +1,20 @@
 <script setup>
 /* ------------------------------ Gestion evenements ------------------------------------------- */
-const { categories, events, categoryMap, affiches } = useEvents()
+const api = useApi();
+
+const { data: _events } = await useAsyncData('events', () =>
+    api.get('/api/events'),
+);
+const events = _events.value.data ?? [];
+const { data: _categories } = await useAsyncData('categories', () =>
+    api.get('/api/categories'),
+);
+const categories = _categories.value.data ?? [];
+const { data: _affiches } = await useAsyncData('affiches', () =>
+    api.get('/api/affiches'),
+);
+const affiches = _affiches.value.data ?? [];
+const categoryMap = createCategoryMap(categories ?? []);
 
 const EVENTS_LIMIT = 50
 const upcomingEvents = useUpcomingEvents(events, categoryMap, EVENTS_LIMIT)

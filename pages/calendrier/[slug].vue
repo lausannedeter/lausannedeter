@@ -1,7 +1,14 @@
 <script setup>
-// const { events } = useEvents()
-const { events, pending, error } = await useFetch('/api/events')
-const route = useRoute()
+const api = useApi();
+
+const { data: _events } = await useAsyncData('events', () =>
+    api.get('/api/events'),
+);
+const events = _events.value.data ?? [];
+const { data: _categories } = await useAsyncData('categories', () =>
+    api.get('/api/categories'),
+);
+const route = useRoute();
 
 const event = events.find(
     e => e.slug === route.params.slug
