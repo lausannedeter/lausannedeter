@@ -12,11 +12,12 @@ export const useApi = () => {
       return await $fetch(endpoint, { baseURL, ...options });
     } catch (err) {
       console.warn(`L'API ne repond pas ${endpoint}, fallback vers les JSON`, err);
-      const { events, categories, affiches } = useEvents();
-      if (endpoint.endsWith('/events')) return events;
-      if (endpoint.endsWith('/categories')) return categories;
-      if (endpoint.endsWith('/affiches')) return affiches;
-      throw err;
+      const { categories, categoryMap, events, affiches } = useEvents();
+      const object = { data: null };
+      if (endpoint.endsWith('/events')) object.data= events;
+      if (endpoint.endsWith('/categories')) object.data = categories;
+      if (endpoint.endsWith('/affiches')) object.data = affiches;
+      return object;
     }
   };
 
