@@ -61,7 +61,6 @@ const event = events.find(
 }
 
 .event-title {
-    text-transform: capitalize;
     font-family: "Azeret Medium";
     font-size: 24px;
 }
@@ -75,15 +74,12 @@ const event = events.find(
 }
 
 .event-date-day {
-    text-transform: capitalize;
 }
 
 .event-location {
-    text-transform: capitalize;
 }
 
 .event-organizer {
-    text-transform: capitalize;
 }
 
 .event-image {
@@ -121,7 +117,6 @@ const event = events.find(
 .link {
     font-size: 14px;
     text-decoration: underline;
-    text-transform: capitalize;
     width: fit-content;
 }
 
