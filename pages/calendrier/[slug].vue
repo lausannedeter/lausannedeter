@@ -1,19 +1,12 @@
 <script setup>
-const api = useApi();
+  const api = useApi()
+  const route = useRoute()
 
-const { data: _events } = await useAsyncData('events', () =>
-    api.get('/api/events'),
-);
-const events = _events.value.data ?? [];
-const { data: _categories } = await useAsyncData('categories', () =>
-    api.get('/api/categories'),
-);
-const route = useRoute();
+  const { data: _events } = await useAsyncData('events', () => api.get('/api/events'))
+  const { data: _eventsClient } = await useAsyncData('events-client', () => api.get('/api/events'), { server: false, lazy: true })
 
-const event = events.find(
-    e => e.slug === route.params.slug
-)
-
+  const events = computed(() => _eventsClient.value?.data ?? _events.value?.data ?? [])
+  const event = computed(() => events.value.find(e => e.slug === route.params.slug))
 </script>
 
 <template>

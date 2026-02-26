@@ -19,20 +19,21 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
     public: {
-            apiUrl: process.env.NUXT_PUBLIC_API_URL,
-        },
+      apiUrl: process.env.NUXT_PUBLIC_API_URL,
+    },
   },
-  ssr: true,       
+  ssr: true,
   nitro: {
     preset: "static",
     prerender: {
+      failOnError: false,
       routes: [
         '/',
         '/calendrier',
         '/copaines',
         '/a-propos',
         ...events.map(e => `/calendrier/${e.slug}`)
-      ]     
+      ]
     }
   }
 })
