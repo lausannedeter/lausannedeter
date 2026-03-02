@@ -504,7 +504,7 @@
             "endDate": "2026-02-27T23:59",
             "organizer": "des gens deter",
             "image": "",
-            "location": "parc de Montbenon",
+            "location": "Parc de Montbenon",
             "link": "",
             "category": "manifs"
         },
@@ -809,8 +809,8 @@
         },
         {
             "id": 63,
-            "title": "Journée internationale des luttes féministes",
-            "slug": "journee-internationale-luttes-feministes-greve-feministe-lausanne-2026-03-07",
+            "title": "Féministes contre les guerres impérialistes",
+            "slug": "feministes-contre-les-guerres-imperialistes-2026-03-07",
             "description": "📢MANIFESTATION 📢\n\nSamedi 7 mars\n15h\n\nPlace de la cathédrale\nLausanne\n\n🔥 Féministes contre les guerres impérialistes 🔥",
             "startDate": "2026-03-07T15:00",
             "endDate": "2026-03-07T20:00",
@@ -899,38 +899,12 @@
             "category": "confs"
         },
         {
-            "id": 70,
-            "title": "Loto en soutien au Carnaval populaire et deter",
-            "slug": "loto-carnaval-populaire-deter-2026-03-04",
-            "description": "Loto en soutien au Carnaval populaire et deter",
-            "startDate": "2026-03-04T15:00",
-            "endDate": "2026-03-04T20:00",
-            "organizer": "Des gens deter",
-            "image": "",
-            "location": "Maison de Quartier de Chailly",
-            "link": "",
-            "category": "confs"
-        },
-        {
-            "id": 71,
-            "title": "Loto en soutien au Carnaval populaire et deter",
-            "slug": "loto-carnaval-populaire-deter-2026-03-12",
-            "description": "Loto en soutien au Carnaval populaire et deter",
-            "startDate": "2026-03-12T15:00",
-            "endDate": "2026-03-12T20:00",
-            "organizer": "Des gens deter",
-            "image": "",
-            "location": "Maison de Quartier de la Pontaise",
-            "link": "",
-            "category": "confs"
-        },
-        {
             "id": 72,
             "title": "Projection au Cinéma Oblò, soutien au Carnaval populaire et deter",
             "slug": "projection-cinema-oblo-carnaval-populaire-deter-2026-03-12",
             "description": "Projection au cinéma Oblò en soutien au Carnaval populaire et deter",
-            "startDate": "2026-03-13T15:00",
-            "endDate": "2026-03-13T20:00",
+            "startDate": "2026-03-13T",
+            "endDate": "2026-03-13T",
             "organizer": "Des gens deter",
             "image": "",
             "location": "Cinéma Oblò",
@@ -968,8 +942,8 @@
             "title": "Projection au Cinéma de Bellevaux, soutien au Carnaval populaire et deter",
             "slug": "projection-cinema-bellevaux-carnaval-populaire-deter-2026-03-18",
             "description": "",
-            "startDate": "2026-03-18T15:00",
-            "endDate": "2026-03-18T20:00",
+            "startDate": "2026-03-18T",
+            "endDate": "2026-03-18T",
             "organizer": "Des gens deter",
             "image": "",
             "location": "Cinéma de Bellevaux",
@@ -988,6 +962,97 @@
             "location": "Vallon",
             "link": "",
             "category": "confs"
+        },
+        {
+            "id": 77,
+            "title": "Critical Mass",
+            "slug": "critical-mass-2026-03-27",
+            "description": "Critical Mass",
+            "startDate": "2026-03-27T18:00",
+            "endDate": "2026-03-27T23:59",
+            "organizer": "Des gens deter",
+            "image": "",
+            "location": "Parc de Montbenon",
+            "link": "",
+            "category": "manifs"
+        },
+        {
+            "id": 78,
+            "title": "3ème Grande Rencontre des Parentalités Queer Féministes et Complices",
+            "slug": "3eme-grande-rencontre-parentatites-queer-feministes-complices-2026-04-25",
+            "description": "Suite au succès des deux premières éditions, Pôle Sud accueillera, le 25 et 26 avril prochain, la 3ᵉ Grande Rencontre des Parentalités Queer Féministes et Complices.\n\nLe féminisme questionne les inégalités de genre et les rapports de pouvoir, mais la parentalité reste souvent un thème marginal. Pourtant les familles ne sont pas à l’abri de ces enjeux. Au contraire, elles sont même souvent des lieux où ces inégalités sont reproduites. Ces deux jours de rencontres seront l’occasion de se connecter, soutenir et faire rayonner toutes les formes de parentalités.\n\nConférences, spectacles, discussions, performances, ateliers… la programmation est en cours et s’annonce déjà étincelante! Cette année l’événement s’élargit encore grâce à une collaboration avec le Romandie pour une soirée festive le samedi.\n\nBienvenue à touxtes : adultes – parent·exs ou non – et enfants.",
+            "startDate": "2026-04-25T18:00",
+            "endDate": "2026-04-25T23:59",
+            "organizer": "Pôle Sud",
+            "image": "rencontre-queer-parenting-04-25.jpg",
+            "location": "Pôle Sud",
+            "link": "https://polesud.ch/evenement/grande-rencontre/",
+            "category": "confs"
+        },
+        {
+            "id": 79,
+            "title": "3ème Grande Rencontre des Parentalités Queer Féministes et Complices",
+            "slug": "3eme-grande-rencontre-parentatites-queer-feministes-complices-2026-04-26",
+            "description": "Suite au succès des deux premières éditions, Pôle Sud accueillera, le 25 et 26 avril prochain, la 3ᵉ Grande Rencontre des Parentalités Queer Féministes et Complices.\n\nLe féminisme questionne les inégalités de genre et les rapports de pouvoir, mais la parentalité reste souvent un thème marginal. Pourtant les familles ne sont pas à l’abri de ces enjeux. Au contraire, elles sont même souvent des lieux où ces inégalités sont reproduites. Ces deux jours de rencontres seront l’occasion de se connecter, soutenir et faire rayonner toutes les formes de parentalités.\n\nConférences, spectacles, discussions, performances, ateliers… la programmation est en cours et s’annonce déjà étincelante! Cette année l’événement s’élargit encore grâce à une collaboration avec le Romandie pour une soirée festive le samedi.\n\nBienvenue à touxtes : adultes – parent·exs ou non – et enfants.",
+            "startDate": "2026-04-26T18:00",
+            "endDate": "2026-04-26T23:59",
+            "organizer": "Pôle Sud",
+            "image": "rencontre-queer-parenting-04-25.jpg",
+            "location": "Pôle Sud",
+            "link": "https://polesud.ch/evenement/grande-rencontre/",
+            "category": "confs"
+        },
+        {
+            "id": 80,
+            "title": "Manifestation, expulsions abusives du canton de Vaud",
+            "slug": "manifestation-expulsions-abusives-canton-vaud-2026-03-06",
+            "description": "🚨Partagez massivement l'appel à manifester et rendez-vous vendredi pour exiger la fin des expulsions abusives de Azzam, Rami, et toutes les personnes cherchant l'asile en Suisse.",
+            "startDate": "2026-03-06T17:00",
+            "endDate": "2026-03-06T23:59",
+            "organizer": "Lausanne Palestine",
+            "image": "manifestation-expulsions-abusives.jpg",
+            "location": "Place du 14 Juin, Lausanne",
+            "link": "https://www.instagram.com/p/DVWX_b0jK_-/?hl=fr&img_index=1",
+            "category": "manifs"
+        },
+        {
+            "id": 81,
+            "title": "Assemblée Générale - Grève féministe Vaud",
+            "slug": "assemblee-generale-greve-feministe-vaud-2026-04-02",
+            "description": "Assemblée Générale du Collectif de la Grève féministe Vaud.\n\nPour le lieu, écrire à <a href='mailto:info@grevefeministe-vd.ch'>info@grevefeministe-vd.ch<a>.",
+            "startDate": "2026-04-02T17:00",
+            "endDate": "2026-04-02T23:59",
+            "organizer": "Grève Féministe",
+            "image": "",
+            "location": "Lieu: écrire à info@grevefeministe-vd.ch",
+            "link": "",
+            "category": "confs"
+        },
+        {
+            "id": 82,
+            "title": "Repas anti-gaspi du Castor Freegan",
+            "slug": "repas-anti-gaspi-castor-freegan-2026-03-04",
+            "description": "🎉 Repas anti-gaspi, 4 & 5 mars 🎉\n\n🦫🥗 Le Castor Freegan revient avec un repas à base d'invendus pour 150 personnes à l’EPFL 🍎🔥\n\n📍 Cuisine du Klee (Rolex)\n📅 Jeu 4 aprem & Ven 5 mars",
+            "startDate": "2026-03-04T12:00",
+            "endDate": "2026-03-04T17:00",
+            "organizer": "Castor Freegan",
+            "image": "repas-anti-gaspi-castor-freegan.webp",
+            "location": "Cuisine du Klee (Rolex)",
+            "link": "https://www.instagram.com/p/DUvfcNfAgNT/?hl=fr",
+            "category": "bouffespop"
+        },
+        {
+            "id": 83,
+            "title": "Repas anti-gaspi du Castor Freegan",
+            "slug": "repas-anti-gaspi-castor-freegan-2026-03-05",
+            "description": "🎉 Repas anti-gaspi, 4 & 5 mars 🎉\n\n🦫🥗 Le Castor Freegan revient avec un repas à base d'invendus pour 150 personnes à l’EPFL 🍎🔥\n\n📍 Cuisine du Klee (Rolex)\n📅 Jeu 4 aprem & Ven 5 mars",
+            "startDate": "2026-03-05T12:00",
+            "endDate": "2026-03-05T17:00",
+            "organizer": "Castor Freegan",
+            "image": "repas-anti-gaspi-castor-freegan.webp",
+            "location": "Cuisine du Klee (Rolex)",
+            "link": "https://www.instagram.com/p/DUvfcNfAgNT/?hl=fr",
+            "category": "bouffespop"
         }
     ],
     "affiches": [
@@ -1001,7 +1066,7 @@
             "id": 2,
             "monthStart": "2026-03-01",
             "monthLabel": "Mars",
-            "link": ""
+            "link": "lausannedeter-Affiche_Mars.pdf"
         }
     ]
 }
