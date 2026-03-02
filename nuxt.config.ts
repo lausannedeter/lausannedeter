@@ -2,6 +2,10 @@ import data from './data/events.json'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  modules: ['@nuxtjs/sitemap'],
+  site: {
+    url: 'https://lausannedeter.ch'
+  },
   compatibilityDate: '2026-01-15',
   devtools: { enabled: true },
   app: {
@@ -17,7 +21,7 @@ export default defineNuxtConfig({
     }
   },
   css: ['~/assets/css/main.css'],
-  ssr: true,       
+  ssr: true,
   nitro: {
     preset: "static",
     prerender: {
@@ -28,7 +32,7 @@ export default defineNuxtConfig({
         '/copaines',
         '/a-propos',
         ...data.events.map(e => `/calendrier/${e.slug}`)
-      ]     
+      ]
     }
   }
 })

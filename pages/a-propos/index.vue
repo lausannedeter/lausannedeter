@@ -1,4 +1,20 @@
 <script setup>
+useSeoMeta({
+        title: 'À propos – Lausanne Deter',
+        description: 'En savoir plus sur notre collectif et notre démarche à Lausanne.',
+        ogTitle: 'À propos',
+        ogDescription: 'Qui sommes-nous et pourquoi ce projet ?',
+        ogImage: `https://lausannedeter.ch/Logo-red-circle.png`
+})
+
+useHead({
+        link: [
+                {
+                        rel: 'canonical',
+                        href: `https://lausannedeter.ch/a-propos`
+                }
+        ]
+})
 </script>
 
 <template>

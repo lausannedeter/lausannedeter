@@ -6,6 +6,34 @@ const event = events.find(
     e => e.slug === route.params.slug
 )
 
+useSeoMeta({
+  title: event.title,
+  description: event.description,
+  ogTitle: event.title,
+  ogDescription: event.description,
+  ogImage: `https://lausannedeter.ch/event/${event.image}`,
+  twitterCard: 'summary_large_image'
+})
+
+useHead({
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://lausannedeter.ch/calendrier/${event.slug}`
+    }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": event.title,
+        "startDate": event.startDate
+      })
+    }
+  ]
+})
 </script>
 
 <template>

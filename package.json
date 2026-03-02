@@ -11,6 +11,7 @@
     "postbuild": "rimraf docs && cpx \".output/public/**/*\" docs && echo.> docs\\.nojekyll && echo lausannedeter.ch> docs\\CNAME"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^7.6.0",
     "nuxt": "^4.2.2",
     "vue": "^3.5.26",
     "vue-router": "^4.6.4"

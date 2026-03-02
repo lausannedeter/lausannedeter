@@ -4,6 +4,24 @@ const { categories, events, categoryMap, affiches } = useEvents()
 const EVENTS_LIMIT = 3
 const upcomingEvent = useUpcomingEvents(events, categoryMap, EVENTS_LIMIT)
     .map(normalizeEventDates)
+
+useSeoMeta({
+    title: 'Lausanne Deter',
+    description: 'Calendrier des luttes et évènements militants à Lausanne et environs.',
+    ogTitle: 'Lausanne Deter',
+    ogDescription: 'Calendrier des luttes et évènements militants à Lausanne et environs.',
+    ogImage: `https://lausannedeter.ch/Logo-red-circle.png`,
+    twitterCard: 'summary_large_image'
+})
+
+useHead({
+    link: [
+        {
+            rel: 'canonical',
+            href: `https://lausannedeter.ch`
+        }
+    ]
+})
 </script>
 
 <template>
