@@ -4,7 +4,7 @@
 </script>
 
 <template>
-    <section class="collectifs-page">
+    <section class="copaines-page">
         <p>Arrive prochainement...</p>
     </section>
 </template>
