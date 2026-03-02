@@ -879,5 +879,16 @@
     "location": "Cylure, Lausanne",
     "link": "",
     "category": "soirees"
+  },
+  {
+    "_id": "69a5f987f256e3fc2f2c916c",
+    "title": "Test",
+    "startDate": "2026-03-10",
+    "endDate": "2026-03-11",
+    "location": "Lausanne",
+    "organizer": "Test Organizer",
+    "description": "This is a test event description.",
+    "link": "https://lausannedeter.ch",
+    "image": "test.jpg"
   }
 ]
