@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     head: {
       title: 'Lausanne Deter',
       meta: [
-        { name: 'description', content: 'Calendrier militant à Lausanne' }
+        { name: 'description', content: 'Calendrier des luttes et évènements militants à Lausanne et environs' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

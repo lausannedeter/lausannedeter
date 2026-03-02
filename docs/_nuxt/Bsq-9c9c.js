@@ -1,1 +1,0 @@
-import{_ as s,c as n,a as o,o as r}from"./CMGjMh-f.js";const t={},c={class:"archives-page"};function a(i,e){return r(),n("section",c,[...e[0]||(e[0]=[o("p",null,"Arrive prochainement...",-1)])])}const l=s(t,[["render",a]]);export{l as default};

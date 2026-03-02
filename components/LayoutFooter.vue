@@ -11,6 +11,7 @@
         </nuxt-link>
         <nav class="footer-menu-container">
             <nuxt-link to="/calendrier" active-class="active">Calendrier</nuxt-link>
+            <nuxt-link to="/archives" active-class="active">Archives</nuxt-link>
             <nuxt-link to="/copaines" active-class="active">Copaines</nuxt-link>
             <nuxt-link to="/a-propos" active-class="active">À propos</nuxt-link>
         </nav>

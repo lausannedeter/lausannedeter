@@ -1,1 +1,0 @@
-import{_ as n,c as o,a as s,o as t}from"./CMGjMh-f.js";const c={},r={class:"copaines-page"};function a(i,e){return t(),o("section",r,[...e[0]||(e[0]=[s("p",null,"Arrive prochainement...",-1)])])}const p=n(c,[["render",a]]);export{p as default};
