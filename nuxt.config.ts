@@ -12,7 +12,7 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Calendrier militant à Lausanne' }
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/Logo-red-circle.png' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       ],
     }
   },
