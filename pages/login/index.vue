@@ -7,18 +7,19 @@ const status = ref(null); // null | 'loading' | 'error'
 const errorMessage = ref("");
 
 async function handleLogin() {
-  status.value = "loading";
-  errorMessage.value = "";
+  status.value = "loading"
+  errorMessage.value = ""
   try {
-    await api.post("/api/auth/login", {
+    const res = await api.post("/api/auth/login", {
       email: form.email,
       password: form.password,
-    });
-    await router.push("/dashboard");
+    })
+    const user = useState("user")
+    user.value = res.data ?? { email: form.email }
+    await router.push("/orgas/dashboard")
   } catch (err) {
-    status.value = "error";
-    errorMessage.value =
-      err?.data?.message ?? "Identifiants incorrects. Réessaie.";
+    status.value = "error"
+    errorMessage.value = err?.data?.message ?? "Identifiants incorrects. Réessaie."
   }
 }
 </script>
@@ -37,14 +38,12 @@ async function handleLogin() {
         Accède à ton espace organisation pour gérer tes évènements.
       </p>
 
-      <!-- Error -->
       <Transition name="fade">
         <div v-if="status === 'error'" class="banner banner--error">
           ✗ {{ errorMessage }}
         </div>
       </Transition>
 
-      <!-- Form -->
       <form class="login-form" @submit.prevent="handleLogin" novalidate>
         <div class="field">
           <label class="label" for="email"
@@ -121,7 +120,6 @@ async function handleLogin() {
   gap: 24px;
 }
 
-/* Title block */
 .title-block {
   display: flex;
   flex-direction: column;
@@ -144,14 +142,12 @@ async function handleLogin() {
   width: calc(100% - 20px);
 }
 
-/* Hint */
 .login-hint {
   font-size: 13px;
   line-height: 1.6;
   color: #444;
 }
 
-/* Banner */
 .banner--error {
   background-color: #f5c6be;
   color: #7a1a0a;
@@ -160,7 +156,6 @@ async function handleLogin() {
   font-size: 12px;
 }
 
-/* Form */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -236,7 +231,6 @@ async function handleLogin() {
   cursor: not-allowed;
 }
 
-/* Divider */
 .login-divider {
   height: 1px;
   background-color: #e0e0e0;
@@ -253,7 +247,6 @@ async function handleLogin() {
   text-decoration: underline;
 }
 
-/* Loading dots */
 .loading-dots span {
   animation: blink 1s infinite;
   font-size: 20px;
