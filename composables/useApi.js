@@ -17,7 +17,8 @@ export const useApi = () => {
   }
 
   const get = async (endpoint, options = {}) => {
-    if (!baseURL || import.meta.prerender) {
+    const isPrerender = import.meta.prerender || !baseURL || baseURL.includes('localhost')
+    if (isPrerender) {
       console.warn(`Prerender/baseURL manquant → fallback JSON pour ${endpoint}`)
       return getFallback(endpoint)
     }
