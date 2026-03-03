@@ -1,413 +1,398 @@
 <script setup>
+const form = reactive({ name: "", email: "", description: "", url: "" });
+const status = ref(null);
+const errorMessage = ref("");
 const api = useApi();
 
-// --- State ---
-const form = reactive({
-    title: "",
-    description: "",
-    location: "",
-    date: "",
-    time: "",
-    category_id: null,
-    url: "",
-});
-
-const { data: _categories } = await useAsyncData("categories", () =>
-    api.get("/categories"),
-);
-const categories = _categories.value?.data ?? [];
-const categoryMap = createCategoryMap(categories);
-
-const status = ref(null); // null | 'loading' | 'success' | 'error'
-const errorMessage = ref("");
-
-async function handleSubmit() {
-    status.value = "loading";
-    errorMessage.value = "";
-
-    try {
-        const datetime =
-            form.date && form.time
-                ? new Date(`${form.date}T${form.time}`).toISOString()
-                : form.date
-                  ? new Date(form.date).toISOString()
-                  : null;
-
-        const payload = {
-            title: form.title,
-            description: form.description,
-            location: form.location,
-            datetime,
-            category_id: form.category_id,
-            url: form.url || undefined,
-        };
-
-        await api.post("/events", payload);
-        status.value = "success";
-
-        Object.assign(form, {
-            title: "",
-            description: "",
-            location: "",
-            date: "",
-            time: "",
-            category_id: null,
-            url: "",
-        });
-    } catch (err) {
-        status.value = "error";
-        errorMessage.value =
-            err?.data?.message ?? "Une erreur est survenue. Réessaie.";
-    }
-}
-
-function resetStatus() {
-    status.value = null;
+async function handleRegister() {
+  status.value = "loading";
+  errorMessage.value = "";
+  try {
+    await api.post("/organisations/register", {
+      name: form.name,
+      email: form.email,
+      description: form.description,
+      url: form.url || undefined,
+    });
+    status.value = "success";
+    Object.assign(form, { name: "", email: "", description: "", url: "" });
+  } catch (err) {
+    status.value = "error";
+    errorMessage.value =
+      err?.data?.message ?? "Une erreur est survenue. Réessaie.";
+  }
 }
 </script>
 
 <template>
-    <section class="form-page">
-        <div class="title-container">
-            <div class="main-title-container">
-                <h2 class="title">Ajouter un évènement</h2>
-            </div>
-            <div class="title-subblock"></div>
+  <section class="org-page">
+
+    <div class="hero">
+      <div class="title-block">
+        <div class="title-main">
+          <h2 class="title">Organisations</h2>
+        </div>
+        <div class="title-sub"></div>
+      </div>
+
+      <p class="hero-description">
+        Tu fais partie d'un collectif, d'une asso, d'un syndicat ou de toute
+        structure qui lutte contre les oppressions ?
+        <br /><br />
+        <span style="white-space: nowrap;">
+            Rejoins <a class="deter">Lausanne Deter</a> et rends tes évènements visibles à toute la région.
+        </span>
+      </p>
+    </div>
+
+    <div class="why-section">
+      <h3 class="section-label">Pourquoi rejoindre ?</h3>
+      <div class="why-grid">
+        <div class="why-card">
+          <span class="why-icon">📅</span>
+          <p class="why-text">Publie tes évènements directement dans le calendrier romand.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">🔗</span>
+          <p class="why-text">Sois visible auprès des militantexs de toute la région.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-icon">✊</span>
+          <p class="why-text">Converge avec d'autres luttes. Soyons solidaires.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="register-section">
+      <h3 class="section-label">Demande d'accès</h3>
+      <p class="register-hint">
+        Remplis ce formulaire pour obtenir un espace organisation. On te
+        recontacte par email.
+      </p>
+
+      <Transition name="fade">
+        <div v-if="status === 'success'" class="banner banner--success">
+          ✓ Demande envoyée ! On te recontacte bientôt.
+        </div>
+      </Transition>
+      <Transition name="fade">
+        <div v-if="status === 'error'" class="banner banner--error">
+          ✗ {{ errorMessage }}
+        </div>
+      </Transition>
+
+      <form class="register-form" @submit.prevent="handleRegister" novalidate>
+
+        <div class="field">
+          <label class="label" for="org-name">Nom de l'organisation <span class="req">*</span></label>
+          <input
+            id="org-name"
+            v-model="form.name"
+            class="input"
+            type="text"
+            placeholder="Collectif XYZ"
+            required
+            @input="status = null"
+          />
         </div>
 
-        <!-- Succès -->
-        <Transition name="fade">
-            <div v-if="status === 'success'" class="banner banner--success">
-                ✓ Évènement soumis avec succès !
-                <button class="banner-close" @click="resetStatus">×</button>
-            </div>
-        </Transition>
+        <div class="field">
+          <label class="label" for="org-email">Email de contact <span class="req">*</span></label>
+          <input
+            id="org-email"
+            v-model="form.email"
+            class="input"
+            type="email"
+            placeholder="contact@collectif.org"
+            required
+            @input="status = null"
+          />
+        </div>
 
-        <!-- Erreur -->
-        <Transition name="fade">
-            <div v-if="status === 'error'" class="banner banner--error">
-                ✗ {{ errorMessage }}
-                <button class="banner-close" @click="resetStatus">×</button>
-            </div>
-        </Transition>
+        <div class="field">
+          <label class="label" for="org-desc">Présentation rapide <span class="req">*</span></label>
+          <textarea
+            id="org-desc"
+            v-model="form.description"
+            class="input textarea"
+            rows="3"
+            placeholder="Qui êtes-vous ? Quelles luttes portez-vous ?"
+            required
+            @input="status = null"
+          ></textarea>
+        </div>
 
-        <form class="event-form" @submit.prevent="handleSubmit" novalidate>
-            <div class="field">
-                <label class="label" for="title"
-                    >Titre <span class="required">*</span></label
-                >
-                <input
-                    id="title"
-                    v-model="form.title"
-                    class="input"
-                    type="text"
-                    placeholder="Manifestation pour le climat…"
-                    required
-                    @input="resetStatus"
-                />
-            </div>
+        <div class="field">
+          <label class="label" for="org-url">Site ou réseau social (optionnel)</label>
+          <input
+            id="org-url"
+            v-model="form.url"
+            class="input"
+            type="url"
+            placeholder="https://…"
+            @input="status = null"
+          />
+        </div>
 
-            <div class="field">
-                <label class="label" for="description">Description</label>
-                <textarea
-                    id="description"
-                    v-model="form.description"
-                    class="input textarea"
-                    rows="4"
-                    placeholder="Décris l'évènement en quelques lignes…"
-                    @input="resetStatus"
-                ></textarea>
-            </div>
+        <div class="form-footer">
+          <span class="req-note"><span class="req">*</span> champs obligatoires</span>
+          <button
+            class="button submit-btn"
+            type="submit"
+            :disabled="status === 'loading' || status === 'success'"
+          >
+            <span v-if="status === 'loading'" class="loading-dots">
+              <span>.</span><span>.</span><span>.</span>
+            </span>
+            <span v-else>Envoyer la demande</span>
+          </button>
+        </div>
 
-            <div class="field-row">
-                <div class="field">
-                    <label class="label" for="date"
-                        >Date <span class="required">*</span></label
-                    >
-                    <input
-                        id="date"
-                        v-model="form.date"
-                        class="input"
-                        type="date"
-                        required
-                        @input="resetStatus"
-                    />
-                </div>
+      </form>
 
-                <div class="field">
-                    <label class="label" for="time">Heure</label>
-                    <input
-                        id="time"
-                        v-model="form.time"
-                        class="input"
-                        type="time"
-                        @input="resetStatus"
-                    />
-                </div>
-            </div>
+      <p class="login-redirect">
+        Déjà un compte ?
+        <nuxt-link class="login-link" to="/login">Se connecter →</nuxt-link>
+      </p>
+    </div>
 
-            <div class="field">
-                <label class="label" for="location"
-                    >Lieu <span class="required">*</span></label
-                >
-                <input
-                    id="location"
-                    v-model="form.location"
-                    class="input"
-                    type="text"
-                    placeholder="Place de la Riponne, Lausanne"
-                    required
-                    @input="resetStatus"
-                />
-            </div>
-
-            <div class="field">
-                <label class="label" for="category">Catégorie</label>
-                <select
-                    id="category"
-                    v-model="form.category_id"
-                    class="input select"
-                    @change="resetStatus"
-                >
-                    <option :value="null" disabled>
-                        — Sélectionne une catégorie —
-                    </option>
-                    <option
-                        v-for="cat in categoryMap"
-                        :key="cat._id"
-                        :value="cat._id"
-                    >
-                        {{ cat.label }}
-                    </option>
-                </select>
-            </div>
-
-            <div class="field">
-                <label class="label" for="url">Lien (optionnel)</label>
-                <input
-                    id="url"
-                    v-model="form.url"
-                    class="input"
-                    type="url"
-                    placeholder="https://…"
-                    @input="resetStatus"
-                />
-            </div>
-
-            <div class="form-footer">
-                <span class="required-note"
-                    ><span class="required">*</span> champs obligatoires</span
-                >
-                <button
-                    class="button submit-btn"
-                    type="submit"
-                    :disabled="status === 'loading'"
-                >
-                    <span v-if="status === 'loading'" class="loading-dots">
-                        <span>.</span><span>.</span><span>.</span>
-                    </span>
-                    <span v-else>Soumettre l'évènement</span>
-                </button>
-            </div>
-        </form>
-    </section>
+  </section>
 </template>
 
 <style scoped>
-/* ── Layout ── */
-.form-page {
+a.deter {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    gap: 10px;
+    align-items: center;
+    font-family: "Jacquard12";
+    font-weight: 100;
+    font-size: 24px;
+    display: inline;
+    white-space: nowrap;
+}
+.org-page {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
-.title-container {
-    width: 70%;
-    max-width: 480px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    align-self: flex-end;
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.main-title-container {
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #cd523c;
+.title-block {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  max-width: 420px;
+  align-self: flex-end;
+  align-items: flex-end;
 }
 
-.main-title-container .title {
-    font-size: 28px;
-    color: white;
+.title-main {
+  background-color: #a8ba9a;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: end;
 }
 
-.title-subblock {
-    background-color: #e8856e;
-    width: calc(100% - 20px);
-    height: 16px;
+.title { font-size: 30px; }
+
+.title-sub {
+  background-color: #ace894;
+  height: 16px;
+  width: calc(100% - 20px);
+}
+
+.hero-description {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #333;
+}
+
+.why-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-label {
+  font-family: "Azeret Medium";
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555;
+  font-weight: normal;
+}
+
+.why-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.why-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-left: 3px solid #ace894;
+  padding: 12px 16px;
+  background-color: #f7faf6;
+}
+
+.why-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.why-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+.register-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register-hint {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #555;
 }
 
 .banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 18px;
-    font-family: "Azeret Medium";
-    font-size: 13px;
+  padding: 10px 16px;
+  font-family: "Azeret Medium";
+  font-size: 12px;
 }
 
 .banner--success {
-    background-color: #ace894;
-    color: #1a4a0a;
+  background-color: #ace894;
+  color: #1a4a0a;
 }
 
 .banner--error {
-    background-color: #f5c6be;
-    color: #7a1a0a;
+  background-color: #f5c6be;
+  color: #7a1a0a;
 }
 
-.banner-close {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    line-height: 1;
-    padding: 0 4px;
-    color: inherit;
-    font-family: "Azeret Medium";
-}
-
-.event-form {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    flex: 1;
-}
-
-.field-row {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .label {
-    font-family: "Azeret Medium";
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+  font-family: "Azeret Medium";
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.required {
-    color: #cd523c;
-}
-
-.required-note {
-    font-size: 11px;
-    color: #888;
-    align-self: center;
-}
+.req { color: #CD523C; }
+.req-note { font-size: 11px; color: #888; }
 
 .input {
-    border: 1px solid #ccc;
-    padding: 10px 14px;
-    font-family: "Azeret Thin";
-    font-size: 13px;
-    background-color: #fafafa;
-    color: black;
-    outline: none;
-    transition:
-        border-color 0.15s ease,
-        background-color 0.15s ease;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 0;
-    -webkit-appearance: none;
-    appearance: none;
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  font-family: "Azeret Thin";
+  font-size: 13px;
+  background-color: #fafafa;
+  color: black;
+  outline: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .input:focus {
-    border-color: #52bfea;
-    background-color: #f0faff;
+  border-color: #a8ba9a;
+  background-color: #f7faf6;
 }
 
 .textarea {
-    resize: vertical;
-    min-height: 90px;
-}
-
-.select {
-    cursor: pointer;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    padding-right: 38px;
+  resize: vertical;
+  min-height: 80px;
 }
 
 .form-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 4px;
 }
 
 .submit-btn {
-    min-width: 220px;
-    justify-content: center;
-    font-size: 13px;
-    padding: 12px 24px;
-    transition: opacity 0.2s ease;
+  min-width: 200px;
+  justify-content: center;
+  font-size: 13px;
+  padding: 12px 24px;
+  transition: opacity 0.2s;
 }
 
 .submit-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-redirect {
+  font-size: 12px;
+  color: #555;
+}
+
+.login-link {
+  font-family: "Azeret Medium";
+  color: #CD523C;
+  text-decoration: underline;
 }
 
 .loading-dots span {
-    animation: blink 1s infinite;
-    font-size: 20px;
-    line-height: 0;
+  animation: blink 1s infinite;
+  font-size: 20px;
+  line-height: 0;
 }
-.loading-dots span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-.loading-dots span:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
+.loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.4s; }
 @keyframes blink {
-    0%,
-    80%,
-    100% {
-        opacity: 0;
-    }
-    40% {
-        opacity: 1;
-    }
+  0%, 80%, 100% { opacity: 0; }
+  40% { opacity: 1; }
 }
 
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 0.3s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
-}
+.fade-enter-active, .fade-leave-active { transition: opacity 0.3s; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
 
-/* TABLETTE */
+/* Tablet */
 @media (min-width: 750px) {
-    .field-row {
-        flex-direction: row;
-    }
+  .why-grid {
+    flex-direction: row;
+  }
+  .why-card {
+    flex: 1;
+    flex-direction: column;
+  }
 }
 </style>
-
