@@ -1,9 +1,4 @@
 <script setup>
-if (import.meta.prerender) {
-  process.on('uncaughtException', (err) => {
-    console.error('CALENDRIER CRASH:', err)
-  })
-}
 const api = useApi()
 const { data: _events } = await useAsyncData('events', () => api.get('/api/events'))
 const { data: _categories } = await useAsyncData('categories', () => api.get('/api/categories'))
