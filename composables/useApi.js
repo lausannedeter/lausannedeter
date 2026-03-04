@@ -19,12 +19,18 @@ export const useApi = () => {
       return getFallback(endpoint)
     }
     try {
-      return await $fetch(endpoint, {
+      let res = await $fetch(endpoint, {
         baseURL,
         credentials: 'include',
         headers: ssrHeaders, 
         ...options
       })
+      if(res.data.length === 0){
+        console.warn(`La table de la DB pour ${endpoint} est vide`)
+        return getFallback(endpoint)
+      }
+      console.log(res)
+      return res
     } catch (err) {
       console.warn(`L'API ne repond pas ${endpoint} → fallback JSON`, err)
       return getFallback(endpoint)
