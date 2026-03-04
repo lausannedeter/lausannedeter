@@ -29,7 +29,6 @@ export const useApi = () => {
         console.warn(`La table de la DB pour ${endpoint} est vide`)
         return getFallback(endpoint)
       }
-      console.log(res)
       return res
     } catch (err) {
       console.warn(`L'API ne repond pas ${endpoint} → fallback JSON`, err)
