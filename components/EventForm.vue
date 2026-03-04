@@ -75,6 +75,9 @@ function handleSubmit() {
 
 <template>
   <div class="event-form-wrapper">
+        <div class="button-container">
+      <nuxt-link to="/orgas/dashboard" class="back-button">Retour</nuxt-link>
+    </div>
 
     <div v-if="status === 'success'" class="banner banner--success">
       ✓ <slot name="success-message">Évènement enregistré.</slot>
@@ -180,6 +183,23 @@ function handleSubmit() {
   font-size: 13px;
   color: #888;
   padding: 40px 0;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #CD523C;
+  color: white;
+  font-family: "Azeret Medium";
+  font-size: 12px;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.15s;
+  margin-bottom: 2rem;
+}
+
+.back-button:hover {
+  background-color: #b8432e;
 }
 
 .editor-form {
