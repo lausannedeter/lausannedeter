@@ -18,7 +18,7 @@ async function deleteEvent(id) {
   if (!confirm("Supprimer cet évènement ?")) return;
   deleting.value = id;
   try {
-    await api.delete(`/api/events/${id}`);
+    await api.del(`/api/events/${id}`);
     await refreshEvents();
   } finally {
     deleting.value = null;
@@ -108,9 +108,9 @@ function isPast(iso) {
             </nuxt-link>
             <button
               class="icon-btn icon-btn--danger"
-              :disabled="deleting === event.id"
+              :disabled="deleting === event._id"
               title="Supprimer"
-              @click="deleteEvent(event.id)"
+              @click="deleteEvent(event._id)"
             >
               <span v-if="deleting === event.id" class="loading-dots">
                 <span>.</span><span>.</span><span>.</span>
