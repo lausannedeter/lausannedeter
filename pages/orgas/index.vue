@@ -1,4 +1,14 @@
 <script setup>
+const user = useState("user");
+const ready = ref(false)
+
+onMounted(() => {
+  if (user.value) {
+    navigateTo('/orgas/dashboard', { replace: true })
+  } else {
+    ready.value = true
+  }
+})
 const form = reactive({ name: "", email: "", description: "", url: "" });
 const status = ref(null);
 const errorMessage = ref("");
@@ -25,7 +35,10 @@ async function handleRegister() {
 </script>
 
 <template>
-  <section class="org-page">
+  <div v-if="!ready" class="redirecting">
+    <div class="spinner"></div>
+  </div>
+  <section v-else class="org-page">
 
     <div class="hero">
       <div class="title-block">
@@ -363,6 +376,26 @@ a.deter {
 .submit-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.redirecting {
+  min-height: 60svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid #e0e0e0;
+  border-top-color: #CD523C;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 
 .login-redirect {
