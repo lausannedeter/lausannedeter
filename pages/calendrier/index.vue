@@ -50,7 +50,26 @@ const filteredEvents = computed(() => {
   return upcomingEvents.value.filter(event => !activeFilters.value.includes(event.categoryData?.id))
 })
 
-const eventsByMonth = computed(() => groupEventsByMonth(filteredEvents.value))
+const eventsByMonth = computed(() =>
+    groupEventsByMonth(filteredEvents.value)
+)
+
+useSeoMeta({
+    title: 'Calendrier militant – Lausanne Deter',
+    description: 'Retrouvez tous les prochains évènements militants à Lausanne.',
+    ogTitle: 'Prochains événements militants à Lausanne',
+    ogDescription: 'Retrouvez tous les prochains évènements militants à Lausanne.',
+    ogImage: `https://lausannedeter.ch/Logo-red-circle.png`
+})
+
+useHead({
+    link: [
+        {
+            rel: 'canonical',
+            href: `https://lausannedeter.ch/calendrier`
+        }
+    ]
+})
 </script>
 
 <template>

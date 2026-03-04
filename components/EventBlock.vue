@@ -68,11 +68,9 @@ const props = defineProps({
 
 .event-title {
     font-size: 14px;
-    text-transform: capitalize;
 }
 
 .event-more-info {
     font-size: 12px;
-    text-transform: capitalize;
 }
 </style>

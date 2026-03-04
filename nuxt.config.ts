@@ -2,6 +2,10 @@ import events from './data/events.json'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  modules: ['@nuxtjs/sitemap'],
+  site: {
+    url: 'https://lausannedeter.ch'
+  },
   compatibilityDate: '2026-01-15',
   devtools: { enabled: true },
   app: {
@@ -9,10 +13,10 @@ export default defineNuxtConfig({
     head: {
       title: 'Lausanne Deter',
       meta: [
-        { name: 'description', content: 'Calendrier militant à Lausanne' }
+        { name: 'description', content: 'Calendrier des luttes et évènements militants à Lausanne et environs' }
       ],
       link: [
-        { rel: 'icon', type: 'image/png', href: '/Logo-red-circle.png' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       ],
     }
   },
@@ -30,6 +34,7 @@ export default defineNuxtConfig({
       routes: [
         '/',
         '/calendrier',
+        '/archives',
         '/copaines',
         '/a-propos',
         ...events.filter(e => e?.slug).map(e => `/calendrier/${e.slug}`)

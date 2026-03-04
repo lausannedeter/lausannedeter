@@ -7,6 +7,34 @@
 
   const events = computed(() => _eventsClient.value?.data ?? _events.value?.data ?? [])
   const event = computed(() => events.value.find(e => e.slug === route.params.slug))
+  useSeoMeta({
+    title: event.title,
+    description: event.description,
+    ogTitle: event.title,
+    ogDescription: event.description,
+    ogImage: `https://lausannedeter.ch/event/${event.image}`,
+    twitterCard: 'summary_large_image'
+  })
+
+  useHead({
+    link: [
+      {
+        rel: 'canonical',
+        href: `https://lausannedeter.ch/calendrier/${event.slug}`
+      }
+    ],
+    script: [
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": event.title,
+          "startDate": event.startDate
+        })
+      }
+    ]
+  })
 </script>
 
 <template>
@@ -62,7 +90,6 @@
 }
 
 .event-title {
-    text-transform: capitalize;
     font-family: "Azeret Medium";
     font-size: 24px;
 }
@@ -76,15 +103,12 @@
 }
 
 .event-date-day {
-    text-transform: capitalize;
 }
 
 .event-location {
-    text-transform: capitalize;
 }
 
 .event-organizer {
-    text-transform: capitalize;
 }
 
 .event-image {
@@ -122,7 +146,6 @@
 .link {
     font-size: 14px;
     text-decoration: underline;
-    text-transform: capitalize;
     width: fit-content;
 }
 
