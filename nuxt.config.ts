@@ -1,4 +1,4 @@
-import data from './data/events.json'
+import events from './data/events.json'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -21,17 +21,26 @@ export default defineNuxtConfig({
     }
   },
   css: ['~/assets/css/main.css'],
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.NUXT_PUBLIC_API_URL || '',
+    },
+  },
   ssr: true,
   nitro: {
     preset: "static",
     prerender: {
+      failOnError: true,
       routes: [
         '/',
         '/calendrier',
         '/archives',
         '/copaines',
         '/a-propos',
-        ...data.events.map(e => `/calendrier/${e.slug}`)
+        ...events.filter(e => e?.slug).map(e => `/calendrier/${e.slug}`)
+      ],
+      ignore: [
+        '/orgas'
       ]
     }
   }

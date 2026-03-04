@@ -3,12 +3,15 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt build --preset github_pages",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "postbuild": "rimraf docs && cpx \".output/public/**/*\" docs && echo.> docs\\.nojekyll && echo lausannedeter.ch> docs\\CNAME"
+    "postbuild": "rimraf docs && cpx \".output/public/**/*\" docs && echo . > docs\\.nojekyll && echo lausannedeter.ch> docs\\CNAME",
+    "sync:status": "node scripts/sync-events.js status",
+    "sync:push": "node scripts/sync-events.js push",
+    "sync:pull": "node scripts/sync-events.js pull"
   },
   "dependencies": {
     "@nuxtjs/sitemap": "^7.6.0",

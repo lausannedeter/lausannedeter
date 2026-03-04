@@ -1,39 +1,40 @@
 <script setup>
-const { events } = useEvents()
-const route = useRoute()
+  const api = useApi()
+  const route = useRoute()
 
-const event = events.find(
-    e => e.slug === route.params.slug
-)
+  const { data: _events } = await useAsyncData('events', () => api.get('/api/events'))
+  const { data: _eventsClient } = await useAsyncData('events-client', () => api.get('/api/events'), { server: false, lazy: true })
 
-useSeoMeta({
-  title: event.title,
-  description: event.description,
-  ogTitle: event.title,
-  ogDescription: event.description,
-  ogImage: `https://lausannedeter.ch/event/${event.image}`,
-  twitterCard: 'summary_large_image'
-})
+  const events = computed(() => _eventsClient.value?.data ?? _events.value?.data ?? [])
+  const event = computed(() => events.value.find(e => e.slug === route.params.slug))
+  useSeoMeta({
+    title: event.title,
+    description: event.description,
+    ogTitle: event.title,
+    ogDescription: event.description,
+    ogImage: `https://lausannedeter.ch/event/${event.image}`,
+    twitterCard: 'summary_large_image'
+  })
 
-useHead({
-  link: [
-    {
-      rel: 'canonical',
-      href: `https://lausannedeter.ch/calendrier/${event.slug}`
-    }
-  ],
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Event",
-        "name": event.title,
-        "startDate": event.startDate
-      })
-    }
-  ]
-})
+  useHead({
+    link: [
+      {
+        rel: 'canonical',
+        href: `https://lausannedeter.ch/calendrier/${event.slug}`
+      }
+    ],
+    script: [
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": event.title,
+          "startDate": event.startDate
+        })
+      }
+    ]
+  })
 </script>
 
 <template>
