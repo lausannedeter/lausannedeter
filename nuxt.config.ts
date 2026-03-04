@@ -33,6 +33,9 @@ export default defineNuxtConfig({
         '/copaines',
         '/a-propos',
         ...events.filter(e => e?.slug).map(e => `/calendrier/${e.slug}`)
+      ],
+      ignore: [
+        '/orgas'
       ]
     }
   }
