@@ -68,7 +68,7 @@ function isPast(iso) {
     <div class="divider"></div>
 
     <div class="actions-row">
-      <nuxt-link class="button action-btn" to="/evenements/nouveau">
+      <nuxt-link class="button action-btn" to="/orgas/new-event">
         + Ajouter un évènement
       </nuxt-link>
     </div>
@@ -78,7 +78,7 @@ function isPast(iso) {
 
       <div v-if="events.length === 0" class="empty-state">
         <p>Aucun évènement pour l'instant.</p>
-        <nuxt-link class="register-link" to="/evenements/nouveau">
+        <nuxt-link class="register-link" to="/orgas/new-event">
           Créer ton premier évènement →
         </nuxt-link>
       </div>
@@ -101,7 +101,7 @@ function isPast(iso) {
           <div class="event-actions">
             <nuxt-link
               class="icon-btn"
-              :to="`/evenements/${event.id}/editer`"
+              :to="`/orgas/${event._id}/editer`"
               title="Modifier"
             >
               ✎

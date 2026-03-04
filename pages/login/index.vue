@@ -8,14 +8,16 @@ const errorMessage = ref("");
 
 async function handleLogin() {
   status.value = "loading"
-  errorMessage.value = ""
   try {
-    const res = await api.post("/api/auth/login", {
-      email: form.email,
-      password: form.password,
+    const config = useRuntimeConfig()
+    const res = await $fetch('/api/auth/login', {
+      baseURL: config.public.apiUrl,
+      method: 'POST',
+      body: { email: form.email, password: form.password },
+      credentials: 'include'
     })
     const user = useState("user")
-    user.value = res.data ?? { email: form.email }
+    user.value = res.user
     await router.push("/orgas/dashboard")
   } catch (err) {
     status.value = "error"

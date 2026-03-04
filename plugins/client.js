@@ -1,8 +1,6 @@
-export default defineNuxtRouteMiddleware(async () => {
-  if (import.meta.server) return
-
+export default defineNuxtPlugin(async () => {
   const user = useState("user")
-  if (user.value) return
+  if (user.value) return // already set (e.g. just logged in)
 
   const config = useRuntimeConfig()
   try {
@@ -11,9 +9,7 @@ export default defineNuxtRouteMiddleware(async () => {
       credentials: 'include'
     })
     user.value = res.user ?? null
-    if (!user.value) return navigateTo("/login")
   } catch {
     user.value = null
-    return navigateTo("/login")
   }
 })
