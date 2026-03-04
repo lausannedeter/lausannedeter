@@ -890,21 +890,5 @@
     "description": "This is a test event description.",
     "link": "https://lausannedeter.ch",
     "image": "test.jpg"
-  },
-  {
-    "_id": "69a83526aac70cf5bd9b9cd0",
-    "title": "test",
-    "description": "test",
-    "startDate": "2026-03-12T14:35:00.000Z",
-    "endDate": "2026-03-19T14:35:00.000Z",
-    "organizer": "test",
-    "location": "test",
-    "category": "manifs",
-    "createdBy": null,
-    "createdByModel": "SuperAdmin",
-    "createdAt": "2026-03-04T13:35:34.960Z",
-    "updatedAt": "2026-03-04T13:35:34.960Z",
-    "slug": "test-test-2026-03-12",
-    "__v": 0
   }
 ]
