@@ -15,9 +15,10 @@ const { isOpen, close } = useMenu()
                 <nuxt-link to="/calendrier" active-class="active" @click="close">Calendrier</nuxt-link>
                 <nuxt-link to="/archives" active-class="active" @click="close">Archives</nuxt-link>
                 <nuxt-link to="/copaines" active-class="active" @click="close">Copaines</nuxt-link>
-                <!-- <nuxt-link to="/orgas" active-class="active" @click="close">Espace Orgas</nuxt-link> -->
                 <nuxt-link to="/a-propos" active-class="active" @click="close">À propos</nuxt-link>
             </nav>
+
+            <nuxt-link to="/orgas" class="orgas-button" @click="close">Espace Orgas</nuxt-link>
         </div>
     </transition>
 </template>
@@ -30,6 +31,7 @@ const { isOpen, close } = useMenu()
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 .menu {
@@ -65,6 +67,16 @@ nav {
 
 .active {
     font-family: "Azeret Medium";
+}
+
+.orgas-button {
+    position: absolute;
+    bottom: 150px;
+    padding: 10px 20px;
+    font-family: "Azeret Medium";
+    font-size: 12px;
+    background-color: white;
+    color: #CD523C;
 }
 
 /* Transition slide depuis la droite */
