@@ -59,7 +59,7 @@ useHead({
                 <h3 class="subtitle">Prochains évènements:</h3>
                 <transition-group name="eventsList" tag="div" v-if="upcomingEvent.length"
                     class="month-content-container">
-                    <EventBlock v-for="event in upcomingEvent" :key="event.id" :event="event"></EventBlock>
+                    <EventBlock v-for="event in upcomingEvent" :key="event._id" :event="event"></EventBlock>
                 </transition-group>
             </div>
             <div class="buttons-container">

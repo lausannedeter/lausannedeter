@@ -30,7 +30,7 @@ const props = defineProps({
 
         <transition-group name="eventsList" tag="div">
             <transition-group name="eventsList" tag="div" v-if="monthEvents.length" class="month-content-container">
-                <EventBlock v-for="event in monthEvents" :key="event.id" :event="event"></EventBlock>
+                <EventBlock v-for="event in monthEvents" :key="event._id" :event="event"></EventBlock>
             </transition-group>
             <p v-else class="empty">
                 Pas d’évènement pour le moment

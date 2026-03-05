@@ -22,6 +22,7 @@ header {
     position: fixed;
     width: calc(100% - 48px);
     top: 0;
+    z-index: 3;
 }
 
 .header-title-container {

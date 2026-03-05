@@ -15,7 +15,7 @@ const { isOpen, close } = useMenu()
                 <nuxt-link to="/calendrier" active-class="active" @click="close">Calendrier</nuxt-link>
                 <nuxt-link to="/archives" active-class="active" @click="close">Archives</nuxt-link>
                 <nuxt-link to="/copaines" active-class="active" @click="close">Copaines</nuxt-link>
-                <nuxt-link to="/orgas" active-class="active" @click="close">Espace Orgas</nuxt-link>
+                <!-- <nuxt-link to="/orgas" active-class="active" @click="close">Espace Orgas</nuxt-link> -->
                 <nuxt-link to="/a-propos" active-class="active" @click="close">À propos</nuxt-link>
             </nav>
         </div>

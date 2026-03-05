@@ -11,7 +11,13 @@ const { data: _events, refresh: refreshEvents } = await useAsyncData(
   "org-events",
   () => api.get(isSuperAdmin.value ? "/api/events" : "/api/orgas/me/events"),
 );
-const events = computed(() => _events.value?.data ?? []);
+const events = computed(() => _events.value?.data.sort((a, b) => new Date(a.startDate) - new Date(b.startDate)) ?? []);
+
+const { data: _categories } = await useAsyncData('categories', () =>
+  api.get('/api/categories'),
+);
+const categories = _categories.value.data ?? [];
+const categoryMap = createCategoryMap(categories ?? []);
 
 const deleting = ref(null);
 async function deleteEvent(id) {
@@ -84,35 +90,25 @@ function isPast(iso) {
       </div>
 
       <div v-else class="events-list">
-        <div
-          v-for="event in events"
-          :key="event.id"
-          class="event-row"
-          :class="{ 'event-row--past': isPast(event.datetime) }"
-        >
+        <div v-for="event in events" :key="event._id" class="event-row"
+          :class="{ 'event-row--past': isPast(event.endDate) }" :style="{
+            borderLeft: `5px solid ${categoryMap[event.category].color ?? '#ccc'}`
+          }">
           <div class="event-info">
             <span class="event-title">{{ event.title }}</span>
             <span class="event-meta">
-              {{ formatDate(event.datetime) }}
+              {{ formatDate(event.startDate) }}
               <span v-if="event.location"> · {{ event.location }}</span>
             </span>
           </div>
 
           <div class="event-actions">
-            <nuxt-link
-              class="icon-btn"
-              :to="`/orgas/${event._id}/editer`"
-              title="Modifier"
-            >
+            <nuxt-link class="icon-btn" :to="`/orgas/${event._id}/editer`" title="Modifier">
               ✎
             </nuxt-link>
-            <button
-              class="icon-btn icon-btn--danger"
-              :disabled="deleting === event._id"
-              title="Supprimer"
-              @click="deleteEvent(event._id)"
-            >
-              <span v-if="deleting === event.id" class="loading-dots">
+            <button class="icon-btn icon-btn--danger" :disabled="deleting === event._id" title="Supprimer"
+              @click="deleteEvent(event._id)">
+              <span v-if="deleting === event._id" class="loading-dots">
                 <span>.</span><span>.</span><span>.</span>
               </span>
               <span v-else>✕</span>
@@ -247,7 +243,9 @@ function isPast(iso) {
   justify-content: space-between;
   gap: 16px;
   padding: 14px 0;
+  padding-left: 5px;
   border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 10px;
   transition: background-color 0.1s;
 }
 
@@ -324,18 +322,23 @@ function isPast(iso) {
   font-size: 14px;
   line-height: 0;
 }
+
 .loading-dots span:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 .loading-dots span:nth-child(3) {
   animation-delay: 0.4s;
 }
+
 @keyframes blink {
+
   0%,
   80%,
   100% {
     opacity: 0;
   }
+
   40% {
     opacity: 1;
   }
@@ -359,6 +362,7 @@ function isPast(iso) {
   .event-title {
     font-size: 14px;
   }
+
   .event-meta {
     font-size: 12px;
   }
