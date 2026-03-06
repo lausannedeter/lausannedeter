@@ -32,9 +32,11 @@ async function deleteEvent(id) {
 }
 
 async function logout() {
-  await api.post("/api/auth/logout");
+  await api.post("/api/auth/logout", {}, { 
+    withCredentials: true
+  });
   user.value = null;
-  router.push("/login");
+  router.push("/");
 }
 
 function formatDate(iso) {
