@@ -1,0 +1,1 @@
+import{$ as r,x as i,a0 as l,s as c,z as u}from"./CBGRl0XL.js";const f=r(async()=>{let e,a;const t=i("user");if(t.value)return;const s=c();try{const n=([e,a]=l(()=>$fetch("/api/auth/me",{baseURL:s.public.apiUrl,credentials:"include"})),e=await e,a(),e);if(t.value=n.user??null,!t.value)return u("/login")}catch{return t.value=null,u("/login")}});export{f as default};
