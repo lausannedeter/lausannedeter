@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "postbuild": "rimraf docs && cpx \".output/public/**/*\" docs && echo . > docs\\.nojekyll && echo lausannedeter.ch> docs\\CNAME",
+    "postbuild": "rimraf docs && cpx \".output/public/**/*\" docs && shx touch docs/.nojekyll && shx echo . > docs/.nojekyll && shx echo lausannedeter.ch > docs/CNAME",
     "sync:status": "node scripts/sync-events.js status",
     "sync:push": "node scripts/sync-events.js push",
     "sync:pull": "node scripts/sync-events.js pull"
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "cpx": "^1.5.0",
-    "rimraf": "^6.1.2"
+    "rimraf": "^6.1.2",
+    "shx": "^0.4.0"
   }
 }
