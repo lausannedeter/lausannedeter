@@ -18,7 +18,7 @@ async function handleRegister() {
   status.value = "loading";
   errorMessage.value = "";
   try {
-    await api.post("/organisations/register", {
+    await api.post("/api/orgas/register", {
       name: form.name,
       email: form.email,
       description: form.description,
