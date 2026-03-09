@@ -4,16 +4,22 @@ const api = useApi();
 const { data: _events } = await useAsyncData('events', () =>
     api.get('/api/events'),
 );
-const events = _events.value.data ?? [];
 const { data: _categories } = await useAsyncData('categories', () =>
     api.get('/api/categories'),
 );
-const categories = _categories.value.data ?? [];
-const categoryMap = createCategoryMap(categories ?? []);
+
+// Refetch côté client uniquement
+const { data: _eventsClient } = await useAsyncData('events-client', () => api.get('/api/events'), { server: false, lazy: true })
+const { data: _categoriesClient } = await useAsyncData('categories-client', () => api.get('/api/categories'), { server: false, lazy: true })
+
+const events = computed(() => _eventsClient.value?.data ?? _events.value?.data ?? [])
+const categories = computed(() => _categoriesClient.value?.data ?? _categories.value?.data ?? [])
 
 const EVENTS_LIMIT = 3
-const upcomingEvent = useUpcomingEvents(events, categoryMap, EVENTS_LIMIT)
-    .map(normalizeEventDates)
+const categoryMap = computed(() => createCategoryMap(categories.value))
+const upcomingEvents = computed(() =>
+  useUpcomingEvents(events.value, categoryMap.value, EVENTS_LIMIT)
+)
 
 useSeoMeta({
     title: 'Lausanne Deter',
@@ -57,9 +63,9 @@ useHead({
             </div>
             <div class="event-section">
                 <h3 class="subtitle">Prochains évènements:</h3>
-                <transition-group name="eventsList" tag="div" v-if="upcomingEvent.length"
+                <transition-group name="eventsList" tag="div" v-if="upcomingEvents.length"
                     class="month-content-container">
-                    <EventBlock v-for="event in upcomingEvent" :key="event._id" :event="event"></EventBlock>
+                    <EventBlock v-for="event in upcomingEvents" :key="event._id" :event="event"></EventBlock>
                 </transition-group>
             </div>
             <div class="buttons-container">
