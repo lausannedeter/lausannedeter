@@ -1,4 +1,13 @@
 <script setup>
+function toLocalInput(isoStr) {
+  if (!isoStr) return ''
+  const date = new Date(isoStr)
+  // Offset the UTC time by Zurich's offset (+1 or +2 in summer)
+  const zurich = new Date(date.toLocaleString('en-US', { timeZone: 'Europe/Zurich' }))
+  const pad = n => String(n).padStart(2, '0')
+  return `${zurich.getFullYear()}-${pad(zurich.getMonth() + 1)}-${pad(zurich.getDate())}T${pad(zurich.getHours())}:${pad(zurich.getMinutes())}`
+}
+
 const props = defineProps({
   initialData: {
     type: Object,
@@ -49,8 +58,8 @@ watchEffect(() => {
   if (!e || !e.title) return
   form.title = e.title ?? ''
   form.description = e.description ?? ''
-  form.startDate = e.startDate ? e.startDate.slice(0, 16) : ''
-  form.endDate = e.endDate ? e.endDate.slice(0, 16) : ''
+  form.startDate = toLocalInput(e.startDate)
+  form.endDate = toLocalInput(e.endDate)
   form.organizer = e.organizer ?? ''
   form.location = e.location ?? ''
   form.link = e.link ?? ''
