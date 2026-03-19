@@ -12,7 +12,6 @@ export default defineNuxtConfig({
     baseURL: '/',
     head: {
       title: 'Lausanne Deter',
-      htmlAttrs: { lang: 'fr-CH' },
       meta: [
         { name: 'description', content: 'Calendrier des luttes et évènements militants à Lausanne et environs' }
       ],
@@ -25,6 +24,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiUrl: process.env.NUXT_PUBLIC_API_URL || '',
+      cloudinaryCloudName: process.env.NUXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+      cloudinaryUploadPreset: process.env.NUXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET,
     },
   },
   ssr: true,

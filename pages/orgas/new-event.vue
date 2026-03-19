@@ -1,19 +1,28 @@
 <script setup>
 definePageMeta({ middleware: "auth" })
 const api = useApi()
+const cloudinary = useCloudinary()
 const router = useRouter()
 const status = ref(null)
 const errorMessage = ref("")
 
 async function handleCreate(form) {
   status.value = 'saving'
+  const file = form.imageFile
+  const imageName = form.image
+  delete form.imageFile
+
   try {
+    if (file && imageName) {
+      await cloudinary.upload(file, imageName)
+    }
     await api.post('/api/events', form)
     status.value = 'success'
     setTimeout(() => router.push('/orgas/dashboard'), 1200)
   } catch (err) {
     status.value = 'error'
-    errorMessage.value = err?.data?.message ?? 'Erreur.'
+    errorMessage.value = err?.data?.message ?? 'Erreur inconnue.'
+    console.error(err)
   }
 }
 </script>

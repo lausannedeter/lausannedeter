@@ -1,39 +1,39 @@
 <script setup>
   const api = useApi()
   const route = useRoute()
+  const { resolve: resolveImage } = useEventImage()
 
   const { data: _events } = await useAsyncData('events', () => api.get('/api/events'))
   const { data: _eventsClient } = await useAsyncData('events-client', () => api.get('/api/events'), { server: false, lazy: true })
-
   const events = computed(() => _eventsClient.value?.data ?? _events.value?.data ?? [])
   const event = computed(() => events.value.find(e => e.slug === route.params.slug))
-  useSeoMeta({
-    title: event.title,
-    description: event.description,
-    ogTitle: event.title,
-    ogDescription: event.description,
-    ogImage: `https://lausannedeter.ch/event/${event.image}`,
-    twitterCard: 'summary_large_image'
+
+  const imageUrl = ref(null)
+  watchEffect(async () => {
+    if (event.value?.image) {
+      imageUrl.value = await resolveImage(event.value.image)
+    }
   })
 
+  useSeoMeta({
+    title: () => event.value?.title,
+    description: () => event.value?.description,
+    ogTitle: () => event.value?.title,
+    ogDescription: () => event.value?.description,
+    ogImage: () => imageUrl.value,
+    twitterCard: 'summary_large_image'
+  })
   useHead({
-    link: [
-      {
-        rel: 'canonical',
-        href: `https://lausannedeter.ch/calendrier/${event.slug}`
-      }
-    ],
-    script: [
-      {
-        type: 'application/ld+json',
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Event",
-          "name": event.title,
-          "startDate": event.startDate
-        })
-      }
-    ]
+    link: [{ rel: 'canonical', href: () => `https://lausannedeter.ch/calendrier/${event.value?.slug}` }],
+    script: [{
+      type: 'application/ld+json',
+      children: () => JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": event.value?.title,
+        "startDate": event.value?.startDate
+      })
+    }]
   })
 </script>
 
@@ -61,7 +61,7 @@
             </div>
         </div>
 
-        <img v-if="event.image" :src="`/event/${event.image}`" :alt="event.title" class="event-image">
+        <img v-if="imageUrl" :src="imageUrl" :alt="event.title" class="event-image">
 
         <p class="event-description" v-html="event.description"></p>
 
