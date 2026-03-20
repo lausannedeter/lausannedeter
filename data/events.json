@@ -117,19 +117,6 @@
     "category": "soirees"
   },
   {
-    "_id": "69a87234f4251929417458d1",
-    "title": "Atelier participatif, réparation de vélo",
-    "slug": "permanence-velo-2026-02-16",
-    "description": "Atelier participatif de réparation, location et vente de vélos d'occasion",
-    "startDate": "2026-02-16T17:00",
-    "endDate": "2026-02-16T20:00",
-    "organizer": "Axecycle",
-    "image": "axecycle.jpg",
-    "location": "Place de la Riponne 10",
-    "link": "https://www.instagram.com/axecycle/",
-    "category": "perma"
-  },
-  {
     "_id": "69a87234f4251929417458d2",
     "title": "Jouons pour une ville solidaire et anticapitaliste!",
     "slug": "tournoi-de-foot-eag-2026-02-28",
