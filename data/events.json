@@ -1,18 +1,5 @@
 [
   {
-    "_id": "69a87234f4251929417458bf",
-    "title": "Permanence de droit de rester",
-    "slug": "permanence-de-droit-de-rester-2026-16-09",
-    "description": "Tous les lundis soirs 18h30 Permanence de droit de rester à la Maison de Quartier Sous-Gare",
-    "startDate": "2026-02-16T18:30",
-    "endDate": "2026-02-16T23:59",
-    "organizer": "droit de rester",
-    "image": "droitderester.jpg",
-    "location": "Maison de Quartier Sous-Gare",
-    "link": "https://www.instagram.com/droitderester/",
-    "category": "perma"
-  },
-  {
     "_id": "69a87234f4251929417458c0",
     "title": "Loto solidaire",
     "slug": "loto-solidaire-2026-02-28",
