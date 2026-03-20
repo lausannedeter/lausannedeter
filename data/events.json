@@ -91,19 +91,6 @@
     "category": "perma"
   },
   {
-    "_id": "69a87234f4251929417458cd",
-    "title": "Bouffe de la Cantine autogerée",
-    "slug": "cantine-autogeree-2026-02-14",
-    "description": "Bouffe pour tout le monde, à bas la marchandise ! Les deuxièmes et derniers samedis du mois",
-    "startDate": "2026-02-14T10:00",
-    "endDate": "2026-02-14T14:00",
-    "organizer": "Cantine autogerée",
-    "image": "cantine.jpg",
-    "location": "Lieu Secret",
-    "link": "",
-    "category": "bouffespop"
-  },
-  {
     "_id": "69a87234f4251929417458cf",
     "title": "Répétition de la Chorale Anarchiste",
     "slug": "chorale-anar-2026-02-16",
