@@ -417,19 +417,6 @@
     "category": "soirees"
   },
   {
-    "_id": "69a87234f4251929417458f9",
-    "title": "Soirée de soutien pour la Grève Féministe",
-    "slug": "soiree-soutien-greve-feministe-2026-02-20",
-    "description": "",
-    "startDate": "2026-02-20T22:00",
-    "endDate": "2026-02-20T23:59",
-    "organizer": "Grève Féministe",
-    "image": "soiree-soutien-greve-fem.jfif",
-    "location": "Cylure, Lausanne",
-    "link": "",
-    "category": "soirees"
-  },
-  {
     "_id": "69a87234f4251929417458fa",
     "title": "Rojava, Syrie : quelles alternatives pour le Moyen-Orient ?",
     "slug": "rojava-syrie-quelles-alternatives-pour-le-moyen-orient-2026-02-24",
