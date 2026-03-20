@@ -421,12 +421,13 @@
     "slug": "carnaval-2026-03-28",
     "description": "",
     "startDate": "2026-03-28T15:00",
-    "endDate": "2026-03-28T21:00",
+    "endDate": "2026-03-28T22:00:00.000Z",
     "organizer": "Carnaval populaire et deter",
-    "image": "",
-    "location": "Lieu Secret",
+    "image": "651177638_17911049427348313_2414076467972675275_n.jpg",
+    "location": "Lausanne",
     "link": "",
-    "category": "manifs"
+    "category": "manifs",
+    "updatedAt": "2026-03-20T12:26:13.928Z"
   },
   {
     "_id": "69a87234f4251929417458f5",
