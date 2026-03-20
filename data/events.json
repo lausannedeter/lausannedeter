@@ -260,19 +260,6 @@
     "category": "manifs"
   },
   {
-    "_id": "69a87234f4251929417458e3",
-    "title": "Repas de quartier de la Valencienne",
-    "slug": "repas-de-quartier-de-la-valencienne-2026-02-18",
-    "description": "Repas prix libre ouvert à tout le monde tous les mercredis soirs",
-    "startDate": "2026-02-18T18:30",
-    "endDate": "2026-02-18T23:59",
-    "organizer": "La Valencienne",
-    "image": "la-valencienne-repas.jpeg",
-    "location": "Centre socioculturel, rue de Renens 12C",
-    "link": "",
-    "category": "bouffespop"
-  },
-  {
     "_id": "69a87234f4251929417458e5",
     "title": "Repas de quartier de la Valencienne",
     "slug": "repas-de-quartier-de-la-valencienne-2026-02-25",
