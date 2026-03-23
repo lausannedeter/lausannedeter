@@ -935,5 +935,23 @@
     "updatedAt": "2026-03-20T12:31:14.236Z",
     "slug": "projection-put-your-soul-on-your-hand-and-walk-bds-lausanne-2026-03-26",
     "__v": 0
+  },
+  {
+    "_id": "69c12d81023e2fc41e7b81d2",
+    "title": "Projection: \"L'histoire de Souleymane\" à Zelig",
+    "description": "Projection - Mardi 24.03 à 20h - Zelig\n\nEntrée prix libre !\n\n“L’histoire de Souleymane”, Boris Lojkine, France, 2024, 93 minutes\nSouleymane fonce à vélo dans les rues bondées de Paris. Travailleur illégal pour une plateforme de livraison de repas, ce jeune Guinéen d’une humanité sans faille va demander l’asile en France: son entretien a lieu dans deux jours… Récompensé à Cannes Un Certain Regard par le Prix du meilleur acteur décerné au magnétique Abou Sangare, et par le Prix du Jury, le nouveau long-métrage de Boris Lojkine raconte le quotidien des sans-papiers comme une course contre la montre. (Synopsis Trigon Films.)",
+    "startDate": "2026-03-24T19:00:00.000Z",
+    "endDate": "2026-03-24T22:00:00.000Z",
+    "organizer": "Groupe Regards Critiques",
+    "image": "654829803_17990954294934487_6869691042922875501_n.jpg",
+    "location": "Zelig (Campus UNIL, arrêt Mouline)",
+    "link": "https://www.instagram.com/p/DWJZN5HiL3q/?hl=fr",
+    "category": "soirees",
+    "createdBy": null,
+    "createdByModel": "SuperAdmin",
+    "createdAt": "2026-03-23T12:09:37.339Z",
+    "updatedAt": "2026-03-23T12:09:37.339Z",
+    "slug": "projection-lhistoire-de-souleymane-a-zelig-groupe-regards-critiques-2026-03-24",
+    "__v": 0
   }
 ]
