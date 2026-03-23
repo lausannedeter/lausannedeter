@@ -3,12 +3,21 @@
     "id": 1,
     "monthStart": "2026-02-01",
     "monthLabel": "Février",
-    "link": "lausannedeter-Affiche_Février.pdf"
+    "link": "lausannedeter-Affiche_Février.pdf",
+    "preview-link": "preview-calendrier-fevrier.png"
   },
   {
     "id": 2,
     "monthStart": "2026-03-01",
     "monthLabel": "Mars",
-    "link": "lausannedeter-Affiche_Mars.pdf"
+    "link": "lausannedeter-Affiche_Mars.pdf",
+    "preview-link": "preview-calendrier-mars.png"
+  },
+  {
+    "id": 3,
+    "monthStart": "2026-04-01",
+    "monthLabel": "Avril",
+    "link": "",
+    "preview-link": ""
   }
 ]
