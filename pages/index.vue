@@ -4,16 +4,22 @@ const api = useApi();
 const { data: _events } = await useAsyncData('events', () =>
     api.get('/api/events'),
 );
-const events = _events.value.data ?? [];
 const { data: _categories } = await useAsyncData('categories', () =>
     api.get('/api/categories'),
 );
-const categories = _categories.value.data ?? [];
-const categoryMap = createCategoryMap(categories ?? []);
+
+//Refetch côté client
+const { data: _eventsClient } = await useAsyncData('events-client', () => api.get('/api/events'), { server: false, lazy: true })
+const { data: _categoriesClient } = await useAsyncData('categories-client', () => api.get('/api/categories'), { server: false, lazy: true })
+
+const events = computed(() => _eventsClient.value?.data ?? _events.value?.data ?? [])
+const categories = computed(() => _categoriesClient.value?.data ?? _categories.value?.data ?? [])
 
 const EVENTS_LIMIT = 3
-const upcomingEvent = useUpcomingEvents(events, categoryMap, EVENTS_LIMIT)
-    .map(normalizeEventDates)
+const categoryMap = computed(() => createCategoryMap(categories.value))
+const upcomingEvent = computed(() =>
+    useUpcomingEvents(events.value, categoryMap.value, EVENTS_LIMIT)
+)
 
 useSeoMeta({
     title: 'Lausanne Deter',
