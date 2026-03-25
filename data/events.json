@@ -1061,5 +1061,23 @@
     "updatedAt": "2026-03-25T13:12:38.022Z",
     "slug": "groupe-de-paroles-pour-personnes-neurodivergentes-et-veneres-groupe-de-paroles-pour-neuroa-veneres-2026-04-23",
     "__v": 0
+  },
+  {
+    "_id": "69c3e00c023e2fc41e7b889a",
+    "title": "Match solidaire - Récolte de fonds pour Cuba",
+    "description": "🚨URGENCE POUR CUBA🚨\n\n📢 Le FC POP organise un match humanitaire pour Cuba, en collaboration avec Suisse-Cuba et le FC Hardegger🇨🇺\n\n📢 RDV au terrain de foot de Vidy le dimanche 19 avril à partir de 13h👐🏼\n\n📢 Le match commence à 13h30 et tout au long un repas cubain sera servi, ainsi qu'un apéro🍽\n\n📢 Le but est de récolter un maximum d'argent, de médicaments et de matériel médical pour les envoyer à Cuba, qui vit sous un blocus inhumain imposé par l'impérialisme",
+    "startDate": "2026-04-19T11:00:00.000Z",
+    "endDate": "2026-04-19T16:00:00.000Z",
+    "organizer": "FC POP",
+    "image": "656246627_18318857335253020_2763097416131049183_n.jfif",
+    "location": "Terrain de foot de Vidy",
+    "link": "https://www.instagram.com/p/DWRjhFoDD4D/?hl=fr&img_index=1",
+    "category": "manifs",
+    "createdBy": null,
+    "createdByModel": "SuperAdmin",
+    "createdAt": "2026-03-25T13:15:56.197Z",
+    "updatedAt": "2026-03-25T13:15:56.197Z",
+    "slug": "match-solidaire-recolte-de-fonds-pour-cuba-fc-pop-2026-04-19",
+    "__v": 0
   }
 ]
