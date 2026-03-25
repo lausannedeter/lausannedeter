@@ -953,5 +953,23 @@
     "updatedAt": "2026-03-23T12:09:37.339Z",
     "slug": "projection-lhistoire-de-souleymane-a-zelig-groupe-regards-critiques-2026-03-24",
     "__v": 0
+  },
+  {
+    "_id": "69c3d130023e2fc41e7b87af",
+    "title": "Manifestation: Sommet contre l'extractivisme et l'impérialisme !",
+    "description": "Non au sommet des pilleurs!\n\nLuttons contre l'extractivisme et l'impérialisme\n\nPour une justice sociale et climatique!",
+    "startDate": "2026-04-20T16:00:00.000Z",
+    "endDate": "2026-04-20T20:00:00.000Z",
+    "organizer": "Stop Pillage",
+    "image": "656115419_17942585010146947_6759831146282949617_n.webp",
+    "location": "Place du 14 juin, Lausanne",
+    "link": "https://www.instagram.com/p/DWPDOavAm6A/?img_index=7",
+    "category": "manifs",
+    "createdBy": null,
+    "createdByModel": "SuperAdmin",
+    "createdAt": "2026-03-25T12:12:32.551Z",
+    "updatedAt": "2026-03-25T12:12:32.551Z",
+    "slug": "manifestation-sommet-contre-lextractivisme-et-limperialisme-stop-pillage-2026-04-20",
+    "__v": 0
   }
 ]
