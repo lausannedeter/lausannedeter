@@ -1045,5 +1045,23 @@
     "updatedAt": "2026-03-25T13:15:56.197Z",
     "slug": "match-solidaire-recolte-de-fonds-pour-cuba-fc-pop-2026-04-19",
     "__v": 0
+  },
+  {
+    "_id": "69c56035023e2fc41e7b8b27",
+    "title": "Café Autogéré & Rassemblement Queer - Admin: déclarations d'impôts",
+    "description": "Plus d'informations suiveront quelques jours avant chaque CARaQ\n\nTous les mardis du 31 mars au 5 mai de 15h à 19h, goûter et discussions\n\n31 Mars : admin, déclaration d'impôts\n7 Avril : pins et bracelets\n14 Avril : échange de connaissances autour des démarches AI\n21 Avril : Couptif\n28 Avril : Électronique de base, mini lampes\n5 Mai : Freeshop et couture",
+    "startDate": "2026-03-31T13:00:00.000Z",
+    "endDate": "2026-03-31T17:00:00.000Z",
+    "organizer": "Caraqueer",
+    "image": "655022741_17874508209556226_596132559159844579_n.webp",
+    "location": "Lien en mp",
+    "link": "https://www.instagram.com/p/DWGh8KLiO7A/?hl=fr",
+    "category": "confs",
+    "createdBy": null,
+    "createdByModel": "SuperAdmin",
+    "createdAt": "2026-03-26T16:35:01.300Z",
+    "updatedAt": "2026-03-26T16:35:01.300Z",
+    "slug": "cafe-autogere-and-rassemblement-queer-admin-declarations-dimpots-caraqueer-2026-03-31",
+    "__v": 0
   }
 ]
