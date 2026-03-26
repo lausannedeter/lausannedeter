@@ -1153,5 +1153,23 @@
     "updatedAt": "2026-03-26T16:41:00.948Z",
     "slug": "cafe-autogere-and-rassemblement-queer-freeshop-and-couture-caraqueer-2026-05-05",
     "__v": 0
+  },
+  {
+    "_id": "69c58534c253cc390b5bea46",
+    "title": "Festival Paysan",
+    "description": "Le festival paysan se veut un lieu de rencontres et de découvertes ouvert à toutes et tous. Face aux tensions grandissantes au sein du monde paysan, le festival ambitionne de (re)créer des liens entre agriculture et société civile et d'aborder, ensemble, les défits des actuelles et futures générations d'agriculteurs et agricultrices. Nous serions heureux d'accueillir tout type de pratiques agricoles (microferme, bio, conventionnel, etc.), car c'est seulement ensemble que nous pouvons penser l'agriculture suisse !\n\nHébergé dans le corps historique de la ferme de Bassenges, à deux pas de Lausanne et accessible en métro, le festival propose un programme varié et festif entre tables rondes, marché de producteur·rices, forum des connaissances, ateliers, spectacle, visite de ferme, projection, concert et bal folk (voir programme détaillé ci-dessous !).\n\n2026 étant l'année des agricultrices selon l'ONU, le festival fera la part belle aux paysanne·xs et à la diversité!",
+    "startDate": "2026-04-17T12:00:00.000Z",
+    "endDate": "2026-04-17T21:00:00.000Z",
+    "organizer": "Uniterre, Amix Bassenges, Ferme Bassenges",
+    "image": "260221_festivalpaysan_savethedate.png",
+    "location": "Ferme de Bassenges à Ecublens(VD)",
+    "link": "https://festival-paysan.ch/",
+    "category": "confs",
+    "createdBy": null,
+    "createdByModel": "SuperAdmin",
+    "createdAt": "2026-03-26T19:12:52.389Z",
+    "updatedAt": "2026-03-26T19:12:52.389Z",
+    "slug": "festival-paysan-uniterre-amix-bassenges-ferme-bassenges-2026-04-17",
+    "__v": 0
   }
 ]
