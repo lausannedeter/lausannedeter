@@ -1,10 +1,35 @@
 <script setup>
+const { resolve: resolveImage } = useCalendarImage()
 const api = useApi();
 
 const { data: _affiches } = await useAsyncData('affiches', () =>
     api.get('/api/affiches'),
 );
 const affiches = _affiches.value.data.sort((a, b) => new Date(b.monthStart) - new Date(a.monthStart)) ?? [];
+
+
+const resolvedUrls = ref({})
+
+watchEffect(async () => {
+  if (!affiches) return
+
+  const map = {}
+
+  for (const affiche of affiches) {
+    map[affiche._id] = {}
+
+    if (affiche.preview_link) {
+      map[affiche._id].preview = await resolveImage(affiche.preview_link)
+    }
+
+    if (affiche.link) {
+      map[affiche._id].pdf = await resolveImage(`fl_attachment/${affiche.link}`)
+    }
+  }
+
+  resolvedUrls.value = map
+})
+
 
 useSeoMeta({
     title: 'Archives des calendriers – Lausanne Deter',
@@ -40,9 +65,12 @@ useHead({
                     <h2 class="month-label">{{ `${affiche.monthLabel} ${new Date(affiche.monthStart).getFullYear()}` }}
                     </h2>
                 </div>
-                <div class="preview-container">
-                    <a :href="`/affiches/${affiche.link}`" download>
-                        <PdfPreview :pdfUrl="`/affiches/${affiche.link}`" />
+                <div v-if="resolvedUrls[affiche._id]" class="preview-container">
+                    <a :href="resolvedUrls[affiche._id].pdf" download>
+                        <img :src="resolvedUrls[affiche._id].preview" :alt="affiche.link" class="preview-image">
+                    </a>
+                    <a class="download-text" :href="resolvedUrls[affiche._id].pdf" download>
+                        Télécharger
                     </a>
                 </div>
             </div>
@@ -105,7 +133,15 @@ useHead({
 .preview-container {
     padding: 30px 24px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 60vh;
 }
 
 /* TABLETTE */
@@ -116,8 +152,8 @@ useHead({
     }
 
     .preview-container {
-    padding: 30px 72px;
-}
+        padding: 30px 72px;
+    }
 }
 
 /* DESKTOP */
@@ -128,7 +164,7 @@ useHead({
     }
 
     .preview-container {
-    padding: 30px 144px;
-}
+        padding: 30px 144px;
+    }
 }
 </style>

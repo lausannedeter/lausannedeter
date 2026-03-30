@@ -1,4 +1,6 @@
 <script setup>
+const { resolve: resolveImage } = useCalendarImage()
+
 const props = defineProps({
     monthEvents: {
         type: Array
@@ -11,6 +13,14 @@ const props = defineProps({
     }
 })
 
+
+const pdfUrl = ref(null)
+
+watchEffect(async () => {
+  if (!props.affiche) return
+
+  pdfUrl.value = await resolveImage(`fl_attachment/${props.affiche.link}`)
+})
 </script>
 
 <template>
@@ -24,7 +34,7 @@ const props = defineProps({
 
         <div v-if="affiche && affiche.link !== ''" class="download-link-container">
             <span class="link-text">
-                Télécharge <a class="link" :href="`/affiches/${affiche.link}`" download>l'agenda version pdf</a> et imprime le pour ton lieu co'
+                Télécharge <a class="link" :href="pdfUrl" download>l'agenda version pdf</a> et imprime le pour ton lieu co'
             </span>
         </div>
 
