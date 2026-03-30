@@ -152,4 +152,77 @@ watchEffect(async () => {
 .calendar-preview {
     height: 100px;
 }
+.calendar-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #444;
+    text-decoration: none;
+    transition:
+        border-color 0.15s,
+        color 0.15s,
+        background-color 0.15s;
+    font-family: "Azeret Medium";
+}
+
+.icon-btn:hover {
+    border-color: #52bfea;
+    color: #52bfea;
+}
+
+.icon-btn--danger:hover {
+    border-color: #cd523c;
+    color: #cd523c;
+}
+
+.icon-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.loading-dots span {
+    animation: blink 1s infinite;
+    font-size: 14px;
+    line-height: 0;
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+
+    0%,
+    80%,
+    100% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+}
+
+/* Tablet */
+@media (min-width: 750px) {
+    .calendar-title {
+        font-size: 14px;
+    }
+}
 </style>
