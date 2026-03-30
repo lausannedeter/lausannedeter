@@ -418,19 +418,6 @@
     "category": "confs"
   },
   {
-    "_id": "69a87234f425192941745900",
-    "title": "Assemblée Générale - Collectif Syndical Bas-Seuil",
-    "slug": "assemblee-generale-collectif-syndical-bas-seuil-2026-02-26",
-    "description": "Assemblée Générale du Collectif Syndical Bas-Seuil",
-    "startDate": "2026-02-26T19:00",
-    "endDate": "2026-02-26T23:59",
-    "organizer": "des gens deter",
-    "image": "",
-    "location": "Maison du Peuple",
-    "link": "",
-    "category": "confs"
-  },
-  {
     "_id": "69a87234f425192941745901",
     "title": "Bouffe de la Cantine autogerée",
     "slug": "cantine-autogeree-2026-03-28",
