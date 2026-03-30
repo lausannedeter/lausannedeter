@@ -58,6 +58,7 @@ const form = reactive({
 
 watchEffect(() => {
   const c = props.initialData
+  console.log(c)
   if (!c || !c.monthLabel) return
   form.monthStart = c.monthStart.slice(0, 7) ?? ''
   form.monthLabel = getMonthLabel(c.monthStart) ?? ''
@@ -138,7 +139,7 @@ function handleSubmit() {
                 📄 <span>{{ form.link }}</span>
               </div>
             </template>
-            <template v-else-if="form.preview_link">
+            <template v-else-if="form.link">
               <span class="upload-icon">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
                   stroke-linecap="round" stroke-linejoin="round">
@@ -147,7 +148,7 @@ function handleSubmit() {
                   <line x1="12" y1="3" x2="12" y2="15" />
                 </svg>
               </span>
-              <span class="upload-text"><span class="upload-cta">{{ form.preview_link }}</span></span>
+              <span class="upload-text"><span class="upload-cta">{{ form.link }}</span></span>
             </template>
             <template v-else>
               <span class="upload-icon">
@@ -162,8 +163,8 @@ function handleSubmit() {
               <span class="upload-hint">PDF uniquement</span>
             </template>
           </div>
-          <button v-if="form.preview_link" type="button" class="upload-remove"
-            @click="form.preview_link = null; linkFile = null; linkUploadedUrl = null; linkFileInput.value = ''">
+          <button v-if="form.link" type="button" class="upload-remove"
+            @click="form.link = null; linkFile = null; linkUploadedUrl = null; linkFileInput.value = ''">
             ✕ Supprimer le PDF
           </button>
         </div>
