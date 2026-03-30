@@ -1,23 +1,22 @@
 [
   {
-    "id": 1,
-    "monthStart": "2026-02-01",
-    "monthLabel": "Février",
-    "link": "lausannedeter-Affiche_Février.pdf",
-    "preview-link": ""
-  },
-  {
-    "id": 2,
-    "monthStart": "2026-03-01",
+    "_id": "69ca81d7c253cc390b5bfc66",
+    "monthStart": "2026-03-01T00:00:00.000Z",
     "monthLabel": "Mars",
-    "link": "lausannedeter-Affiche_Mars.pdf",
-    "preview-link": ""
+    "link": "lausannedeter-affiche_mars.pdf",
+    "preview_link": "preview-calendrier-mars.png",
+    "createdAt": "2026-03-30T13:59:51.427Z",
+    "updatedAt": "2026-03-30T13:59:51.427Z",
+    "__v": 0
   },
   {
-    "id": 3,
-    "monthStart": "2026-04-01",
-    "monthLabel": "Avril",
-    "link": "",
-    "preview-link": ""
+    "_id": "69ca8192c253cc390b5bfc4e",
+    "monthStart": "2026-02-01T00:00:00.000Z",
+    "monthLabel": "Février",
+    "link": "lausannedeter-affiche_fevrier.pdf",
+    "preview_link": "preview-calendrier-fevrier.png",
+    "createdAt": "2026-03-30T13:58:42.893Z",
+    "updatedAt": "2026-03-30T14:41:26.913Z",
+    "__v": 0
   }
 ]

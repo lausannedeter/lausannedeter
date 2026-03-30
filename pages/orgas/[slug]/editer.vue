@@ -13,9 +13,6 @@ const eventData = computed(() => _event.value?.data ?? undefined)
 const { data: _affiche } = await useAsyncData('edit-affiche', () => api.get(`/api/affiches/${id}`))
 const afficheData = computed(() => _affiche.value?.data ?? undefined)
 
-console.log(eventData.value)
-console.log(afficheData.value)
-
 async function handleSave(form) {
   status.value = 'saving'
   try {
