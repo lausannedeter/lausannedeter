@@ -1,18 +1,5 @@
 [
   {
-    "_id": "69a87234f4251929417458c0",
-    "title": "Loto solidaire",
-    "slug": "loto-solidaire-2026-02-28",
-    "description": "SAVE THE DATE – LOTO DES MULTI ! ⚡ \n\n📅 Samedi 28 février\n🕕 Portes ouvertes à 18h – Loto à 19h \n📍 Casino de Montbenon \n\n⚡ Ça revient ! Après le succès de l'année dernière, le Loto des Multi fait son grand retour ! \n⚡ Animé par @merryqueersmas, cette soirée pleine de fun et de surprises soutient notre programme Multiplicatrices. \n⚡ Plus d'infos très bientôt ! La billetterie ouvrira prochainement, avec tous les détails pour participer. \n⚡ Préparez-vous à une soirée pleine de surprises et de tonnes de prix à gagner… on a hâte de vous retrouver !",
-    "startDate": "2026-02-28T18:00",
-    "endDate": "2026-02-28T20:00",
-    "organizer": "Fondation Surgir",
-    "image": "loto_surgir.webp",
-    "location": "Casino de Montbenon",
-    "link": "https://www.instagram.com/p/DT0hBuxAkDB/",
-    "category": "soirees"
-  },
-  {
     "_id": "69a87234f4251929417458c1",
     "title": "Permanence de droit de rester",
     "slug": "permanence-de-droit-de-rester-2026-23-09",
@@ -323,19 +310,6 @@
     "image": "projection-laus-pal.jpg",
     "location": "Le Cinematographe",
     "link": "https://www.instagram.com/p/DUyOdSBCGLw/?hl=fr&img_index=1",
-    "category": "soirees"
-  },
-  {
-    "_id": "69a87234f4251929417458f8",
-    "title": "Super lotogéré en soutien au Carnaval populaire et deter",
-    "slug": "lotogere-soutien-carnaval-populaire-deter-2026-03-01",
-    "description": "🐱🐱🐱 Super Lotogéré 🐱🐱\n📆 Dim 1 mars I 16:00 - 18:00\n📍 Pôle Sud, salle Gibraltar (accessible PMR)\n\nLe Carnaval populaire & déter est de retour 28 mars 2026 dans les rues de Lausanne !\n\nAprès le franc succès du Lotogéré l'an passé, on remet ça le dimanche 1er mars 2026 pour vous faire gagner des super lots tout en construisant une caisse de soutien pour le carnaval.\n\nOn vous attend dès 15h pour manger des crêpes et jouer au loto entre 16h et 18h.\n\n15h : ouverture des portes\n16h – 18h : loto prix libre et crêpes",
-    "startDate": "2026-03-01T15:00",
-    "endDate": "2026-03-01T22:00",
-    "organizer": "Carnaval populaire et deter",
-    "image": "lotogere.png",
-    "location": "Pôle sud",
-    "link": "https://www.instagram.com/p/DU1NehcjwI1/?hl=fr",
     "category": "soirees"
   },
   {
