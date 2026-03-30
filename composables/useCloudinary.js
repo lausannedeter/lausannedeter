@@ -2,8 +2,6 @@ export const useCloudinary = () => {
   const config = useRuntimeConfig()
 
   async function upload(file, filename) {
-    console.log('cloudinaryCloudName:', config.public.cloudinaryCloudName)
-    console.log('cloudinaryUploadPreset:', config.public.cloudinaryUploadPreset)
     const body = new FormData()
     body.append('file', file)
     body.append('upload_preset', config.public.cloudinaryUploadPreset)

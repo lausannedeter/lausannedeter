@@ -1,4 +1,6 @@
 <script setup>
+import OrgasDashboardCalendarsDisplay from '~/components/OrgasDashboardCalendarsDisplay.vue';
+
 definePageMeta({ middleware: "auth" });
 
 const api = useApi();
@@ -8,8 +10,11 @@ const user = useState("user");
 const isSuperAdmin = computed(() => user.value?.role === "superadmin");
 
 const { data: _events, refresh: refreshEvents } = await useAsyncData(
-  "org-events",
+  `org-events`,
   () => api.get(isSuperAdmin.value ? "/api/events" : "/api/orgas/me/events"),
+  {
+    server: false
+  }
 );
 const events = computed(() => _events.value?.data.sort((a, b) => new Date(a.startDate) - new Date(b.startDate)) ?? []);
 
@@ -18,6 +23,11 @@ const { data: _categories } = await useAsyncData('categories', () =>
 );
 const categories = _categories.value.data ?? [];
 const categoryMap = createCategoryMap(categories ?? []);
+
+const { data: _affiches, refresh: refreshAffiches } = await useAsyncData('affiches', () =>
+  api.get('/api/affiches')
+);
+const affiches = _affiches.value.data ?? [];
 
 const deleting = ref(null);
 async function deleteEvent(id) {
@@ -31,25 +41,30 @@ async function deleteEvent(id) {
   }
 }
 
+async function deleteCalendar(id) {
+  if (!confirm("Supprimer ce calendrier ?")) return;
+  deleting.value = id;
+  try {
+    await api.del(`/api/affiches/${id}`);
+    //Refresh affiche ici??
+  } finally {
+    deleting.value = null;
+  }
+}
+
 async function logout() {
-  await api.post("/api/auth/logout", {}, { 
+  await api.post("/api/auth/logout", {}, {
     withCredentials: true
   });
   user.value = null;
   router.push("/");
 }
 
-function formatDate(iso) {
-  if (!iso) return "—";
-  return new Date(iso).toLocaleDateString("fr-CH", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-}
-
-function isPast(iso) {
-  return iso && new Date(iso) < new Date();
+const activeTab = ref("events")
+function changeActiveTab(tab) {
+  if (activeTab.value !== tab) {
+    activeTab.value = tab
+  }
 }
 </script>
 
@@ -75,49 +90,19 @@ function isPast(iso) {
 
     <div class="divider"></div>
 
-    <div class="actions-row">
-      <nuxt-link class="button action-btn" to="/orgas/new-event">
-        + Ajouter un évènement
-      </nuxt-link>
+    <div v-if="isSuperAdmin" class="tab-container">
+      <div class="event-tab tab-button" :class="{active : activeTab === 'events'}"  @click="changeActiveTab('events')">
+        Évènements
+      </div>
+      <div class="calendar-tab tab-button" :class="{active : activeTab === 'calendars'}"  @click="changeActiveTab('calendars')">
+        Calendriers
+      </div>
     </div>
 
-    <div class="events-section">
-      <h3 class="section-label">Mes évènements</h3>
-
-      <div v-if="events.length === 0" class="empty-state">
-        <p>Aucun évènement pour l'instant.</p>
-        <nuxt-link class="register-link" to="/orgas/new-event">
-          Créer ton premier évènement →
-        </nuxt-link>
-      </div>
-
-      <div v-else class="events-list">
-        <div v-for="event in events" :key="event._id" class="event-row"
-          :class="{ 'event-row--past': isPast(event.endDate) }" :style="{
-            borderLeft: `5px solid ${categoryMap[event.category].color ?? '#ccc'}`
-          }">
-          <div class="event-info">
-            <span class="event-title">{{ event.title }}</span>
-            <span class="event-meta">
-              {{ formatDate(event.startDate) }}
-              <span v-if="event.location"> · {{ event.location }}</span>
-            </span>
-          </div>
-
-          <div class="event-actions">
-            <nuxt-link class="icon-btn" :to="`/orgas/${event._id}/editer`" title="Modifier">
-              ✎
-            </nuxt-link>
-            <button class="icon-btn icon-btn--danger" :disabled="deleting === event._id" title="Supprimer"
-              @click="deleteEvent(event._id)">
-              <span v-if="deleting === event._id" class="loading-dots">
-                <span>.</span><span>.</span><span>.</span>
-              </span>
-              <span v-else>✕</span>
-            </button>
-          </div>
-        </div>
-      </div>
+    <div class="tab-content-container">
+      <OrgasDashboardEventsDisplay v-if="activeTab === 'events'" :events="events" :categoryMap="categoryMap"
+        @delete="deleteEvent"></OrgasDashboardEventsDisplay>
+      <orgas-dashboard-calendars-display v-if="activeTab === 'calendars'" :affiches="affiches" @delete="deleteCalendar"></orgas-dashboard-calendars-display>
     </div>
   </section>
 </template>
@@ -195,157 +180,6 @@ function isPast(iso) {
   background-color: #e0e0e0;
 }
 
-.actions-row {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.action-btn {
-  font-size: 13px;
-  padding: 10px 20px;
-}
-
-.section-label {
-  font-family: "Azeret Medium";
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #555;
-  font-weight: normal;
-  margin-bottom: 16px;
-}
-
-.empty-state {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 32px 0;
-  color: #888;
-  font-size: 13px;
-}
-
-.register-link {
-  font-family: "Azeret Medium";
-  color: #cd523c;
-  text-decoration: underline;
-  font-size: 13px;
-}
-
-.events-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  border-top: 1px solid #e0e0e0;
-}
-
-.event-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 14px 0;
-  padding-left: 5px;
-  border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 10px;
-  transition: background-color 0.1s;
-}
-
-.event-row--past {
-  opacity: 0.5;
-}
-
-.event-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  overflow: hidden;
-}
-
-.event-title {
-  font-family: "Azeret Medium";
-  font-size: 13px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.event-meta {
-  font-size: 11px;
-  color: #888;
-  font-family: "Azeret Thin Italic";
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.event-actions {
-  display: flex;
-  gap: 8px;
-  flex-shrink: 0;
-}
-
-.icon-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border: 1px solid #ccc;
-  background: none;
-  cursor: pointer;
-  font-size: 14px;
-  color: #444;
-  text-decoration: none;
-  transition:
-    border-color 0.15s,
-    color 0.15s,
-    background-color 0.15s;
-  font-family: "Azeret Medium";
-}
-
-.icon-btn:hover {
-  border-color: #52bfea;
-  color: #52bfea;
-}
-
-.icon-btn--danger:hover {
-  border-color: #cd523c;
-  color: #cd523c;
-}
-
-.icon-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.loading-dots span {
-  animation: blink 1s infinite;
-  font-size: 14px;
-  line-height: 0;
-}
-
-.loading-dots span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.loading-dots span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes blink {
-
-  0%,
-  80%,
-  100% {
-    opacity: 0;
-  }
-
-  40% {
-    opacity: 1;
-  }
-}
-
 .role-badge {
   display: inline-block;
   background-color: #cd523c;
@@ -359,14 +193,25 @@ function isPast(iso) {
   letter-spacing: 0.05em;
 }
 
-/* Tablet */
-@media (min-width: 750px) {
-  .event-title {
-    font-size: 14px;
-  }
-
-  .event-meta {
-    font-size: 12px;
-  }
+.tab-container {
+  display: flex;
+  width: fit-content;
+  margin-top: -36px;
+  border-right: solid #e0e0e0 1px;
 }
+
+.tab-button {
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-left: solid #e0e0e0 1px;
+  border-bottom: solid #e0e0e0 1px;
+}
+
+.tab-button.active {
+  font-family: Azeret Medium;
+}
+
+/* Tablet */
+@media (min-width: 750px) {}
 </style>
