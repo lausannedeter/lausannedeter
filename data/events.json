@@ -260,19 +260,6 @@
     "category": "bouffespop"
   },
   {
-    "_id": "69a87234f4251929417458e8",
-    "title": "Lancement de la campagne AFZ Vaud!",
-    "slug": "lancement-de-la-campagne-afz-vaud-2026-02-21",
-    "description": "📢 Lancement de la campagne AFZ Vaud!\n\nLa campagne Apartheid Free Zone (AFZ - Zone libre d'apartheid) vise à rassembler lieux culturels, commerces, associations et institutions autour d'un engagement clair : refuser toute forme de complicité avec le génocide, l'apartheid et le colonialisme de peuplement israéliens.\n\nÀ cette occasion nous vous invitons à venir discuter des enjeux du boycott, notamment culturel, et des bases juridiques qui l'accompagnent.\n\n17h00 : table-ronde\n19h00 : repas palestinien végétarien\n20h30 : concert de @7ema_music et DJ set de @_l_ramin_l_\n\n📅 21 février\n\n📍Pôle Sud\n\nEntrée prix libre.",
-    "startDate": "2026-02-21T17:00",
-    "endDate": "2026-02-21T23:59",
-    "organizer": "Apartheid Free Zone",
-    "image": "AFZ.webp",
-    "location": "Pôle Sud",
-    "link": "https://www.instagram.com/p/DULq23bDTfZ/?hl=fr&img_index=1",
-    "category": "soirees"
-  },
-  {
     "_id": "69a87234f4251929417458ec",
     "title": "Stand LSCV dans le cadre de la Semaine de la durabilité",
     "slug": "stand-lscv-semaine-de-la-durabilité-2026-03-02",
@@ -868,7 +855,7 @@
   },
   {
     "_id": "69bd3b04023e2fc41e7b7c85",
-    "title": "Improviser nos quotidiens révolutionnaires",
+    "title": "Improviser nos quotidiens révolutionnés",
     "description": "💥STAGE D’IMPRO MILITANTE💥\n\nL’impro peut être un outil de nos luttes. Sa capacité à partir de nous, du moment et à créer des scènes sans contraintes matérielles peut être mobilisée pour revisiter nos pratiques quotidiennes, en extraire leurs gestes révolutionnaires, en imaginer d’autres. « La révolution s’ancrait dans le quotidien (…) en transformant radicalement le quotidien pour en faire une affaire collective, en se le réappropriant dans et par la lutte politique… », dit Kristin Ross dans « La Forme Commune ». Le quotidien peut être l’un des terrains de notre désaliénation, l’impro peut être un outil pour le transformer. Viens on teste!\n\nSamedi 11 avril de 10h à 16h, @collectif.laniche , Tarif: 80.-\ninscriptions à ludimarwood@outlook.com",
     "startDate": "2026-04-11T08:00:00.000Z",
     "endDate": "2026-04-11T14:00:00.000Z",
@@ -880,8 +867,8 @@
     "createdBy": null,
     "createdByModel": "SuperAdmin",
     "createdAt": "2026-03-20T12:18:12.201Z",
-    "updatedAt": "2026-03-20T12:18:12.201Z",
-    "slug": "improviser-nos-quotidiens-revolutionnaires-collectif-la-niche-2026-04-11",
+    "updatedAt": "2026-03-30T09:14:51.709Z",
+    "slug": "improviser-nos-quotidiens-revolutionnes-collectif-la-niche-2026-04-11",
     "__v": 0
   },
   {
@@ -1170,6 +1157,60 @@
     "createdAt": "2026-03-26T19:12:52.389Z",
     "updatedAt": "2026-03-26T19:12:52.389Z",
     "slug": "festival-paysan-uniterre-amix-bassenges-ferme-bassenges-2026-04-17",
+    "__v": 0
+  },
+  {
+    "_id": "69ca378ac253cc390b5bf367",
+    "title": "Club escalade queer",
+    "description": "Marre des mascus torse nu à la salle d’escalade ? Viens grimper avec nous en mixité choisie queer, le jeudi 16 avril dès 18h à la salle de bloc de Beaulieu !\n\nInscriptions via le code QR ou le lien dans notre bio, jusqu’au 10 avril 💥\n\nMatériel : prends ton matos si t’en as, sinon la location de chaussons est possible sur place et revient à 5 francs. On s’occupe de la magnésie !\n\nL’entrée est prix libre cette fois-ci ! Plus d’informations dans le formulaire d’inscription :)\n\nAu plaisir de grimper ensemble ✨\n",
+    "startDate": "2026-04-16T16:00:00.000Z",
+    "endDate": "2026-04-16T18:00:00.000Z",
+    "organizer": "plan queer",
+    "image": "planqueer_escalade.png",
+    "location": "salle de bloc de Beaulieu",
+    "link": "https://www.instagram.com/planqueer/",
+    "category": "confs",
+    "createdBy": null,
+    "createdByModel": "SuperAdmin",
+    "createdAt": "2026-03-30T08:42:50.018Z",
+    "updatedAt": "2026-03-30T09:11:01.268Z",
+    "slug": "club-escalade-queer-plan-queer-2026-04-16",
+    "__v": 0
+  },
+  {
+    "_id": "69ca3e17c253cc390b5bf3c4",
+    "title": "Festival Paysan",
+    "description": "Le festival paysan se veut un lieu de rencontres et de découvertes ouvert à toutes et tous. Face aux tensions grandissantes au sein du monde paysan, le festival ambitionne de (re)créer des liens entre agriculture et société civile et d'aborder, ensemble, les défits des actuelles et futures générations d'agriculteurs et agricultrices. Nous serions heureux d'accueillir tout type de pratiques agricoles (microferme, bio, conventionnel, etc.), car c'est seulement ensemble que nous pouvons penser l'agriculture suisse !\n\nHébergé dans le corps historique de la ferme de Bassenges, à deux pas de Lausanne et accessible en métro, le festival propose un programme varié et festif entre tables rondes, marché de producteur·rices, forum des connaissances, ateliers, spectacle, visite de ferme, projection, concert et bal folk (voir programme détaillé ci-dessous !).\n\n2026 étant l'année des agricultrices selon l'ONU, le festival fera la part belle aux paysanne·xs et à la diversité!",
+    "startDate": "2026-04-18T12:00:00.000Z",
+    "endDate": "2026-04-18T21:00:00.000Z",
+    "organizer": "Uniterre, Amix Bassenges, Ferme Bassenges",
+    "image": "260221_festivalpaysan_savethedate.png",
+    "location": "Ferme de Bassenges à Ecublens(VD)",
+    "link": "https://festival-paysan.ch/",
+    "category": "confs",
+    "createdBy": null,
+    "createdByModel": "SuperAdmin",
+    "createdAt": "2026-03-30T09:10:47.442Z",
+    "updatedAt": "2026-03-30T09:10:47.442Z",
+    "slug": "festival-paysan-uniterre-amix-bassenges-ferme-bassenges-2026-04-18",
+    "__v": 0
+  },
+  {
+    "_id": "69ca405dc253cc390b5bf40a",
+    "title": "Critical Mass",
+    "description": "Le dernier vendredi de chaque mois, rdv au parc Montbenon à 18h\n\nDépart lorsque la masse est critique\n\nMobilité douce et intersectionnalité",
+    "startDate": "2026-04-24T16:00:00.000Z",
+    "endDate": "2026-04-24T20:00:00.000Z",
+    "organizer": "Des gens deter",
+    "image": "301255849_1244604522748827_3184983555474078156_n.jpg",
+    "location": "Parc de Montbenon",
+    "link": "https://www.instagram.com/critical_mass_lausanne/?hl=fr",
+    "category": "manifs",
+    "createdBy": null,
+    "createdByModel": "SuperAdmin",
+    "createdAt": "2026-03-30T09:20:29.019Z",
+    "updatedAt": "2026-03-30T09:20:29.019Z",
+    "slug": "critical-mass-des-gens-deter-2026-04-24",
     "__v": 0
   }
 ]
