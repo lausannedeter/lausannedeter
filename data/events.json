@@ -1043,5 +1043,41 @@
     "updatedAt": "2026-03-30T09:20:29.019Z",
     "slug": "critical-mass-des-gens-deter-2026-04-24",
     "__v": 0
+  },
+  {
+    "_id": "69caa727c253cc390b5c006a",
+    "title": "\"Pas de Suisse à 10 millions\" : Comment l’UDC alimente le racisme d’Etat",
+    "description": "Conférence-discussion du GRC autour de l’initiative raciste de l’UDC, de son histoire, du racisme d’Etat en Suisse et de son actualité à travers les situations de violences policières\n🎤 Avec Jean-Michel Dolivo (avocat et militant de solidaritéS), Céline Fama Jeannet (Collectif Justice pour Michael) et Jennifer Mandundu (soeur de Hervé Mandundu) ",
+    "startDate": "2026-03-31T16:00:00.000Z",
+    "endDate": "2026-03-31T19:00:00.000Z",
+    "organizer": "Groupe Regards Critiques",
+    "image": "photo_2026-03-30_14-24-40.jpg",
+    "location": "UNIL, bâtiment Géopolis, salle 2221",
+    "link": "https://www.instagram.com/p/DWWaEyQiMWE/?hl=fr",
+    "category": "confs",
+    "createdBy": null,
+    "createdByModel": "SuperAdmin",
+    "createdAt": "2026-03-30T16:39:03.822Z",
+    "updatedAt": "2026-03-30T16:39:03.822Z",
+    "slug": "pas-de-suisse-a-10-millions-comment-ludc-alimente-le-racisme-detat-groupe-regards-critiques-2026-03-31",
+    "__v": 0
+  },
+  {
+    "_id": "69cbc4e3c253cc390b5c015a",
+    "title": "FLINTAWA V1",
+    "description": "Rendez-vous le 18 avril pour une super teuf organisé par et pour des personnes fintaq (femme, intersex, non-binaire, trans, agenre et queer).\n\nInfo: rejoindre le canal telegram ",
+    "startDate": "2026-04-18T17:00:00.000Z",
+    "endDate": "2026-04-19T08:30:00.000Z",
+    "organizer": "ST4R6STEM",
+    "image": "5924965964350950665.jpg",
+    "location": "Lieu en mp",
+    "link": "https://t.me/+B-MMBGp5tjE2YTFk ",
+    "category": "soirees",
+    "createdBy": null,
+    "createdByModel": "SuperAdmin",
+    "createdAt": "2026-03-31T12:58:11.527Z",
+    "updatedAt": "2026-03-31T12:58:11.527Z",
+    "slug": "flintawa-v1-st4r6stem-2026-04-18",
+    "__v": 0
   }
 ]
