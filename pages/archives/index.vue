@@ -7,8 +7,6 @@ const { data: _affiches } = await useAsyncData('affiches', () =>
 );
 const affiches = _affiches.value.data.sort((a, b) => new Date(b.monthStart) - new Date(a.monthStart)) ?? [];
 
-console.log(affiches)
-
 
 const resolvedUrls = ref({})
 
