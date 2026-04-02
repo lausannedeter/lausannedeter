@@ -5,17 +5,19 @@ const api = useApi();
 const { data: _affiches } = await useAsyncData('affiches', () =>
     api.get('/api/affiches'),
 );
-const affiches = _affiches.value.data.sort((a, b) => new Date(b.monthStart) - new Date(a.monthStart)) ?? [];
+//Refetch côté client
+const { data: _affichesClient } = await useAsyncData('affiches-client', () => api.get('/api/affiches'), { server: false, lazy: true })
+const affiches = computed(() => _affichesClient.value?.data ?? _affiches.value?.data ?? [])
 
 
 const resolvedUrls = ref({})
 
 watchEffect(async () => {
-  if (!affiches) return
+  if (!affiches.value) return
 
   const map = {}
 
-  for (const affiche of affiches) {
+  for (const affiche of affiches.value) {
     map[affiche._id] = {}
 
     if (affiche.preview_link) {
