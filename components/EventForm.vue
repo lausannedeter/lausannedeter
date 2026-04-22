@@ -82,6 +82,20 @@ watchEffect(() => {
   form.image = e.image ?? ''
 })
 
+//Adapt endDate to startDate
+watchEffect(() => {
+  if((form.startDate && !form.endDate) || (form.startDate > form.endDate)) {
+    form.endDate = form.startDate
+  }
+}, [form.startDate])
+
+//Adapt startDate to endDate
+watchEffect(() => {
+  if(form.endDate && !form.startDate) {
+    form.startDate = form.endDate
+  }
+}, [form.endDate])
+
 function onFileSelect(event) {
   const file = event.target.files?.[0]
   if (file) {
