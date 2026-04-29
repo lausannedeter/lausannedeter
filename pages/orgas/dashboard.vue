@@ -30,7 +30,7 @@ const categoryMap = createCategoryMap(categories ?? []);
 const { data: _affiches, refresh: refreshAffiches } = await useAsyncData('affiches', () =>
   api.get('/api/affiches')
 );
-const affiches = _affiches.value.data ?? [];
+const affiches = computed(() => _affiches.value.data ?? []);
 
 const deleting = ref(null);
 async function deleteEvent(id) {
