@@ -20,6 +20,16 @@ async function deleteEvent(id) {
     }
 }
 
+const deletingAll = ref(false)
+async function deleteAllPastEvents() {
+    deletingAll.value = true
+    try {
+        console.log("Deleting all")
+    } finally {
+        deletingAll.value = false
+    }
+}
+
 
 function formatDate(iso) {
     if (!iso) return "—";
@@ -42,11 +52,19 @@ function isPast(iso) {
             <nuxt-link class="button action-btn" to="/orgas/new-event">
                 + Ajouter un évènement
             </nuxt-link>
+            <button class="button action-btn" :disabled="deletingAll" @click="deleteAllPastEvents()">
+                <span v-if="deletingAll" class="loading-dots">
+                    <span>.</span><span>.</span><span>.</span>
+                </span>
+                <span v-else>
+                    ✕ TOUT SUPPRIMER
+                </span>
+            </button>
         </div>
 
-        <h3 class="section-label">Mes évènements</h3>
+        <h3 class="section-label">Mes évènements passés</h3>
 
-        <div v-if="events.length === 0" class="empty-state">
+        <div v-if="!events || events.length === 0" class="empty-state">
             <p>Aucun évènement pour l'instant.</p>
             <nuxt-link class="register-link" to="/orgas/new-event">
                 Créer ton premier évènement →
@@ -89,11 +107,14 @@ function isPast(iso) {
     gap: 16px;
     flex-wrap: wrap;
     margin-bottom: 36px;
+    justify-content: space-between;
 }
 
 .action-btn {
     font-size: 13px;
     padding: 10px 20px;
+    cursor: pointer;
+    border: none;
 }
 
 .section-label {

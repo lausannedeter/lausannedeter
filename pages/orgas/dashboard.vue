@@ -17,6 +17,9 @@ const { data: _events, refresh: refreshEvents } = await useAsyncData(
   }
 );
 const events = computed(() => _events.value?.data.sort((a, b) => new Date(a.startDate) - new Date(b.startDate)) ?? []);
+const eventsUpcoming = computed(() => _events.value?.data.filter((event) => !isPast(event.endDate)).sort((a, b) => new Date(a.startDate) - new Date(b.startDate)) ?? [])
+const eventsPast = computed(() => _events.value?.data.filter((event) => isPast(event.endDate)).sort((a, b) => new Date(a.startDate) - new Date(b.startDate)) ?? [])
+const eventsPermanences = computed(() => _events.value?.data.filter((event) => event.category === "perma").sort((a, b) => new Date(a.startDate) - new Date(b.startDate)) ?? [])
 
 const { data: _categories } = await useAsyncData('categories', () =>
   api.get('/api/categories'),
@@ -60,11 +63,15 @@ async function logout() {
   router.push("/");
 }
 
-const activeTab = ref("events")
+const activeTab = ref("eventsUpcoming")
 function changeActiveTab(tab) {
   if (activeTab.value !== tab) {
     activeTab.value = tab
   }
+}
+
+function isPast(iso) {
+    return iso && new Date(iso) < new Date();
 }
 </script>
 
@@ -91,8 +98,14 @@ function changeActiveTab(tab) {
     <div class="divider"></div>
 
     <div v-if="isSuperAdmin" class="tab-container">
-      <div class="event-tab tab-button" :class="{active : activeTab === 'events'}"  @click="changeActiveTab('events')">
-        Évènements
+      <div class="event-tab tab-button" :class="{active : activeTab === 'eventsUpcoming'}"  @click="changeActiveTab('eventsUpcoming')">
+        Évènements Futurs
+      </div>
+      <div class="event-tab tab-button" :class="{active : activeTab === 'eventsPast'}"  @click="changeActiveTab('eventsPast')">
+        Évènements Passés
+      </div>
+      <div class="event-tab tab-button" :class="{active : activeTab === 'permanences'}"  @click="changeActiveTab('permanences')">
+        Permanences
       </div>
       <div class="calendar-tab tab-button" :class="{active : activeTab === 'calendars'}"  @click="changeActiveTab('calendars')">
         Calendriers
@@ -100,8 +113,10 @@ function changeActiveTab(tab) {
     </div>
 
     <div class="tab-content-container">
-      <OrgasDashboardEventsDisplay v-if="activeTab === 'events'" :events="events" :categoryMap="categoryMap"
-        @delete="deleteEvent"></OrgasDashboardEventsDisplay>
+      <OrgasDashboardEventsUpcomingDisplay v-if="activeTab === 'eventsUpcoming'" :events="eventsUpcoming" :categoryMap="categoryMap"
+      @delete="deleteEvent"></OrgasDashboardEventsUpcomingDisplay>
+      <orgas-dashboard-events-past-display v-if="activeTab === 'eventsPast'" :events="eventsPast" :categoryMap="categoryMap" @delete="deleteEvent"></orgas-dashboard-events-past-display>
+      <orgas-dashboard-permanences v-if="activeTab === 'permanences'" :events="eventsPermanences" :categoryMap="categoryMap" @delete="deleteEvent"></orgas-dashboard-permanences>
       <orgas-dashboard-calendars-display v-if="activeTab === 'calendars'" :affiches="affiches" @delete="deleteCalendar"></orgas-dashboard-calendars-display>
     </div>
   </section>
