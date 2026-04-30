@@ -19,7 +19,22 @@ const { data: _events, refresh: refreshEvents } = await useAsyncData(
 const events = computed(() => _events.value?.data.sort((a, b) => new Date(a.startDate) - new Date(b.startDate)) ?? []);
 const eventsUpcoming = computed(() => _events.value?.data.filter((event) => !isPast(event.endDate)).sort((a, b) => new Date(a.startDate) - new Date(b.startDate)) ?? [])
 const eventsPast = computed(() => _events.value?.data.filter((event) => isPast(event.endDate)).sort((a, b) => new Date(a.startDate) - new Date(b.startDate)) ?? [])
-const eventsPermanences = computed(() => _events.value?.data.filter((event) => event.category === "perma").sort((a, b) => new Date(a.startDate) - new Date(b.startDate)) ?? [])
+const eventsRepetitions = computed(() => {
+  const events = _events.value?.data ?? []
+
+  // Compter les occurrences par title
+  const countByTitle = events.reduce((acc, event) => {
+    acc[event.title] = (acc[event.title] || 0) + 1
+    return acc
+  }, {})
+
+  // Filtrer ceux présents au moins 2 fois + tri
+  return events
+    .filter(event => 
+      countByTitle[event.title] >= 2
+    )
+    .sort((a, b) => new Date(a.startDate) - new Date(b.startDate))
+})
 
 const { data: _categories } = await useAsyncData('categories', () =>
   api.get('/api/categories'),
@@ -104,8 +119,8 @@ function isPast(iso) {
       <div class="event-tab tab-button" :class="{active : activeTab === 'eventsPast'}"  @click="changeActiveTab('eventsPast')">
         Évènements Passés
       </div>
-      <div class="event-tab tab-button" :class="{active : activeTab === 'permanences'}"  @click="changeActiveTab('permanences')">
-        Permanences
+      <div class="event-tab tab-button" :class="{active : activeTab === 'repetitions'}"  @click="changeActiveTab('repetitions')">
+        Évènements à répétition
       </div>
       <div class="calendar-tab tab-button" :class="{active : activeTab === 'calendars'}"  @click="changeActiveTab('calendars')">
         Calendriers
@@ -116,7 +131,7 @@ function isPast(iso) {
       <OrgasDashboardEventsUpcomingDisplay v-if="activeTab === 'eventsUpcoming'" :events="eventsUpcoming" :categoryMap="categoryMap"
       @delete="deleteEvent"></OrgasDashboardEventsUpcomingDisplay>
       <orgas-dashboard-events-past-display v-if="activeTab === 'eventsPast'" :events="eventsPast" :categoryMap="categoryMap" @delete="deleteEvent"></orgas-dashboard-events-past-display>
-      <orgas-dashboard-permanences v-if="activeTab === 'permanences'" :events="eventsPermanences" :categoryMap="categoryMap" @delete="deleteEvent"></orgas-dashboard-permanences>
+      <orgas-dashboard-repetitions v-if="activeTab === 'repetitions'" :events="eventsRepetitions" :categoryMap="categoryMap" @delete="deleteEvent"></orgas-dashboard-repetitions>
       <orgas-dashboard-calendars-display v-if="activeTab === 'calendars'" :affiches="affiches" @delete="deleteCalendar"></orgas-dashboard-calendars-display>
     </div>
   </section>
