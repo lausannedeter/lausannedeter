@@ -1,6 +1,7 @@
 <script setup>
 definePageMeta({ middleware: "auth" })
 const api = useApi()
+const cloudinary = useCloudinary()
 const router = useRouter()
 const route = useRoute()
 const id = route.params.slug
@@ -15,7 +16,14 @@ const afficheData = computed(() => _affiche.value?.data ?? undefined)
 
 async function handleSave(form) {
   status.value = 'saving'
+  const file = form.imageFile
+  const imageName = form.image
+  delete form.imageFile
+
   try {
+    if (file && imageName) {
+      await cloudinary.upload(file, imageName)
+    }
     if (eventData.value) {
       await api.put(`/api/events/${id}`, form)
     }

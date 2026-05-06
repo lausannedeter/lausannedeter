@@ -1,0 +1,1 @@
+import{x as n}from"./CCwYqN0u.js";const u=()=>{const t=n();async function c(r){if(!r)return null;const o=`https://res.cloudinary.com/${t.public.cloudinaryCloudName}/image/upload/${r.replace(/\.[^.]+$/,"")}`,e=`/affiches/${r}`;try{if((await fetch(o,{method:"HEAD"})).ok)return o}catch{}return e}return{resolve:c}};export{u};
