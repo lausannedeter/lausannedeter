@@ -15,7 +15,8 @@
             <nuxt-link to="/copaines" active-class="active">Copaines</nuxt-link>
             <nuxt-link to="/a-propos" active-class="active">À propos</nuxt-link>
         </nav>
-        <a class="mail-link" href="mailto:lausannedeter@proton.me">lausannedeter@proton.me</a>
+        <a class="mail-link" href="mailto:lausannedeter@proton.me" target="_blank">lausannedeter@proton.me</a>
+        <a class="insta-link" href="https://www.instagram.com/lsn.dtr/?hl=fr" target="_blank">@lsn.dtr</a>
     </footer>
 </template>
 
@@ -64,6 +65,11 @@ footer * {
 }
 
 .mail-link {
+    width: fit-content;
+    align-self: center;
+}
+
+.insta-link {
     width: fit-content;
     align-self: center;
 }

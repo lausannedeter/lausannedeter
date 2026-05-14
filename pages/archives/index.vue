@@ -117,6 +117,10 @@ useHead({
     padding: 30px 24px;
 }
 
+.affiche-container {
+    min-height: 300px;
+}
+
 .month-label-container {
     background-color: #1A160F;
     display: flex;
