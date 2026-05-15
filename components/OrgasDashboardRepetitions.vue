@@ -1,4 +1,6 @@
 <script setup>
+const localePath = useLocalePath()
+
 const props = defineProps({
     events: {
         type: Array
@@ -47,7 +49,6 @@ function isPast(iso) {
 const openGroupsMenu = ref({})
 function toggleGroup(title) {
     openGroupsMenu.value[title] = !openGroupsMenu.value[title]
-    console.log(openGroupsMenu.value)
 }
 </script>
 
@@ -55,7 +56,7 @@ function toggleGroup(title) {
     <div class="events-section">
 
         <div class="actions-row">
-            <nuxt-link class="button action-btn" to="/orgas/new-event">
+            <nuxt-link class="button action-btn" :to="localePath('/orgas/new-event')">
                 + Ajouter un évènement
             </nuxt-link>
         </div>
@@ -64,7 +65,7 @@ function toggleGroup(title) {
 
         <div v-if="!events || events.length === 0" class="empty-state">
             <p>Aucun évènement pour l'instant.</p>
-            <nuxt-link class="register-link" to="/orgas/new-event">
+            <nuxt-link class="register-link" :to="localePath('/orgas/new-event')">
                 Créer ton premier évènement →
             </nuxt-link>
         </div>
@@ -99,7 +100,7 @@ function toggleGroup(title) {
                         </div>
 
                         <div class="event-actions">
-                            <nuxt-link class="icon-btn" :to="`/orgas/${event._id}/editer`" title="Modifier">
+                            <nuxt-link class="icon-btn" :to="localePath(`/orgas/${event._id}/editer`)" title="Modifier">
                                 ✎
                             </nuxt-link>
                             <button class="icon-btn icon-btn--danger" :disabled="deleting === event._id"

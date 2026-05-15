@@ -1,4 +1,6 @@
 <script setup>
+const { locales, setLocale, locale } = useI18n()
+
 const { resolve: resolveImage } = useCalendarImage()
 const api = useApi();
 
@@ -13,23 +15,23 @@ const affiches = computed(() => _affichesClient.value?.data ?? _affiches.value?.
 const resolvedUrls = ref({})
 
 watchEffect(async () => {
-  if (!affiches.value) return
+    if (!affiches.value) return
 
-  const map = {}
+    const map = {}
 
-  for (const affiche of affiches.value) {
-    map[affiche._id] = {}
+    for (const affiche of affiches.value) {
+        map[affiche._id] = {}
 
-    if (affiche.preview_link) {
-      map[affiche._id].preview = await resolveImage(affiche.preview_link)
+        if (affiche.preview_link) {
+            map[affiche._id].preview = await resolveImage(affiche.preview_link)
+        }
+
+        if (affiche.link) {
+            map[affiche._id].pdf = await resolveImage(`fl_attachment/${affiche.link}`)
+        }
     }
 
-    if (affiche.link) {
-      map[affiche._id].pdf = await resolveImage(`fl_attachment/${affiche.link}`)
-    }
-  }
-
-  resolvedUrls.value = map
+    resolvedUrls.value = map
 })
 
 
@@ -55,16 +57,19 @@ useHead({
     <section class="archives-page">
         <div class="title-container">
             <div class="title">
-                <h1>Archives</h1>
+                <h1>{{ $t("archives.title") }}</h1>
             </div>
             <div class="slider"></div>
         </div>
-        <p class="archives-intro-text">Retrouvez ici les archives de nos affiches de calendrier disponibles au
-            téléchargement.</p>
+        <p class="archives-intro-text">{{ $t("archives.paragraph") }}</p>
         <div class="archives-container">
             <div v-for="affiche in affiches" :key="affiche._id" class="affiche-container">
                 <div class="month-label-container">
-                    <h2 class="month-label">{{ `${affiche.monthLabel} ${new Date(affiche.monthStart).getFullYear()}` }}
+                    <h2 class="month-label">
+                        {{ new Date(affiche.monthStart).toLocaleDateString(locale, {
+                            month: 'long',
+                            year: 'numeric'
+                        }) }}
                     </h2>
                 </div>
                 <div v-if="resolvedUrls[affiche._id]" class="preview-container">
@@ -72,7 +77,7 @@ useHead({
                         <img :src="resolvedUrls[affiche._id].preview" :alt="affiche.link" class="preview-image">
                     </a>
                     <a class="download-text" :href="resolvedUrls[affiche._id].pdf" download>
-                        Télécharger
+                        {{ $t("archives.downloadButton") }}
                     </a>
                 </div>
             </div>

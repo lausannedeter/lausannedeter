@@ -1,4 +1,7 @@
 <script setup>
+const { locales, setLocale, locale } = useI18n()
+const localePath = useLocalePath()
+
   const api = useApi()
   const route = useRoute()
   const { resolve: resolveImage } = useEventImage()
@@ -43,14 +46,14 @@
             <h3 class="event-title">{{ event.title }}</h3>
             <div class="under-title-container">
                 <div class="event-date-container">
-                    <span class="event-date-day">{{ new Date(event.startDate).toLocaleDateString('fr-CH', {
+                    <span class="event-date-day">{{ new Date(event.startDate).toLocaleDateString(locale, {
                         weekday: "long",
                         year: "numeric",
                         month: "long",
                         day: "numeric",
                     }) }}</span> |
                     <span class="event-date-time">
-                        {{ new Date(event.startDate).toLocaleTimeString('fr-CH', {
+                        {{ new Date(event.startDate).toLocaleTimeString(locale, {
                             hour: '2-digit',
                             minute: '2-digit'
                         }) }}
@@ -66,13 +69,13 @@
         <p class="event-description" v-html="event.description"></p>
 
         <div v-if="event.link" class="usefull-links">
-            <h3 class="links-title">Liens utiles:</h3>
+            <h3 class="links-title">{{ $t("calendrier.singleEvent.usefulLinks") }}</h3>
             <div class="links-container">
                 <a :href="event.link" target="_blank" class="link">{{ event.organizer }}</a>
             </div>
         </div>
 
-        <nuxt-link to="/calendrier" class="button">Retour au calendrier</nuxt-link>
+        <nuxt-link :to="localePath('/calendrier')" class="button">{{ $t("calendrier.singleEvent.backButton") }}</nuxt-link>
     </section>
 </template>
 

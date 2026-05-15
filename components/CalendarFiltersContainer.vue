@@ -13,11 +13,13 @@ const props = defineProps({
 
 <template>
     <div class="filters-container">
-        <div class="filter-button deselect" style="border: 2px solid white" @click="$emit('toggleAllFilters')"><span>Tous les filtres</span></div>
-        <div v-for="(category, index) in categories" :key="category.id" class="filter-button" :class="{unselected: activeFilters.includes(category.id)}"
+        <div class="filter-button deselect" style="border: 2px solid white" @click="$emit('toggleAllFilters')"><span>{{
+            $t("calendrier.filters") }}</span></div>
+        <div v-for="(category, index) in categories" :key="category.id" class="filter-button"
+            :class="{ unselected: activeFilters.includes(category.id) }"
             :style="{ backgroundColor: category.color, border: `2px solid ${category.color}` }"
             @click="$emit('toggleFilters', category.id)">
-            <span>{{ category.label }}</span>
+            <span>{{ $t(`categories.${category.id}`) }}</span>
         </div>
     </div>
 </template>

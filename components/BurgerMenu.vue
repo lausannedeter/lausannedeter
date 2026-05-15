@@ -1,5 +1,8 @@
 <script setup>
 const { isOpen, close } = useMenu()
+
+const { locales, setLocale, locale } = useI18n()
+const localePath = useLocalePath()
 </script>
 
 <template>
@@ -10,15 +13,21 @@ const { isOpen, close } = useMenu()
         <!-- Menu -->
         <div v-if="isOpen" class="menu">
             <img src="/icons/menu-cross.png" alt="cross-icon" class="close" @click="close">
+            <div class="lang-container">
+                <button v-for="localeI in locales" :class="{ active: locale === localeI.code }"
+                    @click="setLocale(localeI.code)">
+                    {{ localeI.name }}
+                </button>
+            </div>
 
             <nav>
-                <nuxt-link to="/calendrier" active-class="active" @click="close">Calendrier</nuxt-link>
-                <nuxt-link to="/archives" active-class="active" @click="close">Archives</nuxt-link>
-                <nuxt-link to="/copaines" active-class="active" @click="close">Copaines</nuxt-link>
-                <nuxt-link to="/a-propos" active-class="active" @click="close">À propos</nuxt-link>
+                <nuxt-link :to="localePath('/calendrier')" active-class="active" @click="close">{{ $t("nav.calendrier") }}</nuxt-link>
+                <nuxt-link :to="localePath('/archives')" active-class="active" @click="close">{{ $t("nav.archives") }}</nuxt-link>
+                <nuxt-link :to="localePath('/copaines')" active-class="active" @click="close">{{ $t("nav.copaines") }}</nuxt-link>
+                <nuxt-link :to="localePath('/a-propos')" active-class="active" @click="close">{{ $t("nav.about") }}</nuxt-link>
             </nav>
 
-            <nuxt-link to="/orgas" class="orgas-button" @click="close">Espace Orgas</nuxt-link>
+            <nuxt-link :to="localePath('/orgas')" class="orgas-button" @click="close">{{ $t("nav.espaceOrgas") }}</nuxt-link>
         </div>
     </transition>
 </template>
@@ -47,6 +56,21 @@ const { isOpen, close } = useMenu()
     z-index: 1000;
 }
 
+.lang-container {
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 100px;
+    gap: 1.5rem;
+}
+
+.lang-container button {
+    font-family: "Azeret Thin";
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 .close {
     background: none;
     border: none;
@@ -63,10 +87,11 @@ nav {
     flex-direction: column;
     gap: 1.5rem;
     text-transform: uppercase;
+    width: fit-content;
 }
 
 .active {
-    font-family: "Azeret Medium";
+    font-family: "Azeret Medium" !important;
 }
 
 .orgas-button {

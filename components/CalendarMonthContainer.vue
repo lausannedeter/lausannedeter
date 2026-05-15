@@ -1,4 +1,6 @@
 <script setup>
+const { locales, setLocale, locale } = useI18n()
+
 const { resolve: resolveImage } = useCalendarImage()
 
 const props = defineProps({
@@ -13,20 +15,19 @@ const props = defineProps({
     }
 })
 
-
 const pdfUrl = ref(null)
 
 watchEffect(async () => {
-  if (!props.affiche) return
+    if (!props.affiche) return
 
-  pdfUrl.value = await resolveImage(`fl_attachment/${props.affiche.link}`)
+    pdfUrl.value = await resolveImage(`fl_attachment/${props.affiche.link}`)
 })
 </script>
 
 <template>
     <div class="calendar-month-container">
         <div class="title-container">
-            <h2 class="month-title">{{ monthName.toLocaleDateString('fr-CH', {
+            <h2 class="month-title">{{ monthName.toLocaleDateString(locale, {
                 month: 'long',
                 year: 'numeric'
             }) }}</h2>
@@ -34,7 +35,8 @@ watchEffect(async () => {
 
         <div v-if="affiche && affiche.link !== ''" class="download-link-container">
             <span class="link-text">
-                Télécharge <a class="link" :href="pdfUrl" download>l'agenda version pdf</a> et imprime le pour ton lieu co'
+                {{ $t("calendrier.download.part1") }} <a class="link" :href="pdfUrl" download>{{ $t("calendrier.download.link") }}</a>
+                {{ $t("calendrier.download.part2") }}
             </span>
         </div>
 
@@ -43,7 +45,7 @@ watchEffect(async () => {
                 <EventBlock v-for="event in monthEvents" :key="event._id" :event="event"></EventBlock>
             </transition-group>
             <p v-else class="empty">
-                Pas d’évènement pour le moment
+                {{ $t("calendrier.noEvents") }}
             </p>
         </transition-group>
 

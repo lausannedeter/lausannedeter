@@ -1,9 +1,10 @@
 <script setup>
+const localePath = useLocalePath()
 </script>
 
 <template>
     <header>
-        <nuxt-link to="/">
+        <nuxt-link :to="localePath('/')">
             <div class="header-title-container">
                 <img class="logo" src="/Logo-inverted-circle.png" alt="Logo">
                 <h1 class="title">Lausanne Deter</h1>

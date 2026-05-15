@@ -1,19 +1,20 @@
 <script setup>
+const localePath = useLocalePath()
 </script>
 
 <template>
     <footer>
-        <nuxt-link class="footer-title-link-container" to="/">
+        <nuxt-link class="footer-title-link-container" :to="localePath('/')">
             <div class="footer-title-container">
                 <img class="logo" src="/Logo-red-circle.png" alt="Logo">
                 <h1 class="title">Lausanne Deter</h1>
             </div>
         </nuxt-link>
         <nav class="footer-menu-container">
-            <nuxt-link to="/calendrier" active-class="active">Calendrier</nuxt-link>
-            <nuxt-link to="/archives" active-class="active">Archives</nuxt-link>
-            <nuxt-link to="/copaines" active-class="active">Copaines</nuxt-link>
-            <nuxt-link to="/a-propos" active-class="active">À propos</nuxt-link>
+            <nuxt-link :to="localePath('/calendrier')" active-class="active">{{ $t("nav.calendrier") }}</nuxt-link>
+            <nuxt-link :to="localePath('/archives')" active-class="active">{{ $t("nav.archives") }}</nuxt-link>
+            <nuxt-link :to="localePath('/copaines')" active-class="active">{{ $t("nav.copaines") }}</nuxt-link>
+            <nuxt-link :to="localePath('/a-propos')" active-class="active">{{ $t("nav.about") }}</nuxt-link>
         </nav>
         <a class="mail-link" href="mailto:lausannedeter@proton.me" target="_blank">lausannedeter@proton.me</a>
         <a class="insta-link" href="https://www.instagram.com/lsn.dtr/?hl=fr" target="_blank">@lsn.dtr</a>

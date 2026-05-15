@@ -1,4 +1,6 @@
 <script setup>
+const localePath = useLocalePath()
+
 const api = useApi();
 const router = useRouter();
 
@@ -31,13 +33,13 @@ async function handleLogin() {
     <div class="login-card">
       <div class="title-block">
         <div class="title-main">
-          <h2 class="title">Connexion</h2>
+          <h2 class="title">{{ $t("login.title") }}</h2>
         </div>
         <div class="title-sub"></div>
       </div>
 
       <p class="login-hint">
-        Accède à ton espace organisation pour gérer tes évènements.
+        {{ $t("login.paragraph") }}
       </p>
 
       <Transition name="fade">
@@ -49,7 +51,7 @@ async function handleLogin() {
       <form class="login-form" @submit.prevent="handleLogin" novalidate>
         <div class="field">
           <label class="label" for="email"
-            >Email <span class="req">*</span></label
+            >{{ $t("login.form.email") }} <span class="req">*</span></label
           >
           <input
             id="email"
@@ -64,7 +66,7 @@ async function handleLogin() {
 
         <div class="field">
           <label class="label" for="password"
-            >Mot de passe <span class="req">*</span></label
+            >{{ $t("login.form.password") }} <span class="req">*</span></label
           >
           <input
             id="password"
@@ -78,8 +80,8 @@ async function handleLogin() {
         </div>
 
         <div class="form-footer">
-          <nuxt-link class="forgot-link" to="/mot-de-passe-oublie">
-            Mot de passe oublié ?
+          <nuxt-link class="forgot-link" :to="localePath('/mot-de-passe-oublie')">
+            {{ $t("login.form.forgot") }}
           </nuxt-link>
           <button
             class="button submit-btn"
@@ -89,7 +91,7 @@ async function handleLogin() {
             <span v-if="status === 'loading'" class="loading-dots">
               <span>.</span><span>.</span><span>.</span>
             </span>
-            <span v-else>Se connecter</span>
+            <span v-else>{{ $t("login.form.submit") }}</span>
           </button>
         </div>
       </form>
@@ -97,9 +99,9 @@ async function handleLogin() {
       <div class="login-divider"></div>
 
       <p class="register-hint">
-        Pas encore de compte ?
-        <nuxt-link class="register-link" to="/orgas">
-          Rejoindre l'agenda →
+        {{ $t("login.signin") }}
+        <nuxt-link class="register-link" :to="localePath('/orgas')">
+          {{ $t("login.signInButton") }} →
         </nuxt-link>
       </p>
     </div>

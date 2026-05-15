@@ -1,0 +1,150 @@
+{
+    "nav": {
+        "calendrier": "Calendrier",
+        "archives": "Archives",
+        "copaines": "Copaines",
+        "about": "À propos",
+        "espaceOrgas": "Espace Orgas"
+    },
+    "categories": {
+        "bouffespop": "Bouffes pop",
+        "perma": "Permanences",
+        "soirees": "Soirées, concerts, projections",
+        "confs": "Conférences, tables rondes, ateliers",
+        "manifs": "Manifs, rassemblements, grêves"
+    },
+    "accueil": {
+        "welcome": {
+            "title": "Bienvenue",
+            "paragraphe": {
+                "part1": "Ici, nous visibilisons toutes les luttes qui se placent à gauche du curseur politique et qui se battent contre toute forme d'oppression.",
+                "part2": "Découvrez où et quand les luttes romandes s’organisent!"
+            },
+            "nextEvent": {
+                "title": "Prochains évènements:"
+            },
+            "buttons": {
+                "seeCalendar": "Voir le calendrier",
+                "shareEvent": "Partager un évènement"
+            }
+        },
+        "copaines": {
+            "title": "Copaines",
+            "paragraph": {
+                "part1": "En romandie, beaucoup de lieux sont fertiles à la resistance. Certains peuvent être des points de repères pour militantexs perdues.",
+                "part2": "Plusieurs collectifs s’organisent autour de differentes causes. C’est notamment dans cet agenda que ces luttes convergent. Soyons solidaires, soutenons-les."
+            },
+            "buttons": {
+                "seeCopaines": "Voir les copaines"
+            }
+        }
+    },
+    "calendrier": {
+        "filters": "Tous les filtres",
+        "download": {
+            "part1": "Télécharge ",
+            "link": "l'agenda version pdf",
+            "part2": " et imprime le pour ton lieu co'"
+        },
+        "noEvents": "Pas d'évènement pour le moment",
+        "singleEvent": {
+            "usefulLinks": "Lien utiles:",
+            "backButton": "Retour au calendrier"
+        }
+    },
+    "archives": {
+        "title": "Archives",
+        "paragraph": "Retrouvez ici les archives de nos affiches de calendrier disponibles au téléchargement.",
+        "downloadButton": "Télécharger"
+    },
+    "copaines": {
+        "title": "Copaines",
+        "commingsoon": "Arrive prochainement..."
+    },
+    "about": {
+        "qui": {
+            "title": "Qui ?",
+            "paragraph": {
+                "part1": "Nous sommes ",
+                "part2": ", un collectif qui a pour but de visibiliser les différents événements militants de la région lausannoise. Nous souhaitons visibiliser toutes les luttes qui se placent à gauche du curseur politique et qui se battent contre toute forme d'oppression.",
+                "part3": "Nous ne prenons pas un parti pris idéologique spéficique et considérons que l’important est de miser sur une convergence des luttes, que visibiliser nos différents événements nous rendra plus fort, car c’est par le nombre que nous mettrons fin aux oppressions systémiques."
+            }
+        },
+        "pourquoi": {
+            "title": "Pourquoi ?",
+            "paragraph": {
+                "part1": "Nous avons constaté qu’il est parfois difficile d’être au courant des différents événements prenants place dans la région. Par cet agenda nous souhaitons mettre en avant ces événements afin de les rendre le plus accessible possible.",
+                "part2": "Nous pensons que rendre la lutte plus accessible, notamment par cet outil, nous permettra de faire grossir toujours plus notre camp et de peser davantage dans la bataille matérielle et idéologique en cours."
+            }
+        },
+        "comment": {
+            "title": "Comment ?",
+            "paragraph": {
+                "part1": "Chaque mois les événements militants sont répértoriés sur ce site. Si vous êtes un collectif/lieu et souhaitez visibiliser un/des événements écrivez nous un mail à ",
+                "part2": "et retrouvez nous sur instagram à ",
+                "part3": "Vous pouvez imprimer nos agendas pour les afficher dans vos différents lieux, afin de toujours avoir sous l’oeil le programme du mois :)"
+            }
+        },
+        "seeCalendarButton": "Voir le calendrier"
+    },
+    "espaceOrgas": {
+        "title": "Organisations",
+        "paragraph": {
+            "part1": "Tu fais partie d'un collectif, d'une asso, d'un syndicat ou de toute structure qui lutte contre les oppressions ?",
+            "part2": "Rejoins ",
+            "part3": " et rends tes évènements visibles à toute la région."
+        },
+        "whyJoin": {
+            "title": "Pourquoi rejoindre ?",
+            "publish": "Publie tes évènements directement dans le calendrier romand.",
+            "visibility": "Sois visible auprès des militantexs de toute la région.",
+            "solidarity": "Converge avec d'autres luttes. Soyons solidaires."
+        },
+        "accessDemand": {
+            "title": "Demande d'accès",
+            "paragraph": "Remplis ce formulaire pour obtenir un espace organisation. On te recontacte par email.",
+            "success": "Demande envoyée ! On te recontacte bientôt.",
+            "form": {
+                "name": {
+                    "label": "Nom de l'organisation",
+                    "placeholder": "Collectif XYZ"
+                },
+                "email": {
+                    "label": "Email de contact"
+                },
+                "presentation": {
+                    "label": "Présentation rapide",
+                    "placeholder": "Qui êtes-vous ? Quelles luttes portez-vous ?"
+                },
+                "link": {
+                    "label": "Site ou réseau social (optionnel)"
+                },
+                "required": "champs obligatoires",
+                "submit": "Envoyer la demande"
+            },
+            "connect": {
+                "label": "Déjà un compte ?",
+                "button": "Se connecter"
+            }
+        }
+    },
+    "login": {
+        "title": "Connexion",
+        "paragraph": "Accède à ton espace organisation pour gérer tes évènements.",
+        "form": {
+            "email": "Email",
+            "password": "Mot de passe",
+            "forgot": "Mot de passe oublié ?",
+            "submit": "Se connecter"
+        },
+        "signin": "Pas encore de compte ?",
+        "signInButton": "Rejoindre l'agenda"
+    },
+    "forgottenPassword": {
+        "title": "Mot de passe oublié",
+        "paragraph": "Saisis l'adresse email de ton organisation. On t'enverra un lien pour réinitialiser ton mot de passe.",
+        "backToConnexion": "Retour à la connexion",
+        "submit": "Envoyer le lien",
+        "success": "Si un compte existe pour cette adresse, tu recevras un email sous peu."
+    }
+}

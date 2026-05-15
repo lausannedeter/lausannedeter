@@ -1,4 +1,6 @@
 <script setup>
+const localePath = useLocalePath()
+
 const { resolve: resolveImage } = useCalendarImage()
 
 const props = defineProps({
@@ -40,7 +42,7 @@ watchEffect(async () => {
 <template>
     <div class="calendars-section">
         <div class="actions-row">
-            <nuxt-link class="button action-btn" to="/orgas/new-calendar">
+            <nuxt-link class="button action-btn" :to="localePath('/orgas/new-calendar')">
                 + Ajouter un calendrier
             </nuxt-link>
         </div>
@@ -49,7 +51,7 @@ watchEffect(async () => {
 
         <div v-if="affiches.length === 0" class="empty-state">
             <p>Aucun calendrier pour l'instant.</p>
-            <nuxt-link class="register-link" to="/orgas/new-calendar">
+            <nuxt-link class="register-link" :to="localePath('/orgas/new-calendar')">
                 Créer ton premier calendrier →
             </nuxt-link>
         </div>
@@ -62,7 +64,7 @@ watchEffect(async () => {
                 </div>
 
                 <div class="calendar-actions">
-                    <nuxt-link class="icon-btn" :to="`/orgas/${affiche._id}/editer`" title="Modifier">
+                    <nuxt-link class="icon-btn" :to="localePath(`/orgas/${affiche._id}/editer`)" title="Modifier">
                         ✎
                     </nuxt-link>
                     <button class="icon-btn icon-btn--danger" :disabled="deleting === affiche._id" title="Supprimer"

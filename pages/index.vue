@@ -1,4 +1,6 @@
 <script setup>
+const localePath = useLocalePath()
+
 const api = useApi();
 
 const { data: _events } = await useAsyncData('events', () =>
@@ -46,31 +48,31 @@ useHead({
             <div class="welcome-text-container">
                 <div class="title-container welcome">
                     <div class="main-title-container welcome">
-                        <h2 class="title">Bienvenue</h2>
+                        <h2 class="title">{{ $t("accueil.welcome.title") }}</h2>
                     </div>
                     <div class="title-container-subblock welcome"></div>
                 </div>
 
                 <p class="welcome-description">
-                    Ici, nous visibilisons toutes les luttes qui se placent à gauche du curseur politique
-                    et qui
-                    se battent
-                    contre toute forme d'oppression.
+                    {{ $t("accueil.welcome.paragraphe.part1") }}
                     <br>
                     <br>
-                    Découvrez où et quand les luttes romandes s’organisent!
+                    {{ $t("accueil.welcome.paragraphe.part2") }}
                 </p>
             </div>
             <div class="event-section">
-                <h3 class="subtitle">Prochains évènements:</h3>
+                <h3 class="subtitle">
+                    {{ $t("accueil.welcome.nextEvent.title") }}</h3>
                 <transition-group name="eventsList" tag="div" v-if="upcomingEvent.length"
                     class="month-content-container">
                     <EventBlock v-for="event in upcomingEvent" :key="event._id" :event="event"></EventBlock>
                 </transition-group>
             </div>
             <div class="buttons-container">
-                <nuxt-link class="button see-calendar" to="/calendrier">Voir le calendrier</nuxt-link>
-                <a class="button share-event" href="mailto:lausannedeter@proton.me">Partager un évènement</a>
+                <nuxt-link class="button see-calendar" :to="localePath('/calendrier')">
+                    {{ $t("accueil.welcome.buttons.seeCalendar") }}</nuxt-link>
+                <a class="button share-event" href="mailto:lausannedeter@proton.me">
+                    {{ $t("accueil.welcome.buttons.shareEvent") }}</a>
             </div>
         </div>
 
@@ -78,24 +80,20 @@ useHead({
             <div class="copaines-text-container">
                 <div class="title-container copaines">
                     <div class="main-title-container copaines">
-                        <h2 class="title">Copaines</h2>
+                        <h2 class="title">{{ $t("accueil.copaines.title") }}</h2>
                     </div>
                     <div class="title-container-subblock copaines"></div>
                 </div>
 
                 <p class="copaines-description">
-                    En romandie, beaucoup de lieux sont fertiles à la resistance. Certains peuvent être
-                    des points de
-                    repères pour militantexs perdues.
+                    {{ $t("accueil.copaines.paragraph.part1") }}
                     <br>
                     <br>
-                    Plusieurs collectifs s’organisent autour de differentes causes. C’est notamment dans cet
-                    agenda que
-                    ces luttes convergent. Soyons solidaires, soutenons-les.
+                    {{ $t("accueil.copaines.paragraph.part2") }}
                 </p>
             </div>
             <div class="buttons-container">
-                <nuxt-link class="button see-collectifs" to="/copaines">Voir les copaines</nuxt-link>
+                <nuxt-link class="button see-collectifs" :to="localePath('/copaines')">{{ $t("accueil.copaines.buttons.seeCopaines") }}</nuxt-link>
             </div>
         </div>
     </section>

@@ -1,0 +1,150 @@
+{
+    "nav": {
+        "calendrier": "Calendar",
+        "archives": "Archives",
+        "copaines": "Comrades",
+        "about": "About",
+        "espaceOrgas": "Organizations space"
+    },
+    "categories": {
+        "bouffespop": "Community meals",
+        "perma": "Open support sessions",
+        "soirees": "Parties, concerts, screenings",
+        "confs": "Conferences, round tables, workshops",
+        "manifs": "Demonstrations, gatherings, strikes"
+    },
+    "accueil": {
+        "welcome": {
+            "title": "Welcome",
+            "paragraphe": {
+                "part1": "Here, we make visible all struggles positioned on the left side of the political spectrum and fighting against all forms of oppression.",
+                "part2": "Discover where and when struggles are organizing across French-speaking Switzerland!"
+            },
+            "nextEvent": {
+                "title": "Upcoming events:"
+            },
+            "buttons": {
+                "seeCalendar": "View the calendar",
+                "shareEvent": "Share an event"
+            }
+        },
+        "copaines": {
+            "title": "Comrades",
+            "paragraph": {
+                "part1": "Across French-speaking Switzerland, many places nurture resistance. Some can become landmarks for lost activists.",
+                "part2": "Many collectives organize around different causes. This calendar is one of the spaces where these struggles converge. Let’s stand together and support them."
+            },
+            "buttons": {
+                "seeCopaines": "See the comrades"
+            }
+        }
+    },
+    "calendrier": {
+        "filters": "All filters",
+        "download": {
+            "part1": "Download ",
+            "link": "the calendar PDF version",
+            "part2": " and print it for your community space"
+        },
+        "noEvents": "No events at the moment",
+        "singleEvent": {
+            "usefulLinks": "Useful links:",
+            "backButton": "Back to the calendar"
+        }
+    },
+    "archives": {
+        "title": "Archives",
+        "paragraph": "Find here the archives of our calendar posters available for download.",
+        "downloadButton": "Download"
+    },
+    "copaines": {
+        "title": "Comrades",
+        "commingsoon": "Coming soon..."
+    },
+    "about": {
+        "qui": {
+            "title": "Who?",
+            "paragraph": {
+                "part1": "We are ",
+                "part2": ", a collective whose goal is to make visible the different activist events taking place in the Lausanne region. We aim to highlight all struggles positioned on the left side of the political spectrum and fighting against all forms of oppression.",
+                "part3": "We do not align ourselves with one specific ideological stance and believe that what matters most is building convergence between struggles. By making our various events visible, we become stronger together, because it is through numbers that we will put an end to systemic oppression."
+            }
+        },
+        "pourquoi": {
+            "title": "Why?",
+            "paragraph": {
+                "part1": "We noticed that it can sometimes be difficult to stay informed about the different events taking place in the region. Through this calendar, we want to highlight these events and make them as accessible as possible.",
+                "part2": "We believe that making activism more accessible, especially through this tool, will help our movement grow stronger and carry more weight in the ongoing material and ideological struggle."
+            }
+        },
+        "comment": {
+            "title": "How?",
+            "paragraph": {
+                "part1": "Each month, activist events are listed on this website. If you are a collective or venue and would like to make one or more events visible, send us an email at ",
+                "part2": "and find us on Instagram at ",
+                "part3": "You can print our calendars and display them in your various spaces so you always have the month’s program in sight :)"
+            }
+        },
+        "seeCalendarButton": "View the calendar"
+    },
+    "espaceOrgas": {
+        "title": "Organizations",
+        "paragraph": {
+            "part1": "Are you part of a collective, association, union, or any structure fighting against oppression?",
+            "part2": "Join ",
+            "part3": " and make your events visible across the whole region."
+        },
+        "whyJoin": {
+            "title": "Why join?",
+            "publish": "Publish your events directly in the regional calendar.",
+            "visibility": "Be visible to activists across the whole region.",
+            "solidarity": "Connect with other struggles. Let’s stand together."
+        },
+        "accessDemand": {
+            "title": "Access request",
+            "paragraph": "Fill out this form to get an organization space. We’ll contact you by email.",
+            "success": "Request sent! We’ll get back to you soon.",
+            "form": {
+                "name": {
+                    "label": "Organization name",
+                    "placeholder": "Collective XYZ"
+                },
+                "email": {
+                    "label": "Contact email"
+                },
+                "presentation": {
+                    "label": "Short presentation",
+                    "placeholder": "Who are you? What struggles do you support?"
+                },
+                "link": {
+                    "label": "Website or social media (optional)"
+                },
+                "required": "required fields",
+                "submit": "Send request"
+            },
+            "connect": {
+                "label": "Already have an account?",
+                "button": "Log in"
+            }
+        }
+    },
+    "login": {
+        "title": "Login",
+        "paragraph": "Access your organization space to manage your events.",
+        "form": {
+            "email": "Email",
+            "password": "Password",
+            "forgot": "Forgot password?",
+            "submit": "Log in"
+        },
+        "signin": "Don’t have an account yet?",
+        "signInButton": "Join the calendar"
+    },
+    "forgottenPassword": {
+        "title": "Forgot password",
+        "paragraph": "Enter your organization’s email address. We’ll send you a link to reset your password.",
+        "backToConnexion": "Back to login",
+        "submit": "Send reset link",
+        "success": "If an account exists for this address, you will receive an email shortly."
+    }
+}

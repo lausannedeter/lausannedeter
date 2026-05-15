@@ -1,4 +1,6 @@
 <script setup>
+const localePath = useLocalePath()
+
 const uploadedUrl = ref(null)
 const fileInput = ref(null)
 const imageFile = ref(null)
@@ -125,7 +127,7 @@ function handleSubmit() {
 <template>
   <div class="event-form-wrapper">
     <div class="button-container">
-      <nuxt-link to="/orgas/dashboard" class="back-button">Retour</nuxt-link>
+      <nuxt-link :to="localePath('/orgas/dashboard')" class="back-button">Retour</nuxt-link>
     </div>
 
     <div v-if="status === 'success'" class="banner banner--success">

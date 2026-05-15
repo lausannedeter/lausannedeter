@@ -1,4 +1,6 @@
 <script setup>
+const localePath = useLocalePath()
+
 const linkUploadedUrl = ref(null)
 const linkFileInput = ref(null)
 const linkFile = ref(null)
@@ -58,7 +60,6 @@ const form = reactive({
 
 watchEffect(() => {
   const c = props.initialData
-  console.log(c)
   if (!c || !c.monthLabel) return
   form.monthStart = c.monthStart.slice(0, 7) ?? ''
   form.monthLabel = getMonthLabel(c.monthStart) ?? ''
@@ -109,7 +110,7 @@ function handleSubmit() {
 <template>
   <div class="event-form-wrapper">
     <div class="button-container">
-      <nuxt-link to="/orgas/dashboard" class="back-button">Retour</nuxt-link>
+      <nuxt-link :to="localePath('/orgas/dashboard')" class="back-button">Retour</nuxt-link>
     </div>
 
     <div v-if="status === 'success'" class="banner banner--success">

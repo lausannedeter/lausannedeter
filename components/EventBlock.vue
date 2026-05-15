@@ -1,4 +1,7 @@
 <script setup>
+const { locales, setLocale, locale } = useI18n()
+const localePath = useLocalePath()
+
 const props = defineProps({
     event: {
         type: Object
@@ -9,11 +12,11 @@ const props = defineProps({
 <template>
     <div class="event-block-container">
         <div class="date-container">
-            <span class="date-day">{{ event.occurrenceDate.toLocaleDateString('fr-CH', { weekday: 'short' }) }}</span>
-            <span class="date-num">{{ event.occurrenceDate.toLocaleDateString('fr-CH', { day: 'numeric' }) }}</span>
+            <span class="date-day">{{ event.occurrenceDate.toLocaleDateString(locale, { weekday: 'short' }) }}</span>
+            <span class="date-num">{{ event.occurrenceDate.toLocaleDateString(locale, { day: 'numeric' }) }}</span>
         </div>
 
-        <nuxt-link v-if="event.slug" :to="`/calendrier/${event.slug}`" class="event-link">
+        <nuxt-link v-if="event.slug" :to="localePath(`/calendrier/${event.slug}`)" class="event-link">
             <div class="info-container"
                 :style="{ 
                     borderBottom: `3px solid ${event.categoryData?.color ?? '#ccc'}`, 
@@ -21,7 +24,7 @@ const props = defineProps({
                 }">
                 <h3 class="event-title">{{ event.title }}</h3>
                 <div class="event-more-info">
-                    <span>{{ event.organizer }} - {{ event.dayStart.toLocaleTimeString('fr-CH', {
+                    <span>{{ event.organizer }} - {{ event.dayStart.toLocaleTimeString(locale, {
                         hour: '2-digit',
                         minute: '2-digit' }) }} - {{ event.location }}</span>
                 </div>

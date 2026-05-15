@@ -1,4 +1,6 @@
 <script setup>
+const localePath = useLocalePath()
+
 useSeoMeta({
         title: 'À propos – Lausanne Deter',
         description: 'En savoir plus sur notre collectif et notre démarche à Lausanne.',
@@ -22,59 +24,27 @@ useHead({
                 <div class="section-container">
                         <div class="title-container">
                                 <div class="title qui">
-                                        <h2>Qui&thinsp;?</h2>
+                                        <h2>{{ $t("about.qui.title") }}</h2>
                                 </div>
                                 <div class="slider1"></div>
                         </div>
                         <div class="descr">
-                                <p>Nous sommes <b>Lausanne Deter</b>, un collectif qui a pour but de visibiliser les
-                                        différents
-                                        événements
-                                        militants de la région lausannoise.
-
-                                        Nous souhaitons visibiliser toutes les luttes qui se placent à gauche du
-                                        curseur
-                                        politique
-                                        et qui se battent
-                                        contre toute forme d'oppression.
-                                        <br><br>
-                                        Nous ne prenons pas un parti pris idéologique spéficique et considérons que
-                                        l’important
-                                        est de miser
-                                        sur une convergence des luttes, que visibiliser nos différents
-                                        événements nous
-                                        rendra
-                                        plus fort, car
-                                        c’est par le nombre que nous mettrons fin aux oppressions systémiques.
-                                </p>
+                                <p>{{ $t("about.qui.paragraph.part1") }}<b>Lausanne Deter</b>{{
+                                        $t("about.qui.paragraph.part2") }} <br><br>
+                                        {{ $t("about.qui.paragraph.part3") }}</p>
                         </div>
                 </div>
 
                 <div class="section-container">
                         <div class="title-container right">
                                 <div class="title pq">
-                                        <h2>Pourquoi&thinsp;?</h2>
+                                        <h2>{{ $t("about.pourquoi.title") }}</h2>
                                 </div>
                                 <div class="slider2"></div>
                         </div>
                         <div class="descr">
-                                <p>Nous avons constaté qu’il est parfois difficile d’être au courant des différents
-                                        événements
-                                        prenants
-                                        place dans la région.
-
-                                        Par cet agenda nous souhaitons mettre en avant ces événements afin de les
-                                        rendre le
-                                        plus accessible possible.
-                                        <br><br>
-                                        Nous pensons que rendre la lutte plus accessible, notamment par cet outil, nous
-                                        permettra de faire
-                                        grossir toujours plus notre camp et de peser davantage dans la bataille
-                                        matérielle
-                                        et
-                                        idéologique en
-                                        cours.
-                                </p>
+                                <p>{{ $t("about.pourquoi.paragraph.part1") }} <br><br> {{
+                                        $t("about.pourquoi.paragraph.part2") }}</p>
                         </div>
                 </div>
 
@@ -82,27 +52,24 @@ useHead({
                 <div class="section-container">
                         <div class="title-container">
                                 <div class="title com">
-                                        <h2>Comment&thinsp;?</h2>
+                                        <h2>{{ $t("about.comment.title") }}</h2>
                                 </div>
                                 <div class="slider3"></div>
                         </div>
                         <div class="descr">
-                                <p>Chaque mois les événements militants sont répértoriés sur ce site.
-                                        Si vous êtes un collectif/lieu et souhaitez visibiliser un/des événements
-                                        écrivez nous un mail à
-                                        <b><a href="mailto:lausannedeter@proton.me">lausannedeter@proton.me</a></b> et
-                                        retrouvez nous sur instagram à <b><a href="https://www.instagram.com/lsn.dtr/"
+                                <p>
+                                        {{ $t("about.comment.paragraph.part1") }}
+                                        <b><a href="mailto:lausannedeter@proton.me">lausannedeter@proton.me</a></b>
+                                        {{ $t("about.comment.paragraph.part2") }}
+                                        <b><a href="https://www.instagram.com/lsn.dtr/"
                                                         target="_blank">@lsn.dtr</a></b>.
                                         <br><br>
-                                        Vous pouvez imprimer nos agendas pour les afficher dans vos différents lieux,
-                                        afin
-                                        de toujours avoir sous
-                                        l’oeil le programme du mois :)
+                                        {{ $t("about.comment.paragraph.part3") }}
                                 </p>
                         </div>
                 </div>
 
-                <nuxt-link to="/calendrier" class="button">Voir le calendrier</nuxt-link>
+                <nuxt-link :to="localePath('/calendrier')" class="button">{{ $t("about.seeCalendarButton") }}</nuxt-link>
         </section>
 </template>
 

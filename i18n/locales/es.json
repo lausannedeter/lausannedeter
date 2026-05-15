@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "calendrier": "Calendario",
+    "archives": "Archivos",
+    "copaines": "Compañeras",
+    "about": "Acerca de",
+    "espaceOrgas": "Espacio organizaciones"
+  },
+  "categories": {
+    "bouffespop": "Comidas populares",
+    "perma": "Permanencias",
+    "soirees": "Fiestas, conciertos, proyecciones",
+    "confs": "Conferencias, mesas redondas, talleres",
+    "manifs": "Manifestaciones, concentraciones, huelgas"
+  },
+  "accueil": {
+    "welcome": {
+      "title": "Bienvenidx",
+      "paragraphe": {
+        "part1": "Aquí visibilizamos todas las luchas situadas a la izquierda del espectro político y que combaten toda forma de opresión.",
+        "part2": "¡Descubre dónde y cuándo se organizan las luchas en la Suiza francófona!"
+      },
+      "nextEvent": {
+        "title": "Próximos eventos:"
+      },
+      "buttons": {
+        "seeCalendar": "Ver el calendario",
+        "shareEvent": "Compartir un evento"
+      }
+    },
+    "copaines": {
+      "title": "Compañeras",
+      "paragraph": {
+        "part1": "En la Suiza francófona, muchos lugares son fértiles para la resistencia. Algunos pueden ser puntos de referencia para militantes perdidxs.",
+        "part2": "Varios colectivos se organizan en torno a diferentes causas. Es precisamente en este calendario donde convergen estas luchas. Seamos solidarias y apoyémoslas."
+      },
+      "buttons": {
+        "seeCopaines": "Ver las compañeras"
+      }
+    }
+  },
+  "calendrier": {
+    "filters": "Todos los filtros",
+    "download": {
+      "part1": "Descarga ",
+      "link": "la versión PDF del calendario",
+      "part2": " e imprímela para tu espacio colectivo"
+    },
+    "noEvents": "No hay eventos por el momento",
+    "singleEvent": {
+      "usefulLinks": "Enlaces útiles:",
+      "backButton": "Volver al calendario"
+    }
+  },
+  "archives": {
+    "title": "Archivos",
+    "paragraph": "Encuentra aquí los archivos de nuestros carteles del calendario disponibles para descargar.",
+    "downloadButton": "Descargar"
+  },
+  "copaines": {
+    "title": "Compañeras",
+    "commingsoon": "Próximamente..."
+  },
+  "about": {
+    "qui": {
+      "title": "¿Quiénes?",
+      "paragraph": {
+        "part1": "Somos ",
+        "part2": ", un colectivo cuyo objetivo es visibilizar los diferentes eventos militantes de la región de Lausana. Queremos dar visibilidad a todas las luchas situadas a la izquierda del espectro político y que combaten toda forma de opresión.",
+        "part3": "No adoptamos una postura ideológica específica y consideramos que lo importante es apostar por una convergencia de luchas. Visibilizar nuestros diferentes eventos nos hará más fuertes, porque será mediante la fuerza del número que pondremos fin a las opresiones sistémicas."
+      }
+    },
+    "pourquoi": {
+      "title": "¿Por qué?",
+      "paragraph": {
+        "part1": "Hemos constatado que a veces es difícil estar al tanto de los diferentes eventos que tienen lugar en la región. Con este calendario queremos destacar estos eventos para hacerlos lo más accesibles posible.",
+        "part2": "Creemos que hacer la lucha más accesible, especialmente mediante esta herramienta, nos permitirá hacer crecer aún más nuestro movimiento y tener más peso en la batalla material e ideológica en curso."
+      }
+    },
+    "comment": {
+      "title": "¿Cómo?",
+      "paragraph": {
+        "part1": "Cada mes los eventos militantes se recopilan en este sitio web. Si sois un colectivo o un espacio y queréis visibilizar uno o varios eventos, escribidnos un correo a ",
+        "part2": "y encontradnos en Instagram en ",
+        "part3": "Podéis imprimir nuestros calendarios y exhibirlos en vuestros distintos espacios para tener siempre a la vista el programa del mes :)"
+      }
+    },
+    "seeCalendarButton": "Ver el calendario"
+  },
+  "espaceOrgas": {
+    "title": "Organizaciones",
+    "paragraph": {
+      "part1": "¿Formas parte de un colectivo, una asociación, un sindicato o cualquier estructura que lucha contra las opresiones?",
+      "part2": "Únete a ",
+      "part3": " y haz visibles tus eventos en toda la región."
+    },
+    "whyJoin": {
+      "title": "¿Por qué unirse?",
+      "publish": "Publica tus eventos directamente en el calendario regional.",
+      "visibility": "Hazte visible ante militantes de toda la región.",
+      "solidarity": "Converge con otras luchas. Seamos solidarias."
+    },
+    "accessDemand": {
+      "title": "Solicitud de acceso",
+      "paragraph": "Completa este formulario para obtener un espacio de organización. Nos pondremos en contacto contigo por correo electrónico.",
+      "success": "¡Solicitud enviada! Nos pondremos en contacto contigo pronto.",
+      "form": {
+        "name": {
+          "label": "Nombre de la organización",
+          "placeholder": "Colectivo XYZ"
+        },
+        "email": {
+          "label": "Correo de contacto"
+        },
+        "presentation": {
+          "label": "Presentación breve",
+          "placeholder": "¿Quiénes sois? ¿Qué luchas defendéis?"
+        },
+        "link": {
+          "label": "Sitio web o red social (opcional)"
+        },
+        "required": "campos obligatorios",
+        "submit": "Enviar solicitud"
+      },
+      "connect": {
+        "label": "¿Ya tienes una cuenta?",
+        "button": "Iniciar sesión"
+      }
+    }
+  },
+  "login": {
+    "title": "Iniciar sesión",
+    "paragraph": "Accede a tu espacio de organización para gestionar tus eventos.",
+    "form": {
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "forgot": "¿Olvidaste tu contraseña?",
+      "submit": "Iniciar sesión"
+    },
+    "signin": "¿Aún no tienes cuenta?",
+    "signInButton": "Unirse al calendario"
+  },
+  "forgottenPassword": {
+    "title": "Contraseña olvidada",
+    "paragraph": "Introduce la dirección de correo de tu organización. Te enviaremos un enlace para restablecer tu contraseña.",
+    "backToConnexion": "Volver al inicio de sesión",
+    "submit": "Enviar enlace",
+    "success": "Si existe una cuenta asociada a esta dirección, recibirás un correo en breve."
+  }
+}

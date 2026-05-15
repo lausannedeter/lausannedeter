@@ -20,7 +20,7 @@ useHead({
 
 <template>
     <section class="copaines-page">
-        <p>Arrive prochainement...</p>
+        <p>{{ $t("copaines.commingsoon") }}</p>
     </section>
 </template>
 

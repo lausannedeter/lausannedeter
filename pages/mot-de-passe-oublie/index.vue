@@ -1,4 +1,6 @@
 <script setup>
+const localePath = useLocalePath()
+
 const form = reactive({ email: "" })
 const status = ref(null) // null | 'loading' | 'success' | 'error'
 const errorMessage = ref("")
@@ -24,7 +26,7 @@ async function handleSubmit() {
       <!-- Title -->
       <div class="title-block">
         <div class="title-main">
-          <h2 class="title">Mot de passe oublié</h2>
+          <h2 class="title">{{ $t("forgottenPassword.title") }}</h2>
         </div>
         <div class="title-sub"></div>
       </div>
@@ -32,7 +34,7 @@ async function handleSubmit() {
       <!-- Success state -->
       <Transition name="fade">
         <div v-if="status === 'success'" class="banner banner--success">
-          ✓ Si un compte existe pour cette adresse, tu recevras un email sous peu.
+          ✓ {{ $t("forgottenPassword.success") }}
         </div>
       </Transition>
 
@@ -45,7 +47,7 @@ async function handleSubmit() {
 
       <template v-if="status !== 'success'">
         <p class="hint">
-          Saisis l'adresse email de ton organisation. On t'enverra un lien pour réinitialiser ton mot de passe.
+          {{ $t("forgottenPassword.paragraph") }}
         </p>
 
         <form class="forgot-form" @submit.prevent="handleSubmit" novalidate>
@@ -63,7 +65,7 @@ async function handleSubmit() {
           </div>
 
           <div class="form-footer">
-            <nuxt-link class="back-link" to="/login">← Retour à la connexion</nuxt-link>
+            <nuxt-link class="back-link" :to="localePath('/login')">← {{ $t("forgottenPassword.backToConnexion") }}</nuxt-link>
             <button
               class="button submit-btn"
               type="submit"
@@ -72,7 +74,7 @@ async function handleSubmit() {
               <span v-if="status === 'loading'" class="loading-dots">
                 <span>.</span><span>.</span><span>.</span>
               </span>
-              <span v-else>Envoyer le lien</span>
+              <span v-else>{{ $t("forgottenPassword.submit") }}</span>
             </button>
           </div>
         </form>
@@ -81,7 +83,7 @@ async function handleSubmit() {
       <!-- Post-success action -->
       <Transition name="fade">
         <div v-if="status === 'success'" class="post-success">
-          <nuxt-link class="back-link" to="/login">← Retour à la connexion</nuxt-link>
+          <nuxt-link class="back-link" :to="localePath('/login')">← {{ $t("forgottenPassword.backToConnexion") }}</nuxt-link>
         </div>
       </Transition>
 
