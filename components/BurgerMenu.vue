@@ -67,6 +67,7 @@ const localePath = useLocalePath()
     font-family: "Azeret Thin";
     font-size: 16px;
     background-color: transparent;
+    color: black;
     border: none;
     cursor: pointer;
 }
