@@ -71,6 +71,8 @@ watchEffect(async () => {
 .month-title {
     color: white;
     font-size: 30px;
+}
+.month-title::first-letter {
     text-transform: capitalize;
 }
 

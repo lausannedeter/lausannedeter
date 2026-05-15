@@ -138,6 +138,9 @@ useHead({
 .month-label {
     color: white;
     font-size: 30px;
+}
+
+.month-label::first-letter {
     text-transform: capitalize;
 }
 

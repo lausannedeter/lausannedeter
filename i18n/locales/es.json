@@ -2,16 +2,16 @@
   "nav": {
     "calendrier": "Calendario",
     "archives": "Archivos",
-    "copaines": "Compañeras",
-    "about": "Acerca de",
+    "copaines": "Camadaras",
+    "about": "Sobre nosotres",
     "espaceOrgas": "Espacio organizaciones"
   },
   "categories": {
-    "bouffespop": "Comidas populares",
+    "bouffespop": "Comidas colectivas",
     "perma": "Permanencias",
     "soirees": "Fiestas, conciertos, proyecciones",
     "confs": "Conferencias, mesas redondas, talleres",
-    "manifs": "Manifestaciones, concentraciones, huelgas"
+    "manifs": "Manifestaciones, encuentros, huelgas"
   },
   "accueil": {
     "welcome": {
@@ -29,13 +29,13 @@
       }
     },
     "copaines": {
-      "title": "Compañeras",
+      "title": "Camadaras",
       "paragraph": {
         "part1": "En la Suiza francófona, muchos lugares son fértiles para la resistencia. Algunos pueden ser puntos de referencia para militantes perdidxs.",
         "part2": "Varios colectivos se organizan en torno a diferentes causas. Es precisamente en este calendario donde convergen estas luchas. Seamos solidarias y apoyémoslas."
       },
       "buttons": {
-        "seeCopaines": "Ver las compañeras"
+        "seeCopaines": "Ver las camadaras"
       }
     }
   },
@@ -54,16 +54,16 @@
   },
   "archives": {
     "title": "Archivos",
-    "paragraph": "Encuentra aquí los archivos de nuestros carteles del calendario disponibles para descargar.",
+    "paragraph": "Encuentra aquí los archivos de nuestros  calendarios disponibles para descargar.",
     "downloadButton": "Descargar"
   },
   "copaines": {
-    "title": "Compañeras",
+    "title": "Camadaras",
     "commingsoon": "Próximamente..."
   },
   "about": {
     "qui": {
-      "title": "¿Quiénes?",
+      "title": "¿Quiénes somos?",
       "paragraph": {
         "part1": "Somos ",
         "part2": ", un colectivo cuyo objetivo es visibilizar los diferentes eventos militantes de la región de Lausana. Queremos dar visibilidad a todas las luchas situadas a la izquierda del espectro político y que combaten toda forma de opresión.",
@@ -71,18 +71,18 @@
       }
     },
     "pourquoi": {
-      "title": "¿Por qué?",
+      "title": "¿Por qué este proyecto?",
       "paragraph": {
         "part1": "Hemos constatado que a veces es difícil estar al tanto de los diferentes eventos que tienen lugar en la región. Con este calendario queremos destacar estos eventos para hacerlos lo más accesibles posible.",
-        "part2": "Creemos que hacer la lucha más accesible, especialmente mediante esta herramienta, nos permitirá hacer crecer aún más nuestro movimiento y tener más peso en la batalla material e ideológica en curso."
+        "part2": "Creemos que hacer la lucha más accesible, especialmente mediante esta herramienta, nos permitirá hacer crecer aún más nuestro movimiento y tener más peso en la lucha material e ideológica."
       }
     },
     "comment": {
-      "title": "¿Cómo?",
+      "title": "¿Cómo funciona?",
       "paragraph": {
-        "part1": "Cada mes los eventos militantes se recopilan en este sitio web. Si sois un colectivo o un espacio y queréis visibilizar uno o varios eventos, escribidnos un correo a ",
-        "part2": "y encontradnos en Instagram en ",
-        "part3": "Podéis imprimir nuestros calendarios y exhibirlos en vuestros distintos espacios para tener siempre a la vista el programa del mes :)"
+        "part1": "Cada mes los eventos militantes se recopilan en este sitio web. Si eres parte de un colectivo o un espacio y quieres visibilizar uno o varios eventos, escribidnos un correo a ",
+        "part2": "o encuéntranos en Instagram en ",
+        "part3": "Puedes imprimir nuestros calendarios y ponerlos a disposición para tener siempre a la vista el programa del mes :)"
       }
     },
     "seeCalendarButton": "Ver el calendario"
