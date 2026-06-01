@@ -4,22 +4,22 @@
         <loc>https://lausannedeter.ch/en</loc>
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr" hreflang="fr" />
-        <xhtml:link rel="alternate" href="https://lausannedeter.ch/es" hreflang="es" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/en" hreflang="en" />
+        <xhtml:link rel="alternate" href="https://lausannedeter.ch/es" hreflang="es" />
     </url>
     <url>
         <loc>https://lausannedeter.ch/en/a-propos</loc>
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/a-propos" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/a-propos" hreflang="fr" />
-        <xhtml:link rel="alternate" href="https://lausannedeter.ch/es/a-propos" hreflang="es" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/en/a-propos" hreflang="en" />
+        <xhtml:link rel="alternate" href="https://lausannedeter.ch/es/a-propos" hreflang="es" />
     </url>
     <url>
         <loc>https://lausannedeter.ch/en/archives</loc>
-        <xhtml:link rel="alternate" href="https://lausannedeter.ch/es/archives" hreflang="es" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/en/archives" hreflang="en" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/archives" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/archives" hreflang="fr" />
+        <xhtml:link rel="alternate" href="https://lausannedeter.ch/es/archives" hreflang="es" />
         <image:image>
             <image:loc>https://lausannedeter.ch/affiches/preview-calendrier-mars.png</image:loc>
         </image:image>
@@ -29,22 +29,22 @@
     </url>
     <url>
         <loc>https://lausannedeter.ch/en/calendrier</loc>
+        <xhtml:link rel="alternate" href="https://lausannedeter.ch/en/calendrier" hreflang="en" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/es/calendrier" hreflang="es" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/calendrier" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/calendrier" hreflang="fr" />
-        <xhtml:link rel="alternate" href="https://lausannedeter.ch/en/calendrier" hreflang="en" />
     </url>
     <url>
         <loc>https://lausannedeter.ch/en/copaines</loc>
+        <xhtml:link rel="alternate" href="https://lausannedeter.ch/en/copaines" hreflang="en" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/copaines" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/copaines" hreflang="fr" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/es/copaines" hreflang="es" />
-        <xhtml:link rel="alternate" href="https://lausannedeter.ch/en/copaines" hreflang="en" />
     </url>
     <url>
         <loc>https://lausannedeter.ch/en/login</loc>
-        <xhtml:link rel="alternate" href="https://lausannedeter.ch/es/login" hreflang="es" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/en/login" hreflang="en" />
+        <xhtml:link rel="alternate" href="https://lausannedeter.ch/es/login" hreflang="es" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/login" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/login" hreflang="fr" />
     </url>
@@ -52,8 +52,8 @@
         <loc>https://lausannedeter.ch/en/mot-de-passe-oublie</loc>
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/mot-de-passe-oublie" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/mot-de-passe-oublie" hreflang="fr" />
-        <xhtml:link rel="alternate" href="https://lausannedeter.ch/es/mot-de-passe-oublie" hreflang="es" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/en/mot-de-passe-oublie" hreflang="en" />
+        <xhtml:link rel="alternate" href="https://lausannedeter.ch/es/mot-de-passe-oublie" hreflang="es" />
     </url>
     <url>
         <loc>https://lausannedeter.ch/en/orgas</loc>
@@ -123,8 +123,8 @@
         <loc>https://lausannedeter.ch/en/calendrier/atelier-recycle-ta-droite-vient-recycler-des-livres-de-fachos-le-locool-2026-03-30</loc>
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/calendrier/atelier-recycle-ta-droite-vient-recycler-des-livres-de-fachos-le-locool-2026-03-30" hreflang="x-default" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/fr/calendrier/atelier-recycle-ta-droite-vient-recycler-des-livres-de-fachos-le-locool-2026-03-30" hreflang="fr" />
-        <xhtml:link rel="alternate" href="https://lausannedeter.ch/es/calendrier/atelier-recycle-ta-droite-vient-recycler-des-livres-de-fachos-le-locool-2026-03-30" hreflang="es" />
         <xhtml:link rel="alternate" href="https://lausannedeter.ch/en/calendrier/atelier-recycle-ta-droite-vient-recycler-des-livres-de-fachos-le-locool-2026-03-30" hreflang="en" />
+        <xhtml:link rel="alternate" href="https://lausannedeter.ch/es/calendrier/atelier-recycle-ta-droite-vient-recycler-des-livres-de-fachos-le-locool-2026-03-30" hreflang="es" />
         <image:image>
             <image:loc>https://lausannedeter.ch/event/locool-recycle-droite-atelier.jpg</image:loc>
         </image:image>
@@ -772,4 +772,4 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://lausannedeter.ch/fr/orgas/new-event" />
     </url>
 </urlset>
-<!-- XML Sitemap generated by @nuxtjs/sitemap v7.6.0 at 2026-06-01T09:52:10.614Z -->
+<!-- XML Sitemap generated by @nuxtjs/sitemap v7.6.0 at 2026-06-01T10:20:07.400Z -->

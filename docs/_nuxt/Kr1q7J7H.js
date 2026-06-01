@@ -1,1 +1,0 @@
-import{a3 as r,y as i,a4 as l,x as c,A as u}from"./y1OTnCkg.js";const f=r(async()=>{let e,t;const a=i("user");if(a.value)return;const s=c();try{const n=([e,t]=l(()=>$fetch("/api/auth/me",{baseURL:s.public.apiUrl,credentials:"include"})),e=await e,t(),e);if(a.value=n.user??null,!a.value)return u("/login")}catch{return a.value=null,u("/login")}});export{f as default};

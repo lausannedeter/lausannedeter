@@ -16,13 +16,28 @@ const afficheData = computed(() => _affiche.value?.data ?? undefined)
 
 async function handleSave(form) {
   status.value = 'saving'
+  
   const file = form.imageFile
   const imageName = form.image
   delete form.imageFile
 
+  const linkFile = form.linkFile
+  const link = form.link
+  delete form.linkFile
+
+  const preview_linkFile = form.preview_linkFile
+  const preview_link = form.preview_link
+  delete form.preview_linkFile
+
   try {
     if (file && imageName) {
       await cloudinary.upload(file, imageName)
+    }
+    if (linkFile && link) {
+      await cloudinary.upload(linkFile, link)
+    }
+    if (preview_linkFile && preview_link) {
+      await cloudinary.upload(preview_linkFile, preview_link)
     }
     if (eventData.value) {
       await api.put(`/api/events/${id}`, form)
