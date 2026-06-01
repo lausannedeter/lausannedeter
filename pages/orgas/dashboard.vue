@@ -112,7 +112,7 @@ function isPast(iso) {
 
     <div class="divider"></div>
 
-    <div v-if="isSuperAdmin" class="tab-container">
+    <div class="tab-container">
       <div class="event-tab tab-button" :class="{active : activeTab === 'eventsUpcoming'}"  @click="changeActiveTab('eventsUpcoming')">
         Évènements Futurs
       </div>
@@ -122,7 +122,7 @@ function isPast(iso) {
       <div class="event-tab tab-button" :class="{active : activeTab === 'repetitions'}"  @click="changeActiveTab('repetitions')">
         Évènements à répétition
       </div>
-      <div class="calendar-tab tab-button" :class="{active : activeTab === 'calendars'}"  @click="changeActiveTab('calendars')">
+      <div v-if="isSuperAdmin" class="calendar-tab tab-button" :class="{active : activeTab === 'calendars'}"  @click="changeActiveTab('calendars')">
         Calendriers
       </div>
     </div>
@@ -132,7 +132,7 @@ function isPast(iso) {
       @delete="deleteEvent"></OrgasDashboardEventsUpcomingDisplay>
       <orgas-dashboard-events-past-display v-if="activeTab === 'eventsPast'" :events="eventsPast" :categoryMap="categoryMap" @delete="deleteEvent"></orgas-dashboard-events-past-display>
       <orgas-dashboard-repetitions v-if="activeTab === 'repetitions'" :events="eventsRepetitions" :categoryMap="categoryMap" @delete="deleteEvent"></orgas-dashboard-repetitions>
-      <orgas-dashboard-calendars-display v-if="activeTab === 'calendars'" :affiches="affiches" @delete="deleteCalendar"></orgas-dashboard-calendars-display>
+      <orgas-dashboard-calendars-display v-if="activeTab === 'calendars' && isSuperAdmin" :affiches="affiches" @delete="deleteCalendar"></orgas-dashboard-calendars-display>
     </div>
   </section>
 </template>
