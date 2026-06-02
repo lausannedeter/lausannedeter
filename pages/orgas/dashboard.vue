@@ -11,7 +11,7 @@ const isSuperAdmin = computed(() => user.value?.role === "superadmin");
 
 const { data: _events, refresh: refreshEvents } = await useAsyncData(
   `org-events`,
-  () => api.get(isSuperAdmin.value ? "/api/events" : "/api/orgas/me/events"),
+  () => api.get(isSuperAdmin.value ? "/api/events" : "/api/events/me"),
   {
     server: false
   }
